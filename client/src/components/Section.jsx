@@ -16,15 +16,15 @@ export default function Section({ link, content, search }) {
             <form className="mt-20 bg-white w-3/4 align shadow-lg flex rounded-2x justify-evenly p-5 rounded-full">
               <div>
                 <label htmlFor="location">Location</label>
-                <input type="text" />
+                {/* <input type="text" /> */}
               </div>
               <div>
                 <label htmlFor="location">Location</label>
-                <input type="text" />
+                {/* <input type="text" /> */}
               </div>
               <div>
                 <label htmlFor="location">Location</label>
-                <input type="text" />
+                {/* <input type="text" /> */}
               </div>
               <button className='rounded-full p-2 bg-pink'><img src={searchImg} className='h-5' /></button>
             </form>
