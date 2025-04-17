@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Headline from "./components/Headline";
+import Hero from "./components/Hero";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <main className="mx-auto max-w-screen-xl ">
         <Headline />
       </main>
+      <Hero/>
     </>
   );
 }

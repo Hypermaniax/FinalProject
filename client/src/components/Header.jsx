@@ -2,11 +2,11 @@ export default function Header() {
   return (
     <header className="bg-white sticky top-0 py-5 shadow-lg">
       <div className="max-w-screen-xl mx-auto flex justify-between items-center px-6">
-        <h1 className="font-extrabold text-xl">
+        <h1 className="font-extrabold text-2xl">
           <span className="text-black">Rent </span>
           <span className="text-pink">Hub</span>
         </h1>
-        <ul className="flex gap-8 text-sm font-medium">
+        <ul className="flex gap-8 font-medium text-lg">
           <li>
             <a href="">Home</a>
           </li>
@@ -24,7 +24,7 @@ export default function Header() {
           </li>
         </ul>
         <form action="">
-          <button className="bg-pink text-white px-5 py-2 rounded-lg text-sm font-bold">
+          <button className="bg-pink text-white px-5 py-1 rounded-lg text-lg font-bold">
             Login
           </button>
         </form>

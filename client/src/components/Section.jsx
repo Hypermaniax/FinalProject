@@ -1,4 +1,4 @@
-import searchImg from '../assets/search.svg'
+import searchImg from "../assets/search.svg";
 export default function Section({ link, content, search }) {
   return (
     <section className="col-span-1 content-center">
@@ -19,17 +19,28 @@ export default function Section({ link, content, search }) {
                 {/* <input type="text" /> */}
               </div>
               <div>
-                <label htmlFor="location">Location</label>
+                <label htmlFor="location">Guest</label>
                 {/* <input type="text" /> */}
               </div>
               <div>
-                <label htmlFor="location">Location</label>
+                <label htmlFor="location">Category</label>
                 {/* <input type="text" /> */}
               </div>
-              <button className='rounded-full p-2 bg-pink'><img src={searchImg} className='h-5' /></button>
+              <button className="rounded-full p-2 bg-pink justify-items-end">
+                <img src={searchImg} className="h-5" />
+              </button>
             </form>
           ) : (
-            <></>
+            <section className="mt-8" >
+              <ul className="flex gap-16 font-bold justify-center">
+                <li>
+                  <button className="bg-white px-7 py-3 rounded-full shadow-lg">About Rent</button>
+                </li>
+                <li>
+                  <button className="bg-pink px-7 py-3 rounded-full shadow-lg text-white" >About Host</button>
+                </li>
+              </ul>
+            </section>
           )}
         </>
       )}
