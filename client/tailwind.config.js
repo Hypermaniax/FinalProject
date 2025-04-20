@@ -9,9 +9,14 @@ export default {
       'pink': '#F75A5A',
       'white': '#FFFFFF',
       'darkWhite': '#F4F4F4',
-      'black' : '#000000'
+      'black': '#000000'
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        Poppins: ["Poppins","Oleo Script"],
+        OleoScript : [ "Oleo Script","Poppins"]
+      }
+    },
   },
   plugins: [],
 }

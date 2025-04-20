@@ -1,26 +1,28 @@
+import { Link } from 'react-router-dom';
+
 export default function Header() {
   return (
-    <header className="bg-white sticky top-0 py-5 shadow-lg">
+    <header className="bg-white sticky top-0 py-5 shadow-lg z-50 ">
       <div className="max-w-screen-xl mx-auto flex justify-between items-center px-6">
         <h1 className="font-extrabold text-2xl">
-          <span className="text-black">Rent </span>
-          <span className="text-pink">Hub</span>
+          <span className="text-black">Stay </span>
+          <span className="text-pink">Nesia</span>
         </h1>
         <ul className="flex gap-8 font-medium text-lg">
           <li>
-            <a href="">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="">Browse Space</a>
+            <Link to="/space"> Space</Link>
           </li>
           <li>
-            <a href="">Bookings</a>
+            <Link to="/bookings">Bookings</Link>
           </li>
           <li>
-            <a href="">Support</a>
+            <Link to="/support">Support</Link>
           </li>
           <li>
-            <a href="">Become Host</a>
+            <Link to="/host">Host</Link>
           </li>
         </ul>
         <form action="">
