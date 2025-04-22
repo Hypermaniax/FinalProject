@@ -1,6 +1,6 @@
 import Input from "./Input";
 
-export default function Bookings() {
+export default function BookingsCards() {
   return (
     <form
       className="grid grid-cols-6 gap-5 bg-white w-3/4 mx-auto p-10 rounded-xl relative z-30 -mt-32 shadow-lg"

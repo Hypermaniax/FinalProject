@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="mx-auto max-w-screen-xl">
+      <main className="mx-auto pb-16 max-w-screen-xl">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/space" element={<BrowseSpaces />} />

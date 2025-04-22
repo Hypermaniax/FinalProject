@@ -13,8 +13,7 @@ export default function Home() {
         <p className="font-OleoScript text-white text-[64px] font-bold">INDONESIA</p>
       </Hero>
       <Accomodation heading={'ACCOMODATION'} title={'Explore Spaces In Indonesia'}/>
-      <Accomodation heading={'PROMOTION'} title={'Trendy Spaces'}/>
-      <Carousel/>
+      <Carousel heading={'PROMOTION'} title={'Trendy Space'}/>
     </>
   );
 }

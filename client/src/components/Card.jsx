@@ -1,16 +1,35 @@
-export default function Card() {
-    return (
-      <div className="relative h-36 rounded-xl overflow-hidden shadow-md w-full">
-        <img
-          src="https://images.unsplash.com/photo-1604999333679-b86d54738315?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-          className="w-full h-full object-cover"
-          alt="Monas"
-        />
-        <div className="absolute bottom-2 left-2 right-2 text-white text-sm font-semibold flex justify-between ">
-          <p>Bali</p>
-          <p>22.100</p>
+import { useEffect, useState } from "react";
+import monas from '../assets/Monas.png'
+const indonesiaProvinces = [
+  { province: "Bali", hotels: 1200 },
+  { province: "Jakarta", hotels: 1500 },
+  { province: "West Java", hotels: 800 },
+  { province: "East Java", hotels: 950 },
+  { province: "Yogyakarta", hotels: 600 },
+  { province: "North Sumatra", hotels: 350 },
+  { province: "South Sulawesi", hotels: 450 },
+  { province: "Central Java", hotels: 750 },
+];
+
+export default function Card({ data }) {
+  return (
+    <>
+      {data.map((item, index) => (
+        <div
+          className="relative h-60 rounded-xl overflow-hidden shadow-md w-full bg-pink"
+          key={index}
+        >
+          <img
+              src={monas}
+              className="w-full object-cover"
+              alt="Monas"
+            />
+          <div className="absolute bottom-2 left-2 right-2 text-black text-sm font-semibold flex justify-between ">
+            <p>{item.province}</p>
+            <p>{item.hotels}</p>
+          </div>
         </div>
-      </div>
-    );
-  }
-  
+      ))}
+    </>
+  );
+}
