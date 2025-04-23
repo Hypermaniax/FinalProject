@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import monas from "../assets/Monas.png";
 
 export default function Card({ data }) {
+  console.log(data);
+  
   return (
     <>
       {data.map((item, index) => (

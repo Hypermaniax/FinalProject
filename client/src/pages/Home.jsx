@@ -8,7 +8,6 @@ export default function Home() {
   return (
     <>
       <Headline />
-      <HowItsWorks />
       <Hero>
         <p className="font-OleoScript text-white text-[64px] font-bold">INDONESIA</p>
       </Hero>

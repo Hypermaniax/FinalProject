@@ -2,7 +2,7 @@ import Input from "./Input";
 
 export default function BookingsCards() {
   return (
-    <form
+    <div
       className="grid grid-cols-6 gap-5 bg-white w-3/4 mx-auto p-10 rounded-xl relative z-30 -mt-32 shadow-lg"
       action=""
       method="post"
@@ -47,6 +47,6 @@ export default function BookingsCards() {
       <button className="col-span-2 bg-pink  mt-5 rounded-lg text-white font-bold">
         Search
       </button>
-    </form>
+    </div>
   );
 }
