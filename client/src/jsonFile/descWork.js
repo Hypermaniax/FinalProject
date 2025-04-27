@@ -16,13 +16,13 @@ const steps = [
         title: "Find a Space",
         icon: arrow, // Replace with SVG/icon
         description:
-            "Browse available spaces in that city\nfilter by category, date, capacity, and more."
+            "Browse available spaces in that city filter by category, date, capacity, and more."
     },
     {
         title: "Make a Booking",
         icon: point, // Replace with SVG/icon
         description:
-            "Explore space details, photos, pricing, and reviews.\nFound the right one? Click “Book Now”"
+            "Explore space details, photos, pricing, and reviews. Found the right one? Click “Book Now”"
     },
     {
         title: "Secure Payment",

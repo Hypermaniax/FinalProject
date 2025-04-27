@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import BrowseSpaces from "./pages/Space";
+import Bookings from "./pages/Bookings";
+import Support from "./pages/Support";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/space" element={<BrowseSpaces />} />
+          <Route path="/bookings" element={<Bookings />} />
+          <Route path="/support" element={<Support />} />
         </Routes>
       </main>
     </>

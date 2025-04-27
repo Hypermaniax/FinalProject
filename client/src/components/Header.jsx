@@ -1,9 +1,8 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <header className="bg-white sticky top-0 py-5 shadow-lg z-50 ">
-      <div className="max-w-screen-xl mx-auto flex justify-between items-center px-6">
+    <nav className="bg-white sticky top-0 py-5 shadow-lg z-50 flex justify-evenly">
         <h1 className="font-extrabold text-2xl">
           <span className="text-black">Stay </span>
           <span className="text-pink">Nesia</span>
@@ -25,12 +24,11 @@ export default function Header() {
             <Link to="/host">Host</Link>
           </li>
         </ul>
-        <form action="">
-          <button className="bg-pink text-white px-5 py-1 rounded-lg text-lg font-bold">
-            Login
-          </button>
-        </form>
-      </div>
-    </header>
+
+        <button className="bg-pink text-white px-5 py-1 rounded-lg text-lg font-bold">
+          Login
+        </button>
+    </nav>
   );
 }
+// max-w-screen-xl w-full bg-pink flex justify-between items-center px-6

@@ -61,6 +61,7 @@ const data = [
     img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
   },
 ];
+import pinkArrow from "../assets/icons/pinkArrow.svg";
 
 function generateRandomClassName(length = 8, prefix = "cls-") {
   const chars =
@@ -71,7 +72,7 @@ function generateRandomClassName(length = 8, prefix = "cls-") {
   }
   return className;
 }
-export default function Carousel({ heading, title }) {
+export default function Carousel({ heading, title, text }) {
   const [dummy, setDummy] = useState();
 
   useEffect(() => {
@@ -82,12 +83,18 @@ export default function Carousel({ heading, title }) {
   const randomLeft = useMemo(() => generateRandomClassName(), []);
 
   return (
-    <section className="text-center mt-24">
+    <section className="text-center mt-8">
       {heading && <h4 className="text-pink text-sm font-bold">{heading}</h4>}
-      <h1 className="text-2xl mb-10 font-bold">{title}</h1>
+      <h1
+        className={`text-2xl mb-5 font-bold ${
+          text ? "text-center" : "text-start"
+        }`}
+      >
+        {title}
+      </h1>
 
       {/* Container relatif */}
-      <div className="relative ">
+      <div className="relative">
         <Swiper
           modules={[Navigation]}
           navigation={{
@@ -104,8 +111,11 @@ export default function Carousel({ heading, title }) {
         >
           {!!dummy &&
             dummy.map((item) => (
-              <SwiperSlide key={item.id} className="py-10 rounded-xl">
-                <div className="bg-white transition-all duration-300 ease-in-out hover:translate-y-[-10px] rounded-3xl shadow-[0_8px_10px_-4px_rgba(0,0,0,0.2)] overflow-hidden">
+              <SwiperSlide
+                key={item.id}
+                className="pt-10 rounded-xl  -top-5"
+              >
+                <div className="bg-white transition-all cursor-pointer duration-300 ease-in-out hover:translate-y-[-10px] rounded-3xl shadow-[0_8px_10px_-4px_rgba(0,0,0,0.2)] overflow-hidden">
                   <img
                     src={item.img}
                     className="w-full object-cover h-60"
@@ -124,16 +134,16 @@ export default function Carousel({ heading, title }) {
 
         {/* Tombol Prev di kiri */}
         <button
-          className={`${randomLeft} absolute -left-5 top-1/2 -translate-y-1/2 text-3xl px-3 py-2 bg-white rounded-full text-pink shadow-2xl z-10`}
+          className={`${randomLeft} absolute -left-7 top-1/2 -translate-y-1/2  bg-white rounded-full text-pink shadow-2xl z-10`}
         >
-          {"<"}
+          <img src={pinkArrow} className="h-14 transform -scale-x-100" alt="" />
         </button>
 
         {/* Tombol Next di kanan */}
         <button
-          className={`${randomRight} absolute -right-5 top-1/2 -translate-y-1/2 text-3xl px-3 py-2 bg-white rounded-full text-pink shadow-2xl z-10`}
+          className={`${randomRight} absolute -right-7 top-1/2 -translate-y-1/2 text-3xl  bg-white rounded-full text-pink shadow-2xl z-10`}
         >
-          {">"}
+          <img src={pinkArrow} className="h-14 transform " alt="" />
         </button>
       </div>
     </section>
