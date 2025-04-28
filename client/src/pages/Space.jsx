@@ -8,7 +8,6 @@ import Filter from "../components/Filter";
 
 export default function Spaces() {
   const [check, setCheck] = useState(undefined);
-  console.log(check);
 
   return (
     <>

@@ -2,13 +2,13 @@ export default function Section({ link, content, search }) {
   return (
     <section className="col-span-1 content-center">
       {link ? (
-        <img src={link} />
+        <img src={link} className="hidden md:block" />
       ) : (
         <>
-          <h1 className="whitespace-pre-line font-bold italic text-5xl">
+          <h1 className="whitespace-pre-line font-bold italic text-lg md:text-5xl">
             {content.head}
           </h1>
-          <p className="text-gray-600 mt-6 leading-relaxed whitespace-pre-line font-thin">
+          <p className="text-gray-600 mt-6 leading-relaxed whitespace-pre-line text-base font-thin">
             {content.text}
           </p>
           {search ? (
@@ -21,12 +21,12 @@ export default function Section({ link, content, search }) {
             <section className="mt-8">
               <ul className="flex gap-16 font-bold justify-center">
                 <li>
-                  <button className="bg-white px-7 py-3 rounded-full shadow-lg">
+                  <button className="bg-white md:px-7 md:py-3 px-2 py-1 rounded-full shadow-lg">
                     About Rent
                   </button>
                 </li>
                 <li>
-                  <button className="bg-pink px-7 py-3 rounded-full shadow-lg text-white">
+                  <button className="bg-pink md:px-7 md:py-3 px-2 py-1 rounded-full shadow-lg text-white">
                     About Host
                   </button>
                 </li>

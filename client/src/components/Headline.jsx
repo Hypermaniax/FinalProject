@@ -32,7 +32,7 @@ const secondText = {
 export default function Headline() {
     
   return (
-    <div className="grid grid-cols-2 pt-16 gap-10 mb-10">
+    <div className="grid md:grid-cols-2  grid-cols-1 pt-16 gap-10 mb-10">
       <Section search content ={firsText}/>
       <Section link={img1} />
       <Section link={img} />

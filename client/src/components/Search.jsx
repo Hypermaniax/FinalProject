@@ -12,7 +12,7 @@ export default function Search({ gotValue }) {
   }
 
   return (
-    <div className="grid grid-cols-6 gap-5 bg-white w-3/4 mx-auto p-10 rounded-xl mb-10 relative z-30 -mt-32 shadow-lg">
+    <div className="md:grid md:grid-cols-6 block grid-cols-1 md:gap-5 gap-1 bg-white w-3/4 mx-auto p-10 rounded-xl mb-10 relative z-30 -mt-32 shadow-lg">
       <Input
         grid="col-span-3"
         typeInput="text"
