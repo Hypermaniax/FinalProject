@@ -4,13 +4,12 @@ const Input = forwardRef(function Input(
   { typeInput, label, id, grid, text },
   ref
 ) {
-
   const data = useRef();
 
   useImperativeHandle(ref, () => {
     return {
       value() {
-        return data.current.value
+        return data.current.value;
       },
     };
   });

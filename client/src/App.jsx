@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="md:mx-auto mx-3 pb-16 max-w-screen-xl">
+      <main className="mx-auto  pb-16 max-w-screen-xl min-w-screen-l">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/space" element={<BrowseSpaces />} />
