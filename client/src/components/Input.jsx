@@ -1,7 +1,7 @@
 import { forwardRef, useImperativeHandle, useRef } from "react";
 
 const Input = forwardRef(function Input(
-  { typeInput, label, id, grid, text },
+  { typeInput, label, id, grid, text, spaceBar },
   ref
 ) {
   const data = useRef();
@@ -13,6 +13,12 @@ const Input = forwardRef(function Input(
       },
     };
   });
+
+  const handleKeyDown = (e) => {
+    if (spaceBar && e.key === " ") {
+      e.preventDefault();
+    }
+  };
 
   return (
     <div className={grid}>
@@ -26,6 +32,7 @@ const Input = forwardRef(function Input(
         <p>Monday, 17 oktober 2045</p>
       ) : (
         <input
+          onKeyDown={handleKeyDown}
           type={typeInput}
           id={id}
           name={id}
