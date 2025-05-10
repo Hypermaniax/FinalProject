@@ -4,18 +4,22 @@ import { useEffect, useState } from "react";
 export default function UseRegister() {
   const [formData, setFormData] = useState(undefined);
   const [response, setResponse] = useState(undefined);
-
+  const [loading, setLoading] = useState(false);
+  
   useEffect(() => {
     if (!formData) return;
     (async () => {
       try {
-        const response = await axios.post(
+        setLoading(true);
+        const post = await axios.post(
           "http://localhost:3000/register",
           formData
         );
-        setResponse(response.data);
+        setLoading(false);
+        setResponse(post);
       } catch (error) {
         setResponse(error.response.data);
+        setLoading(false);
       }
     })();
   }, [formData]);
@@ -27,12 +31,14 @@ export default function UseRegister() {
       emailRef === "" ||
       passwordRef === ""
     ) {
-      setResponse("All fields must be filled");
+      setResponse({ data: "All fields must be filled" });
       return;
     }
 
     if (usernameRef.length < 5 || passwordRef < 5) {
-      setResponse("Username and password must be at least 5 characters");
+      setResponse({
+        data: "Username and password must be at least 5 characters",
+      });
       return;
     }
 
@@ -47,5 +53,6 @@ export default function UseRegister() {
   return {
     onSubmit: handleCick,
     response,
+    loading,
   };
 }

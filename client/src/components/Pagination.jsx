@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import Loading from "./Loading";
 
+import Input from "./Input";
 export default function Pagination({ data }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [dummy, setDummy] = useState(undefined);
@@ -20,22 +20,10 @@ export default function Pagination({ data }) {
 
   return (
     <section className="col-span-4">
-      <div className="bg-white w-full mb-5 p-2 text-lg shadow-xl  rounded-xl flex justify-center gap-2">
-        <input
-          placeholder="Place..."
-          type="text"
-          className="outline-none p-1 text-base border rounded-lg bg-"
-        />
-        <input
-          placeholder="Date..."
-          type="date"
-          className="outline-none p-1 text-base border rounded-lg"
-        />
-        <input
-          placeholder="Max Guest..."
-          type="text"
-          className="outline-none p-1 text-base border rounded-lg"
-        />
+      <div className="bg-white w-full mb-5 text-lg shadow-xl  rounded-xl grid grid-cols-4 p-4 items-end gap-2">
+        <Input typeInput ={'text'} placeHolder='Place' label= 'Place'/>
+        <Input typeInput={'date'} label ="Date"/>
+        <Input typeInput ={'number'} label ="Guest"/>
         <button className="bg-pink px-3 rounded-lg font-medium text-white">
           Search
         </button>
