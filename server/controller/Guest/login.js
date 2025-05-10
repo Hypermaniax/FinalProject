@@ -20,10 +20,9 @@ const login = async (req, res) => {
 
     const payload = {
         username: getData.username,
-        email: getData.email,
     }
 
-    const token = jwt.sign(payload, process.env.JWT_TOKEN, { expiresIn: '5m' })
+    const token = jwt.sign(payload, process.env.JWT_TOKEN, { expiresIn: '1h' })
 
     return res.status(200).json({ message: `Welcome Back ${payload.username}`, token })
 }
