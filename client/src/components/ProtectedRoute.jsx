@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 export default function ProtectedRoutes({ children }) {
   const [protect, setProtect] = useState();
   const token = localStorage.getItem("accessToken");
-console.log(protect);
 
   useEffect(() => {
     try {

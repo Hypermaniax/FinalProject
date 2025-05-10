@@ -8,6 +8,7 @@ const data = [
     text: "With affordable prices, various options to suit every need and budget, and an easy-to-use platform, StayNesia ensures a seamless booking experience for every traveler. Whether you’re looking for a luxury getaway, a cozy spot close to nature, or a simple room in the heart of the city, you’ll find the perfect stay in just a few clicks.",
   },
 ];
+
 export default function AboutUs() {
   return (
     <>
