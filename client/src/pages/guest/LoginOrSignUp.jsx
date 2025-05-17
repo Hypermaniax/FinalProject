@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Login from "../components/Login";
-import SignUp from "../components/SignUp";
+import Login from "../../ui/Login";
+import SignUp from "../../ui/SignUp";
 import { X } from "lucide-react";
 
 export default function LoginOrSignUp({ isOpen, handleClick }) {

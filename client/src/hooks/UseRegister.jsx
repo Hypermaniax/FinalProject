@@ -5,14 +5,14 @@ export default function UseRegister() {
   const [formData, setFormData] = useState(undefined);
   const [response, setResponse] = useState(undefined);
   const [loading, setLoading] = useState(false);
-  
+
   useEffect(() => {
     if (!formData) return;
     (async () => {
       try {
         setLoading(true);
         const post = await axios.post(
-          "http://localhost:3000/register",
+          "http://localhost:3000/regist-host",
           formData
         );
         setLoading(false);
@@ -43,7 +43,7 @@ export default function UseRegister() {
     }
 
     setFormData({
-      fullName: fullNameref,
+      name: fullNameref,
       userName: usernameRef,
       email: emailRef,
       password: passwordRef,

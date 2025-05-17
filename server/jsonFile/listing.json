@@ -1,9 +1,9 @@
 [
   {
-    "_id": "f0e660e1-883a-43bb-ab5a-bc44edd9dde0",
-    "hostId": "c405de49-2166-421b-baf1-9aa350481705",
-    "province": "Kalimantan Timur",
-    "city": "Balikpapan",
+    "location": {
+      "province": "Kalimantan Timur",
+      "city": "Balikpapan"
+    },
     "category": "Penginapan",
     "title": "Resort Tenang Hijau 1",
     "description": "Resort Tenang Hijau 1 terletak di Balikpapan, Kalimantan Timur. Tempat ini nyaman dan cocok untuk liburan.",
@@ -15,20 +15,18 @@
       "Kolam Renang",
       "Parkir"
     ],
-    "maxGuest": 9,
-    "numBedroom": 5,
-    "numBathroom": 1,
+    "capacity": 9,
     "price": 986624,
-    "ratingCount": 4.5,
-    "soldCount": 4326,
-    "createdAt": "2025-05-01T10:54:14.543538",
-    "updatedAt": "2025-05-01T10:54:14.543550"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "a11f778e-7c87-452d-84f4-aeebd9b7d933",
-    "hostId": "640d9b83-1859-40ac-b04a-b1a880a61b80",
-    "province": "NTT",
-    "city": "Kupang",
+    "location": {
+      "province": "NTT",
+      "city": "Kupang"
+    },
     "category": "Villa",
     "title": "Hotel Tenang Alam 2",
     "description": "Hotel Tenang Alam 2 terletak di Kupang, NTT. Tempat ini nyaman dan cocok untuk liburan.",
@@ -40,20 +38,18 @@
       "WiFi",
       "AC"
     ],
-    "maxGuest": 8,
-    "numBedroom": 2,
-    "numBathroom": 1,
+    "capacity": 8,
     "price": 957822,
-    "ratingCount": 4.5,
-    "soldCount": 134,
-    "createdAt": "2025-05-01T10:54:14.543645",
-    "updatedAt": "2025-05-01T10:54:14.543649"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "aa352073-3420-44d6-a696-dc0ccb0c96a2",
-    "hostId": "ccc6169a-b8fe-42c3-98ca-902818729e31",
-    "province": "Kalimantan Timur",
-    "city": "Balikpapan",
+    "location": {
+      "province": "Kalimantan Timur",
+      "city": "Balikpapan"
+    },
     "category": "Resort",
     "title": "Villa Alam Damai 3",
     "description": "Villa Alam Damai 3 terletak di Balikpapan, Kalimantan Timur. Tempat ini nyaman dan cocok untuk liburan.",
@@ -65,20 +61,18 @@
       "AC",
       "Sarapan"
     ],
-    "maxGuest": 8,
-    "numBedroom": 5,
-    "numBathroom": 2,
+    "capacity": 8,
     "price": 715404,
-    "ratingCount": 4.4,
-    "soldCount": 2801,
-    "createdAt": "2025-05-01T10:54:14.544312",
-    "updatedAt": "2025-05-01T10:54:14.544319"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "f5aeaa92-c7e3-4068-9a55-f2daa363e703",
-    "hostId": "cc013d05-3413-413e-8825-618c50ea88b4",
-    "province": "Kalimantan Timur",
-    "city": "Samarinda",
+    "location": {
+      "province": "Kalimantan Timur",
+      "city": "Samarinda"
+    },
     "category": "Villa",
     "title": "Resort Alam Mewah 4",
     "description": "Resort Alam Mewah 4 terletak di Samarinda, Kalimantan Timur. Tempat ini nyaman dan cocok untuk liburan.",
@@ -90,20 +84,18 @@
       "Kolam Renang",
       "AC"
     ],
-    "maxGuest": 8,
-    "numBedroom": 1,
-    "numBathroom": 2,
+    "capacity": 8,
     "price": 1011591,
-    "ratingCount": 4.4,
-    "soldCount": 2260,
-    "createdAt": "2025-05-01T10:54:14.544388",
-    "updatedAt": "2025-05-01T10:54:14.544391"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "7b1870da-3d4a-4af5-98f1-a11151d110b5",
-    "hostId": "ba103bb9-cd31-43b7-b826-52bf2d8ae047",
-    "province": "Sumatera Barat",
-    "city": "Padang",
+    "location": {
+      "province": "Sumatera Barat",
+      "city": "Padang"
+    },
     "category": "Resort",
     "title": "Hotel Nyaman Asri 5",
     "description": "Hotel Nyaman Asri 5 terletak di Padang, Sumatera Barat. Tempat ini nyaman dan cocok untuk liburan.",
@@ -115,20 +107,18 @@
       "Sarapan",
       "Dapur"
     ],
-    "maxGuest": 3,
-    "numBedroom": 1,
-    "numBathroom": 1,
+    "capacity": 3,
     "price": 579008,
-    "ratingCount": 5.0,
-    "soldCount": 4391,
-    "createdAt": "2025-05-01T10:54:14.544576",
-    "updatedAt": "2025-05-01T10:54:14.544587"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "51903f73-cb16-41a1-8e1a-968240313836",
-    "hostId": "679fc350-bf6e-4aaa-b200-47c6eef0f567",
-    "province": "Riau",
-    "city": "Pekanbaru",
+    "location": {
+      "province": "Riau",
+      "city": "Pekanbaru"
+    },
     "category": "Penginapan",
     "title": "Hotel Mewah Mewah 6",
     "description": "Hotel Mewah Mewah 6 terletak di Pekanbaru, Riau. Tempat ini nyaman dan cocok untuk liburan.",
@@ -140,20 +130,18 @@
       "Sarapan",
       "TV"
     ],
-    "maxGuest": 9,
-    "numBedroom": 2,
-    "numBathroom": 1,
+    "capacity": 9,
     "price": 883605,
-    "ratingCount": 4.4,
-    "soldCount": 4272,
-    "createdAt": "2025-05-01T10:54:14.544676",
-    "updatedAt": "2025-05-01T10:54:14.544680"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "9aa12d31-ed87-4cb5-b09f-5a103e2c64d5",
-    "hostId": "c4eaed91-f0f4-40fa-be19-0ceaa57ae48e",
-    "province": "Bali",
-    "city": "Denpasar",
+    "location": {
+      "province": "Bali",
+      "city": "Denpasar"
+    },
     "category": "Villa",
     "title": "Resort Indah Alam 7",
     "description": "Resort Indah Alam 7 terletak di Denpasar, Bali. Tempat ini nyaman dan cocok untuk liburan.",
@@ -165,20 +153,18 @@
       "Parkir",
       "Sarapan"
     ],
-    "maxGuest": 8,
-    "numBedroom": 5,
-    "numBathroom": 2,
+    "capacity": 8,
     "price": 627487,
-    "ratingCount": 4.5,
-    "soldCount": 3934,
-    "createdAt": "2025-05-01T10:54:14.544729",
-    "updatedAt": "2025-05-01T10:54:14.544732"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "fd59148d-f1de-4162-9915-e2a0a8f0ebbb",
-    "hostId": "3a14e68d-8b7c-4fa3-926a-fa7399256845",
-    "province": "DIY",
-    "city": "Yogyakarta",
+    "location": {
+      "province": "DIY",
+      "city": "Yogyakarta"
+    },
     "category": "Hotel",
     "title": "Villa Damai Alam 8",
     "description": "Villa Damai Alam 8 terletak di Yogyakarta, DIY. Tempat ini nyaman dan cocok untuk liburan.",
@@ -190,20 +176,18 @@
       "WiFi",
       "Kolam Renang"
     ],
-    "maxGuest": 3,
-    "numBedroom": 5,
-    "numBathroom": 2,
+    "capacity": 3,
     "price": 958214,
-    "ratingCount": 4.7,
-    "soldCount": 4324,
-    "createdAt": "2025-05-01T10:54:14.544787",
-    "updatedAt": "2025-05-01T10:54:14.544791"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "24e9a6ad-5391-43db-b090-f1e4a57c90a7",
-    "hostId": "fa9e514e-68cf-4cde-93b9-a8b8059e34ad",
-    "province": "Kalimantan Selatan",
-    "city": "Banjarmasin",
+    "location": {
+      "province": "Kalimantan Selatan",
+      "city": "Banjarmasin"
+    },
     "category": "Resort",
     "title": "Penginapan Nyaman Mewah 9",
     "description": "Penginapan Nyaman Mewah 9 terletak di Banjarmasin, Kalimantan Selatan. Tempat ini nyaman dan cocok untuk liburan.",
@@ -215,20 +199,18 @@
       "Kolam Renang",
       "Parkir"
     ],
-    "maxGuest": 6,
-    "numBedroom": 5,
-    "numBathroom": 1,
+    "capacity": 6,
     "price": 919732,
-    "ratingCount": 4.9,
-    "soldCount": 1787,
-    "createdAt": "2025-05-01T10:54:14.544837",
-    "updatedAt": "2025-05-01T10:54:14.544840"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "f032a75e-c3fe-479b-bd30-5030f643b03b",
-    "hostId": "e4c6835f-66c6-41ea-81ea-6231cd120af7",
-    "province": "Sumatera Barat",
-    "city": "Padang",
+    "location": {
+      "province": "Sumatera Barat",
+      "city": "Padang"
+    },
     "category": "Penginapan",
     "title": "Hotel Indah Mewah 10",
     "description": "Hotel Indah Mewah 10 terletak di Padang, Sumatera Barat. Tempat ini nyaman dan cocok untuk liburan.",
@@ -240,20 +222,18 @@
       "Dapur",
       "Sarapan"
     ],
-    "maxGuest": 3,
-    "numBedroom": 5,
-    "numBathroom": 2,
+    "capacity": 3,
     "price": 865415,
-    "ratingCount": 4.9,
-    "soldCount": 1245,
-    "createdAt": "2025-05-01T10:54:14.544884",
-    "updatedAt": "2025-05-01T10:54:14.544888"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "71db182b-b792-4367-9b1d-c8e54579c351",
-    "hostId": "9c1ead98-8b41-4663-943e-7df5c81fd3d5",
-    "province": "Sumatera Selatan",
-    "city": "Palembang",
+    "location": {
+      "province": "Sumatera Selatan",
+      "city": "Palembang"
+    },
     "category": "Villa",
     "title": "Penginapan Nyaman Elok 11",
     "description": "Penginapan Nyaman Elok 11 terletak di Palembang, Sumatera Selatan. Tempat ini nyaman dan cocok untuk liburan.",
@@ -265,20 +245,18 @@
       "Sarapan",
       "Parkir"
     ],
-    "maxGuest": 10,
-    "numBedroom": 2,
-    "numBathroom": 3,
+    "capacity": 10,
     "price": 922966,
-    "ratingCount": 5.0,
-    "soldCount": 4906,
-    "createdAt": "2025-05-01T10:54:14.544952",
-    "updatedAt": "2025-05-01T10:54:14.544956"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "e1a189ad-c2db-4753-b843-3d90589ad97c",
-    "hostId": "042453fe-3e5d-483e-b2f8-3d2e62344773",
-    "province": "Papua",
-    "city": "Jayapura",
+    "location": {
+      "province": "Papua",
+      "city": "Jayapura"
+    },
     "category": "Resort",
     "title": "Hotel Elok Ceriah 12",
     "description": "Hotel Elok Ceriah 12 terletak di Jayapura, Papua. Tempat ini nyaman dan cocok untuk liburan.",
@@ -290,20 +268,18 @@
       "AC",
       "Parkir"
     ],
-    "maxGuest": 6,
-    "numBedroom": 1,
-    "numBathroom": 2,
+    "capacity": 6,
     "price": 704568,
-    "ratingCount": 4.9,
-    "soldCount": 1060,
-    "createdAt": "2025-05-01T10:54:14.545015",
-    "updatedAt": "2025-05-01T10:54:14.545018"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "92951932-6e92-4c0a-bc8a-11ea3f6fd03a",
-    "hostId": "ed57f592-545f-4ed0-8aaf-5ec8b17772ce",
-    "province": "Maluku Utara",
-    "city": "Ternate",
+    "location": {
+      "province": "Maluku Utara",
+      "city": "Ternate"
+    },
     "category": "Villa",
     "title": "Penginapan Nyaman Damai 13",
     "description": "Penginapan Nyaman Damai 13 terletak di Ternate, Maluku Utara. Tempat ini nyaman dan cocok untuk liburan.",
@@ -315,20 +291,18 @@
       "Dapur",
       "WiFi"
     ],
-    "maxGuest": 8,
-    "numBedroom": 3,
-    "numBathroom": 1,
+    "capacity": 8,
     "price": 921110,
-    "ratingCount": 4.4,
-    "soldCount": 4684,
-    "createdAt": "2025-05-01T10:54:14.545081",
-    "updatedAt": "2025-05-01T10:54:14.545084"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "89f0d33c-2993-43fd-a996-2bc654f347eb",
-    "hostId": "a55fcaa5-562a-43d5-b552-347e020279f7",
-    "province": "Papua",
-    "city": "Jayapura",
+    "location": {
+      "province": "Papua",
+      "city": "Jayapura"
+    },
     "category": "Resort",
     "title": "Penginapan Hijau Tenang 14",
     "description": "Penginapan Hijau Tenang 14 terletak di Jayapura, Papua. Tempat ini nyaman dan cocok untuk liburan.",
@@ -340,20 +314,18 @@
       "AC",
       "WiFi"
     ],
-    "maxGuest": 3,
-    "numBedroom": 5,
-    "numBathroom": 2,
+    "capacity": 3,
     "price": 560071,
-    "ratingCount": 4.5,
-    "soldCount": 1027,
-    "createdAt": "2025-05-01T10:54:14.545134",
-    "updatedAt": "2025-05-01T10:54:14.545137"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "aa492389-3b7f-4785-9692-f229d4d6a7b6",
-    "hostId": "9e142aa8-d214-4e9c-865e-867bbde1164f",
-    "province": "NTT",
-    "city": "Kupang",
+    "location": {
+      "province": "NTT",
+      "city": "Kupang"
+    },
     "category": "Villa",
     "title": "Villa Ceriah Asri 15",
     "description": "Villa Ceriah Asri 15 terletak di Kupang, NTT. Tempat ini nyaman dan cocok untuk liburan.",
@@ -365,20 +337,18 @@
       "Kolam Renang",
       "AC"
     ],
-    "maxGuest": 9,
-    "numBedroom": 1,
-    "numBathroom": 3,
+    "capacity": 9,
     "price": 1139208,
-    "ratingCount": 4.8,
-    "soldCount": 3778,
-    "createdAt": "2025-05-01T10:54:14.545180",
-    "updatedAt": "2025-05-01T10:54:14.545184"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "d1604a4b-fe39-416f-b6e2-e9c9185ddefe",
-    "hostId": "e1415e2c-e073-40bd-9b1d-e9be69b0b0d3",
-    "province": "Bali",
-    "city": "Denpasar",
+    "location": {
+      "province": "Bali",
+      "city": "Denpasar"
+    },
     "category": "Villa",
     "title": "Villa Elok Tenang 16",
     "description": "Villa Elok Tenang 16 terletak di Denpasar, Bali. Tempat ini nyaman dan cocok untuk liburan.",
@@ -390,20 +360,18 @@
       "TV",
       "Parkir"
     ],
-    "maxGuest": 9,
-    "numBedroom": 1,
-    "numBathroom": 2,
+    "capacity": 9,
     "price": 1072032,
-    "ratingCount": 4.9,
-    "soldCount": 3545,
-    "createdAt": "2025-05-01T10:54:14.545251",
-    "updatedAt": "2025-05-01T10:54:14.545256"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "d39dbd50-7fbe-4780-91c2-d534cbf2d56a",
-    "hostId": "5f13d6c9-5581-4a83-8cbb-a74c48b1a149",
-    "province": "DIY",
-    "city": "Yogyakarta",
+    "location": {
+      "province": "DIY",
+      "city": "Yogyakarta"
+    },
     "category": "Villa",
     "title": "Hotel Tenang Mewah 17",
     "description": "Hotel Tenang Mewah 17 terletak di Yogyakarta, DIY. Tempat ini nyaman dan cocok untuk liburan.",
@@ -415,20 +383,18 @@
       "WiFi",
       "Parkir"
     ],
-    "maxGuest": 3,
-    "numBedroom": 5,
-    "numBathroom": 1,
+    "capacity": 3,
     "price": 957841,
-    "ratingCount": 4.8,
-    "soldCount": 4456,
-    "createdAt": "2025-05-01T10:54:14.545301",
-    "updatedAt": "2025-05-01T10:54:14.545305"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "73a38d18-a43b-4762-8344-7e70669efe2b",
-    "hostId": "556b15dd-96ef-43b3-a85f-59d7598a02b4",
-    "province": "Jawa Barat",
-    "city": "Bandung",
+    "location": {
+      "province": "Jawa Barat",
+      "city": "Bandung"
+    },
     "category": "Penginapan",
     "title": "Penginapan Mewah Asri 18",
     "description": "Penginapan Mewah Asri 18 terletak di Bandung, Jawa Barat. Tempat ini nyaman dan cocok untuk liburan.",
@@ -440,20 +406,18 @@
       "Sarapan",
       "Parkir"
     ],
-    "maxGuest": 7,
-    "numBedroom": 3,
-    "numBathroom": 1,
+    "capacity": 7,
     "price": 573935,
-    "ratingCount": 4.6,
-    "soldCount": 1719,
-    "createdAt": "2025-05-01T10:54:14.545349",
-    "updatedAt": "2025-05-01T10:54:14.545352"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "7fb627ac-acec-4bb7-aeb6-327e4baf70cd",
-    "hostId": "a90fec38-c3ea-4fb1-94e2-4b82b1a878ab",
-    "province": "Jawa Barat",
-    "city": "Bandung",
+    "location": {
+      "province": "Jawa Barat",
+      "city": "Bandung"
+    },
     "category": "Penginapan",
     "title": "Hotel Ceriah Asri 19",
     "description": "Hotel Ceriah Asri 19 terletak di Bandung, Jawa Barat. Tempat ini nyaman dan cocok untuk liburan.",
@@ -465,20 +429,18 @@
       "AC",
       "Kolam Renang"
     ],
-    "maxGuest": 6,
-    "numBedroom": 5,
-    "numBathroom": 3,
+    "capacity": 6,
     "price": 1094170,
-    "ratingCount": 4.4,
-    "soldCount": 731,
-    "createdAt": "2025-05-01T10:54:14.545502",
-    "updatedAt": "2025-05-01T10:54:14.545528"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "81f51464-36e6-4d4a-98f6-c51687f36ba0",
-    "hostId": "2180be3b-2d8c-444d-9c89-824069b7cb7a",
-    "province": "Jawa Timur",
-    "city": "Surabaya",
+    "location": {
+      "province": "Jawa Timur",
+      "city": "Surabaya"
+    },
     "category": "Resort",
     "title": "Villa Hijau Indah 20",
     "description": "Villa Hijau Indah 20 terletak di Surabaya, Jawa Timur. Tempat ini nyaman dan cocok untuk liburan.",
@@ -490,20 +452,18 @@
       "TV",
       "Kolam Renang"
     ],
-    "maxGuest": 2,
-    "numBedroom": 5,
-    "numBathroom": 2,
+    "capacity": 2,
     "price": 567635,
-    "ratingCount": 4.7,
-    "soldCount": 3585,
-    "createdAt": "2025-05-01T10:54:14.545582",
-    "updatedAt": "2025-05-01T10:54:14.545584"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "62280040-b98c-4089-b9ef-30b9c492b2e1",
-    "hostId": "bd34af20-7b9d-41ca-8811-777433231e8a",
-    "province": "Riau",
-    "city": "Pekanbaru",
+    "location": {
+      "province": "Riau",
+      "city": "Pekanbaru"
+    },
     "category": "Villa",
     "title": "Villa Alam Damai 21",
     "description": "Villa Alam Damai 21 terletak di Pekanbaru, Riau. Tempat ini nyaman dan cocok untuk liburan.",
@@ -515,20 +475,18 @@
       "Parkir",
       "Kolam Renang"
     ],
-    "maxGuest": 5,
-    "numBedroom": 4,
-    "numBathroom": 1,
+    "capacity": 5,
     "price": 624475,
-    "ratingCount": 4.7,
-    "soldCount": 3786,
-    "createdAt": "2025-05-01T10:54:14.545624",
-    "updatedAt": "2025-05-01T10:54:14.545626"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "ff9208c3-82fd-408e-b0b3-078000a5e855",
-    "hostId": "dbe0c0a8-cb21-4ce1-bf72-82b8d80f1cce",
-    "province": "DIY",
-    "city": "Yogyakarta",
+    "location": {
+      "province": "DIY",
+      "city": "Yogyakarta"
+    },
     "category": "Villa",
     "title": "Hotel Nyaman Alam 22",
     "description": "Hotel Nyaman Alam 22 terletak di Yogyakarta, DIY. Tempat ini nyaman dan cocok untuk liburan.",
@@ -540,20 +498,18 @@
       "Parkir",
       "Kolam Renang"
     ],
-    "maxGuest": 7,
-    "numBedroom": 2,
-    "numBathroom": 1,
+    "capacity": 7,
     "price": 670464,
-    "ratingCount": 4.7,
-    "soldCount": 2932,
-    "createdAt": "2025-05-01T10:54:14.545646",
-    "updatedAt": "2025-05-01T10:54:14.545648"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "725db0ff-8dc8-45b2-b84f-7e1ac39a43f3",
-    "hostId": "a3a32599-34b8-4ae9-a3d6-8ec224718ad5",
-    "province": "Bali",
-    "city": "Denpasar",
+    "location": {
+      "province": "Bali",
+      "city": "Denpasar"
+    },
     "category": "Penginapan",
     "title": "Penginapan Elok Indah 23",
     "description": "Penginapan Elok Indah 23 terletak di Denpasar, Bali. Tempat ini nyaman dan cocok untuk liburan.",
@@ -565,20 +521,18 @@
       "Dapur",
       "Sarapan"
     ],
-    "maxGuest": 7,
-    "numBedroom": 5,
-    "numBathroom": 3,
+    "capacity": 7,
     "price": 550919,
-    "ratingCount": 4.8,
-    "soldCount": 4506,
-    "createdAt": "2025-05-01T10:54:14.545667",
-    "updatedAt": "2025-05-01T10:54:14.545669"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "0c18368e-1fa0-4e69-b694-6cdea527fb68",
-    "hostId": "1dbf617e-5012-4a26-985a-aa9b86f2199d",
-    "province": "NTT",
-    "city": "Kupang",
+    "location": {
+      "province": "NTT",
+      "city": "Kupang"
+    },
     "category": "Resort",
     "title": "Resort Alam Indah 24",
     "description": "Resort Alam Indah 24 terletak di Kupang, NTT. Tempat ini nyaman dan cocok untuk liburan.",
@@ -590,20 +544,18 @@
       "Dapur",
       "TV"
     ],
-    "maxGuest": 3,
-    "numBedroom": 4,
-    "numBathroom": 2,
+    "capacity": 3,
     "price": 1204467,
-    "ratingCount": 5.0,
-    "soldCount": 4937,
-    "createdAt": "2025-05-01T10:54:14.545699",
-    "updatedAt": "2025-05-01T10:54:14.545702"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "c32102f4-431e-4f1d-936c-485c143c1947",
-    "hostId": "89fa7f3b-9d2f-48d1-a618-0f96453319b9",
-    "province": "Jawa Timur",
-    "city": "Surabaya",
+    "location": {
+      "province": "Jawa Timur",
+      "city": "Surabaya"
+    },
     "category": "Penginapan",
     "title": "Penginapan Tenang Ceriah 25",
     "description": "Penginapan Tenang Ceriah 25 terletak di Surabaya, Jawa Timur. Tempat ini nyaman dan cocok untuk liburan.",
@@ -615,20 +567,18 @@
       "TV",
       "Parkir"
     ],
-    "maxGuest": 10,
-    "numBedroom": 3,
-    "numBathroom": 1,
+    "capacity": 10,
     "price": 1129773,
-    "ratingCount": 4.4,
-    "soldCount": 1075,
-    "createdAt": "2025-05-01T10:54:14.545739",
-    "updatedAt": "2025-05-01T10:54:14.545741"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "bec25e30-c845-4cfd-93f6-5f225da2709a",
-    "hostId": "60421756-3c13-4e1e-b907-4a16bfe53042",
-    "province": "NTB",
-    "city": "Lombok",
+    "location": {
+      "province": "NTB",
+      "city": "Lombok"
+    },
     "category": "Hotel",
     "title": "Resort Indah Alam 26",
     "description": "Resort Indah Alam 26 terletak di Lombok, NTB. Tempat ini nyaman dan cocok untuk liburan.",
@@ -640,20 +590,18 @@
       "Parkir",
       "TV"
     ],
-    "maxGuest": 7,
-    "numBedroom": 3,
-    "numBathroom": 2,
+    "capacity": 7,
     "price": 1185831,
-    "ratingCount": 4.9,
-    "soldCount": 2561,
-    "createdAt": "2025-05-01T10:54:14.545773",
-    "updatedAt": "2025-05-01T10:54:14.545774"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "788b6ebc-c208-4ed2-8168-af7cbd0ec35b",
-    "hostId": "4c7a275c-c185-4989-b175-9d36f5cfff85",
-    "province": "Sulawesi Utara",
-    "city": "Manado",
+    "location": {
+      "province": "Sulawesi Utara",
+      "city": "Manado"
+    },
     "category": "Hotel",
     "title": "Resort Alam Indah 27",
     "description": "Resort Alam Indah 27 terletak di Manado, Sulawesi Utara. Tempat ini nyaman dan cocok untuk liburan.",
@@ -665,20 +613,18 @@
       "Kolam Renang",
       "Sarapan"
     ],
-    "maxGuest": 6,
-    "numBedroom": 3,
-    "numBathroom": 1,
+    "capacity": 6,
     "price": 1073234,
-    "ratingCount": 4.9,
-    "soldCount": 802,
-    "createdAt": "2025-05-01T10:54:14.545795",
-    "updatedAt": "2025-05-01T10:54:14.545796"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "3f70795e-f3f3-4bdc-8420-3ea0c6499b00",
-    "hostId": "5e713462-f653-4e7f-9b70-ac83eb1f3ae9",
-    "province": "Kalimantan Barat",
-    "city": "Pontianak",
+    "location": {
+      "province": "Kalimantan Barat",
+      "city": "Pontianak"
+    },
     "category": "Resort",
     "title": "Villa Tenang Nyaman 28",
     "description": "Villa Tenang Nyaman 28 terletak di Pontianak, Kalimantan Barat. Tempat ini nyaman dan cocok untuk liburan.",
@@ -690,20 +636,18 @@
       "Sarapan",
       "Dapur"
     ],
-    "maxGuest": 5,
-    "numBedroom": 1,
-    "numBathroom": 1,
+    "capacity": 5,
     "price": 1187245,
-    "ratingCount": 4.6,
-    "soldCount": 4760,
-    "createdAt": "2025-05-01T10:54:14.545815",
-    "updatedAt": "2025-05-01T10:54:14.545817"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "6cfe8c4a-8d79-4a60-9c5b-c1ef8b396bb2",
-    "hostId": "64631bbf-30d2-4fcc-9719-9f3955d32aed",
-    "province": "Bali",
-    "city": "Denpasar",
+    "location": {
+      "province": "Bali",
+      "city": "Denpasar"
+    },
     "category": "Villa",
     "title": "Hotel Hijau Alam 29",
     "description": "Hotel Hijau Alam 29 terletak di Denpasar, Bali. Tempat ini nyaman dan cocok untuk liburan.",
@@ -715,20 +659,18 @@
       "AC",
       "Kolam Renang"
     ],
-    "maxGuest": 4,
-    "numBedroom": 5,
-    "numBathroom": 2,
+    "capacity": 4,
     "price": 1073152,
-    "ratingCount": 4.3,
-    "soldCount": 2325,
-    "createdAt": "2025-05-01T10:54:14.545836",
-    "updatedAt": "2025-05-01T10:54:14.545837"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "27046182-f44e-48a0-90b6-8aae20199226",
-    "hostId": "1b9d2481-a489-4490-be3f-574be312b9c3",
-    "province": "Kalimantan Barat",
-    "city": "Pontianak",
+    "location": {
+      "province": "Kalimantan Barat",
+      "city": "Pontianak"
+    },
     "category": "Resort",
     "title": "Penginapan Mewah Indah 30",
     "description": "Penginapan Mewah Indah 30 terletak di Pontianak, Kalimantan Barat. Tempat ini nyaman dan cocok untuk liburan.",
@@ -740,20 +682,18 @@
       "Dapur",
       "Parkir"
     ],
-    "maxGuest": 3,
-    "numBedroom": 5,
-    "numBathroom": 2,
+    "capacity": 3,
     "price": 1035034,
-    "ratingCount": 4.5,
-    "soldCount": 1121,
-    "createdAt": "2025-05-01T10:54:14.545856",
-    "updatedAt": "2025-05-01T10:54:14.545858"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "fa535f8b-b22c-41a9-8bf3-be92ab3aa057",
-    "hostId": "1e769ede-21b7-4c08-a5fb-902170903c9a",
-    "province": "Maluku",
-    "city": "Ambon",
+    "location": {
+      "province": "Maluku",
+      "city": "Ambon"
+    },
     "category": "Hotel",
     "title": "Hotel Ceriah Elok 31",
     "description": "Hotel Ceriah Elok 31 terletak di Ambon, Maluku. Tempat ini nyaman dan cocok untuk liburan.",
@@ -765,20 +705,18 @@
       "Parkir",
       "AC"
     ],
-    "maxGuest": 8,
-    "numBedroom": 2,
-    "numBathroom": 1,
+    "capacity": 8,
     "price": 1208508,
-    "ratingCount": 4.3,
-    "soldCount": 3492,
-    "createdAt": "2025-05-01T10:54:14.545884",
-    "updatedAt": "2025-05-01T10:54:14.545887"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "c007cfd3-b061-4cc9-b1c8-6e2a669302d1",
-    "hostId": "9477ae85-8a6a-4e2f-af02-9c02fde48901",
-    "province": "Kalimantan Barat",
-    "city": "Pontianak",
+    "location": {
+      "province": "Kalimantan Barat",
+      "city": "Pontianak"
+    },
     "category": "Hotel",
     "title": "Villa Tenang Nyaman 32",
     "description": "Villa Tenang Nyaman 32 terletak di Pontianak, Kalimantan Barat. Tempat ini nyaman dan cocok untuk liburan.",
@@ -790,20 +728,18 @@
       "TV",
       "Parkir"
     ],
-    "maxGuest": 8,
-    "numBedroom": 4,
-    "numBathroom": 3,
+    "capacity": 8,
     "price": 886210,
-    "ratingCount": 4.9,
-    "soldCount": 1351,
-    "createdAt": "2025-05-01T10:54:14.545927",
-    "updatedAt": "2025-05-01T10:54:14.545929"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "0b891115-ed51-487c-9b5c-f6cc5d31706a",
-    "hostId": "adf50a8c-162e-4b34-9cf1-f553697eb339",
-    "province": "Sumatera Selatan",
-    "city": "Palembang",
+    "location": {
+      "province": "Sumatera Selatan",
+      "city": "Palembang"
+    },
     "category": "Resort",
     "title": "Hotel Ceriah Tenang 33",
     "description": "Hotel Ceriah Tenang 33 terletak di Palembang, Sumatera Selatan. Tempat ini nyaman dan cocok untuk liburan.",
@@ -815,20 +751,18 @@
       "AC",
       "WiFi"
     ],
-    "maxGuest": 10,
-    "numBedroom": 2,
-    "numBathroom": 1,
+    "capacity": 10,
     "price": 691401,
-    "ratingCount": 4.5,
-    "soldCount": 3102,
-    "createdAt": "2025-05-01T10:54:14.545950",
-    "updatedAt": "2025-05-01T10:54:14.545952"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "027a8907-1f14-47dd-a617-5ff1057cba20",
-    "hostId": "5ccaf885-cf40-457d-ad74-d5f0f1a3b153",
-    "province": "Papua",
-    "city": "Jayapura",
+    "location": {
+      "province": "Papua",
+      "city": "Jayapura"
+    },
     "category": "Resort",
     "title": "Resort Asri Hijau 34",
     "description": "Resort Asri Hijau 34 terletak di Jayapura, Papua. Tempat ini nyaman dan cocok untuk liburan.",
@@ -840,20 +774,18 @@
       "Parkir",
       "WiFi"
     ],
-    "maxGuest": 10,
-    "numBedroom": 5,
-    "numBathroom": 1,
+    "capacity": 10,
     "price": 1157725,
-    "ratingCount": 4.3,
-    "soldCount": 4693,
-    "createdAt": "2025-05-01T10:54:14.545972",
-    "updatedAt": "2025-05-01T10:54:14.545974"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "89b7980a-c010-463e-855e-cb942f8ec623",
-    "hostId": "573aa048-5183-4bc9-975f-102fd58e2d1f",
-    "province": "Riau",
-    "city": "Pekanbaru",
+    "location": {
+      "province": "Riau",
+      "city": "Pekanbaru"
+    },
     "category": "Penginapan",
     "title": "Resort Damai Indah 35",
     "description": "Resort Damai Indah 35 terletak di Pekanbaru, Riau. Tempat ini nyaman dan cocok untuk liburan.",
@@ -865,20 +797,18 @@
       "Dapur",
       "Parkir"
     ],
-    "maxGuest": 6,
-    "numBedroom": 5,
-    "numBathroom": 3,
+    "capacity": 6,
     "price": 963876,
-    "ratingCount": 4.4,
-    "soldCount": 4605,
-    "createdAt": "2025-05-01T10:54:14.545992",
-    "updatedAt": "2025-05-01T10:54:14.545994"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "bd9cf011-2000-4cf9-b2d9-d732cf514652",
-    "hostId": "433ce12a-4ffc-468c-a899-ef6389ffb528",
-    "province": "Kalimantan Timur",
-    "city": "Balikpapan",
+    "location": {
+      "province": "Kalimantan Timur",
+      "city": "Balikpapan"
+    },
     "category": "Villa",
     "title": "Penginapan Elok Alam 36",
     "description": "Penginapan Elok Alam 36 terletak di Balikpapan, Kalimantan Timur. Tempat ini nyaman dan cocok untuk liburan.",
@@ -890,20 +820,18 @@
       "Kolam Renang",
       "TV"
     ],
-    "maxGuest": 3,
-    "numBedroom": 2,
-    "numBathroom": 1,
+    "capacity": 3,
     "price": 614567,
-    "ratingCount": 4.4,
-    "soldCount": 860,
-    "createdAt": "2025-05-01T10:54:14.546016",
-    "updatedAt": "2025-05-01T10:54:14.546017"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "16d8a85b-b949-48ea-8a26-5d29b5481202",
-    "hostId": "e37d5755-1b27-4a7f-82d5-6d304fad6dcd",
-    "province": "Papua",
-    "city": "Jayapura",
+    "location": {
+      "province": "Papua",
+      "city": "Jayapura"
+    },
     "category": "Resort",
     "title": "Hotel Indah Tenang 37",
     "description": "Hotel Indah Tenang 37 terletak di Jayapura, Papua. Tempat ini nyaman dan cocok untuk liburan.",
@@ -915,20 +843,18 @@
       "AC",
       "TV"
     ],
-    "maxGuest": 7,
-    "numBedroom": 5,
-    "numBathroom": 2,
+    "capacity": 7,
     "price": 650212,
-    "ratingCount": 4.9,
-    "soldCount": 2360,
-    "createdAt": "2025-05-01T10:54:14.546040",
-    "updatedAt": "2025-05-01T10:54:14.546041"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "40697569-5559-4d18-a215-92b71abd480f",
-    "hostId": "cb214085-1872-49d7-b9fc-de1b9673491a",
-    "province": "Jawa Timur",
-    "city": "Surabaya",
+    "location": {
+      "province": "Jawa Timur",
+      "city": "Surabaya"
+    },
     "category": "Resort",
     "title": "Penginapan Hijau Alam 38",
     "description": "Penginapan Hijau Alam 38 terletak di Surabaya, Jawa Timur. Tempat ini nyaman dan cocok untuk liburan.",
@@ -940,20 +866,18 @@
       "Kolam Renang",
       "Parkir"
     ],
-    "maxGuest": 10,
-    "numBedroom": 2,
-    "numBathroom": 1,
+    "capacity": 10,
     "price": 766056,
-    "ratingCount": 4.3,
-    "soldCount": 1488,
-    "createdAt": "2025-05-01T10:54:14.546060",
-    "updatedAt": "2025-05-01T10:54:14.546061"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "374495e0-3a54-4aa9-a34b-d00fd25e344a",
-    "hostId": "50db9093-a063-4811-b93f-90980f2c9ce8",
-    "province": "Kalimantan Timur",
-    "city": "Balikpapan",
+    "location": {
+      "province": "Kalimantan Timur",
+      "city": "Balikpapan"
+    },
     "category": "Villa",
     "title": "Resort Nyaman Indah 39",
     "description": "Resort Nyaman Indah 39 terletak di Balikpapan, Kalimantan Timur. Tempat ini nyaman dan cocok untuk liburan.",
@@ -965,20 +889,18 @@
       "Sarapan",
       "Kolam Renang"
     ],
-    "maxGuest": 6,
-    "numBedroom": 3,
-    "numBathroom": 2,
+    "capacity": 6,
     "price": 772348,
-    "ratingCount": 4.9,
-    "soldCount": 2404,
-    "createdAt": "2025-05-01T10:54:14.546081",
-    "updatedAt": "2025-05-01T10:54:14.546082"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "e72bcf12-24f3-4518-bd1d-68096bbc668d",
-    "hostId": "e502616b-f830-476f-9f24-2f4c3527bd41",
-    "province": "Maluku",
-    "city": "Ambon",
+    "location": {
+      "province": "Maluku",
+      "city": "Ambon"
+    },
     "category": "Hotel",
     "title": "Penginapan Elok Damai 40",
     "description": "Penginapan Elok Damai 40 terletak di Ambon, Maluku. Tempat ini nyaman dan cocok untuk liburan.",
@@ -990,20 +912,18 @@
       "Dapur",
       "Sarapan"
     ],
-    "maxGuest": 7,
-    "numBedroom": 3,
-    "numBathroom": 2,
+    "capacity": 7,
     "price": 527621,
-    "ratingCount": 4.8,
-    "soldCount": 2223,
-    "createdAt": "2025-05-01T10:54:14.546101",
-    "updatedAt": "2025-05-01T10:54:14.546103"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "83e72d67-30bc-49ee-bef6-a14ed652dd05",
-    "hostId": "be3d7708-ec9b-4394-bee8-96c3a3c5244b",
-    "province": "Jawa Barat",
-    "city": "Bandung",
+    "location": {
+      "province": "Jawa Barat",
+      "city": "Bandung"
+    },
     "category": "Penginapan",
     "title": "Hotel Elok Alam 41",
     "description": "Hotel Elok Alam 41 terletak di Bandung, Jawa Barat. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1015,20 +935,18 @@
       "Sarapan",
       "WiFi"
     ],
-    "maxGuest": 10,
-    "numBedroom": 2,
-    "numBathroom": 1,
+    "capacity": 10,
     "price": 992941,
-    "ratingCount": 4.6,
-    "soldCount": 614,
-    "createdAt": "2025-05-01T10:54:14.546123",
-    "updatedAt": "2025-05-01T10:54:14.546125"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "755d048c-a4a3-483d-a779-79b9ff9b5915",
-    "hostId": "b934e592-0114-4708-9dd2-9aa229499232",
-    "province": "Papua",
-    "city": "Jayapura",
+    "location": {
+      "province": "Papua",
+      "city": "Jayapura"
+    },
     "category": "Hotel",
     "title": "Resort Indah Damai 42",
     "description": "Resort Indah Damai 42 terletak di Jayapura, Papua. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1040,20 +958,18 @@
       "AC",
       "Parkir"
     ],
-    "maxGuest": 9,
-    "numBedroom": 3,
-    "numBathroom": 3,
+    "capacity": 9,
     "price": 1122785,
-    "ratingCount": 4.9,
-    "soldCount": 454,
-    "createdAt": "2025-05-01T10:54:14.546171",
-    "updatedAt": "2025-05-01T10:54:14.546174"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "0dd44e5f-8ec6-4f8e-ad2f-ad712d325458",
-    "hostId": "00d35a4a-71c8-40f1-a7a1-f54a7147055d",
-    "province": "Jawa Timur",
-    "city": "Surabaya",
+    "location": {
+      "province": "Jawa Timur",
+      "city": "Surabaya"
+    },
     "category": "Resort",
     "title": "Villa Elok Elok 43",
     "description": "Villa Elok Elok 43 terletak di Surabaya, Jawa Timur. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1065,20 +981,18 @@
       "Kolam Renang",
       "TV"
     ],
-    "maxGuest": 6,
-    "numBedroom": 2,
-    "numBathroom": 1,
+    "capacity": 6,
     "price": 771869,
-    "ratingCount": 4.7,
-    "soldCount": 3671,
-    "createdAt": "2025-05-01T10:54:14.546210",
-    "updatedAt": "2025-05-01T10:54:14.546211"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "91e8d68d-a8ce-4ede-9b85-d12317a254cd",
-    "hostId": "8196fb32-694a-4216-8008-39d191aadc35",
-    "province": "Maluku Utara",
-    "city": "Ternate",
+    "location": {
+      "province": "Maluku Utara",
+      "city": "Ternate"
+    },
     "category": "Resort",
     "title": "Penginapan Mewah Hijau 44",
     "description": "Penginapan Mewah Hijau 44 terletak di Ternate, Maluku Utara. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1090,20 +1004,18 @@
       "Parkir",
       "AC"
     ],
-    "maxGuest": 5,
-    "numBedroom": 1,
-    "numBathroom": 3,
+    "capacity": 5,
     "price": 940415,
-    "ratingCount": 4.3,
-    "soldCount": 1417,
-    "createdAt": "2025-05-01T10:54:14.546230",
-    "updatedAt": "2025-05-01T10:54:14.546233"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "1daf1114-2f29-4585-b448-1873de424b87",
-    "hostId": "5b9d5d64-d48e-420d-b3a6-f14b7333ff60",
-    "province": "Maluku",
-    "city": "Ambon",
+    "location": {
+      "province": "Maluku",
+      "city": "Ambon"
+    },
     "category": "Hotel",
     "title": "Hotel Mewah Ceriah 45",
     "description": "Hotel Mewah Ceriah 45 terletak di Ambon, Maluku. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1115,20 +1027,18 @@
       "Dapur",
       "Sarapan"
     ],
-    "maxGuest": 10,
-    "numBedroom": 5,
-    "numBathroom": 1,
+    "capacity": 10,
     "price": 1007872,
-    "ratingCount": 4.8,
-    "soldCount": 4164,
-    "createdAt": "2025-05-01T10:54:14.546251",
-    "updatedAt": "2025-05-01T10:54:14.546253"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "40644f17-0ba7-4141-941f-6cfbf0667f4d",
-    "hostId": "8a8e5b92-0c1a-40fa-9a73-e5ffd847a25c",
-    "province": "Bali",
-    "city": "Denpasar",
+    "location": {
+      "province": "Bali",
+      "city": "Denpasar"
+    },
     "category": "Resort",
     "title": "Villa Elok Elok 46",
     "description": "Villa Elok Elok 46 terletak di Denpasar, Bali. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1140,20 +1050,18 @@
       "Dapur",
       "WiFi"
     ],
-    "maxGuest": 10,
-    "numBedroom": 2,
-    "numBathroom": 2,
+    "capacity": 10,
     "price": 510083,
-    "ratingCount": 4.7,
-    "soldCount": 979,
-    "createdAt": "2025-05-01T10:54:14.546270",
-    "updatedAt": "2025-05-01T10:54:14.546272"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "3f106f09-06b5-4abe-a319-1f3bdca82117",
-    "hostId": "d04a8307-e093-4d7a-afe1-e98f857fae7f",
-    "province": "Sulawesi Selatan",
-    "city": "Makassar",
+    "location": {
+      "province": "Sulawesi Selatan",
+      "city": "Makassar"
+    },
     "category": "Villa",
     "title": "Penginapan Damai Ceriah 47",
     "description": "Penginapan Damai Ceriah 47 terletak di Makassar, Sulawesi Selatan. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1165,20 +1073,18 @@
       "Parkir",
       "TV"
     ],
-    "maxGuest": 2,
-    "numBedroom": 1,
-    "numBathroom": 2,
+    "capacity": 2,
     "price": 1170376,
-    "ratingCount": 4.6,
-    "soldCount": 129,
-    "createdAt": "2025-05-01T10:54:14.546290",
-    "updatedAt": "2025-05-01T10:54:14.546292"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "f7d86b2f-0cc2-4937-be72-1c98ae35f777",
-    "hostId": "3c528bef-3c9b-43ad-a984-81e63daa7e79",
-    "province": "Sumatera Selatan",
-    "city": "Palembang",
+    "location": {
+      "province": "Sumatera Selatan",
+      "city": "Palembang"
+    },
     "category": "Resort",
     "title": "Hotel Asri Alam 48",
     "description": "Hotel Asri Alam 48 terletak di Palembang, Sumatera Selatan. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1190,20 +1096,18 @@
       "AC",
       "WiFi"
     ],
-    "maxGuest": 8,
-    "numBedroom": 1,
-    "numBathroom": 2,
+    "capacity": 8,
     "price": 1242246,
-    "ratingCount": 4.8,
-    "soldCount": 3260,
-    "createdAt": "2025-05-01T10:54:14.546311",
-    "updatedAt": "2025-05-01T10:54:14.546313"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "0c733cde-6198-40a7-8a2e-93b1fe42eada",
-    "hostId": "1c5d7575-6c8e-4ee3-b98f-d1849a2531fa",
-    "province": "Papua",
-    "city": "Jayapura",
+    "location": {
+      "province": "Papua",
+      "city": "Jayapura"
+    },
     "category": "Hotel",
     "title": "Hotel Damai Alam 49",
     "description": "Hotel Damai Alam 49 terletak di Jayapura, Papua. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1215,20 +1119,18 @@
       "Dapur",
       "Kolam Renang"
     ],
-    "maxGuest": 9,
-    "numBedroom": 2,
-    "numBathroom": 3,
+    "capacity": 9,
     "price": 1053415,
-    "ratingCount": 4.4,
-    "soldCount": 2707,
-    "createdAt": "2025-05-01T10:54:14.546332",
-    "updatedAt": "2025-05-01T10:54:14.546334"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "22eaf201-f3e7-489c-a0fa-2a9c69f8d88c",
-    "hostId": "18c976b3-0a5d-4cc4-8267-2ec03c1118a0",
-    "province": "Sumatera Utara",
-    "city": "Medan",
+    "location": {
+      "province": "Sumatera Utara",
+      "city": "Medan"
+    },
     "category": "Resort",
     "title": "Resort Ceriah Asri 50",
     "description": "Resort Ceriah Asri 50 terletak di Medan, Sumatera Utara. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1240,20 +1142,18 @@
       "WiFi",
       "Sarapan"
     ],
-    "maxGuest": 3,
-    "numBedroom": 2,
-    "numBathroom": 1,
+    "capacity": 3,
     "price": 822011,
-    "ratingCount": 4.8,
-    "soldCount": 2506,
-    "createdAt": "2025-05-01T10:54:14.546354",
-    "updatedAt": "2025-05-01T10:54:14.546356"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "49fdc54b-3f37-4767-831c-734bc1285ac7",
-    "hostId": "f89b89e4-6eb7-428c-b4be-613f794b4dfb",
-    "province": "Jawa Barat",
-    "city": "Bandung",
+    "location": {
+      "province": "Jawa Barat",
+      "city": "Bandung"
+    },
     "category": "Penginapan",
     "title": "Penginapan Tenang Ceriah 51",
     "description": "Penginapan Tenang Ceriah 51 terletak di Bandung, Jawa Barat. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1265,20 +1165,18 @@
       "Parkir",
       "AC"
     ],
-    "maxGuest": 4,
-    "numBedroom": 4,
-    "numBathroom": 3,
+    "capacity": 4,
     "price": 778955,
-    "ratingCount": 4.6,
-    "soldCount": 2927,
-    "createdAt": "2025-05-01T10:54:14.546399",
-    "updatedAt": "2025-05-01T10:54:14.546402"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "a32c4b61-93d8-450e-b89d-e8bcff875a6b",
-    "hostId": "2bf7e1ca-9873-4929-b02b-3a20924d606c",
-    "province": "Jawa Timur",
-    "city": "Surabaya",
+    "location": {
+      "province": "Jawa Timur",
+      "city": "Surabaya"
+    },
     "category": "Villa",
     "title": "Resort Indah Ceriah 52",
     "description": "Resort Indah Ceriah 52 terletak di Surabaya, Jawa Timur. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1290,20 +1188,18 @@
       "Sarapan",
       "Dapur"
     ],
-    "maxGuest": 8,
-    "numBedroom": 4,
-    "numBathroom": 1,
+    "capacity": 8,
     "price": 924756,
-    "ratingCount": 4.8,
-    "soldCount": 2216,
-    "createdAt": "2025-05-01T10:54:14.546433",
-    "updatedAt": "2025-05-01T10:54:14.546435"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "5b9e65af-1568-4aad-aaeb-f81b6b94c49e",
-    "hostId": "d3865dfa-69ba-4547-8a25-48fbeb44da4f",
-    "province": "NTB",
-    "city": "Lombok",
+    "location": {
+      "province": "NTB",
+      "city": "Lombok"
+    },
     "category": "Villa",
     "title": "Villa Nyaman Hijau 53",
     "description": "Villa Nyaman Hijau 53 terletak di Lombok, NTB. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1315,20 +1211,18 @@
       "TV",
       "Parkir"
     ],
-    "maxGuest": 3,
-    "numBedroom": 4,
-    "numBathroom": 2,
+    "capacity": 3,
     "price": 671728,
-    "ratingCount": 4.3,
-    "soldCount": 4252,
-    "createdAt": "2025-05-01T10:54:14.546459",
-    "updatedAt": "2025-05-01T10:54:14.546461"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "c2df05b9-3749-4eab-89e2-618c86e4be48",
-    "hostId": "5189b807-639e-4c97-841c-a884e9775700",
-    "province": "Kalimantan Timur",
-    "city": "Balikpapan",
+    "location": {
+      "province": "Kalimantan Timur",
+      "city": "Balikpapan"
+    },
     "category": "Hotel",
     "title": "Resort Asri Hijau 54",
     "description": "Resort Asri Hijau 54 terletak di Balikpapan, Kalimantan Timur. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1340,20 +1234,18 @@
       "AC",
       "Dapur"
     ],
-    "maxGuest": 3,
-    "numBedroom": 5,
-    "numBathroom": 1,
+    "capacity": 3,
     "price": 799352,
-    "ratingCount": 4.8,
-    "soldCount": 2008,
-    "createdAt": "2025-05-01T10:54:14.546480",
-    "updatedAt": "2025-05-01T10:54:14.546482"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "7489c16c-890a-402f-84e8-da5951f831c6",
-    "hostId": "e776b737-648a-4b4e-9b6a-b2d0e512c497",
-    "province": "DIY",
-    "city": "Yogyakarta",
+    "location": {
+      "province": "DIY",
+      "city": "Yogyakarta"
+    },
     "category": "Hotel",
     "title": "Penginapan Damai Mewah 55",
     "description": "Penginapan Damai Mewah 55 terletak di Yogyakarta, DIY. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1365,20 +1257,18 @@
       "WiFi",
       "Sarapan"
     ],
-    "maxGuest": 6,
-    "numBedroom": 3,
-    "numBathroom": 2,
+    "capacity": 6,
     "price": 580645,
-    "ratingCount": 4.4,
-    "soldCount": 204,
-    "createdAt": "2025-05-01T10:54:14.546500",
-    "updatedAt": "2025-05-01T10:54:14.546502"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "0e895e4e-c36f-491f-9fab-693410708448",
-    "hostId": "0c2f4a61-7b16-4f0d-b258-94954c8ef750",
-    "province": "Sumatera Selatan",
-    "city": "Palembang",
+    "location": {
+      "province": "Sumatera Selatan",
+      "city": "Palembang"
+    },
     "category": "Villa",
     "title": "Hotel Damai Alam 56",
     "description": "Hotel Damai Alam 56 terletak di Palembang, Sumatera Selatan. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1390,20 +1280,18 @@
       "AC",
       "TV"
     ],
-    "maxGuest": 6,
-    "numBedroom": 1,
-    "numBathroom": 3,
+    "capacity": 6,
     "price": 1037463,
-    "ratingCount": 4.9,
-    "soldCount": 4663,
-    "createdAt": "2025-05-01T10:54:14.546521",
-    "updatedAt": "2025-05-01T10:54:14.546523"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "e8bbed0f-2721-461e-aa0c-f315fc819628",
-    "hostId": "bbb9c062-509e-4890-b24b-347324e8026a",
-    "province": "Kalimantan Selatan",
-    "city": "Banjarmasin",
+    "location": {
+      "province": "Kalimantan Selatan",
+      "city": "Banjarmasin"
+    },
     "category": "Hotel",
     "title": "Villa Tenang Ceriah 57",
     "description": "Villa Tenang Ceriah 57 terletak di Banjarmasin, Kalimantan Selatan. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1415,20 +1303,18 @@
       "WiFi",
       "Parkir"
     ],
-    "maxGuest": 8,
-    "numBedroom": 1,
-    "numBathroom": 1,
+    "capacity": 8,
     "price": 977627,
-    "ratingCount": 4.4,
-    "soldCount": 2016,
-    "createdAt": "2025-05-01T10:54:14.546545",
-    "updatedAt": "2025-05-01T10:54:14.546546"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "03d5a209-7bb0-44bb-bafd-e7482b0008dc",
-    "hostId": "36616ba6-92f4-4ebb-a5c7-bbc77db6fafa",
-    "province": "Riau",
-    "city": "Pekanbaru",
+    "location": {
+      "province": "Riau",
+      "city": "Pekanbaru"
+    },
     "category": "Hotel",
     "title": "Hotel Ceriah Asri 58",
     "description": "Hotel Ceriah Asri 58 terletak di Pekanbaru, Riau. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1440,20 +1326,18 @@
       "Sarapan",
       "WiFi"
     ],
-    "maxGuest": 7,
-    "numBedroom": 4,
-    "numBathroom": 3,
+    "capacity": 7,
     "price": 1070732,
-    "ratingCount": 4.9,
-    "soldCount": 4159,
-    "createdAt": "2025-05-01T10:54:14.546567",
-    "updatedAt": "2025-05-01T10:54:14.546568"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "46867bc5-ce5d-45aa-9528-91b269462fd6",
-    "hostId": "a4f24341-05cd-47ed-815a-7430ab271384",
-    "province": "Papua",
-    "city": "Jayapura",
+    "location": {
+      "province": "Papua",
+      "city": "Jayapura"
+    },
     "category": "Resort",
     "title": "Villa Asri Tenang 59",
     "description": "Villa Asri Tenang 59 terletak di Jayapura, Papua. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1465,20 +1349,18 @@
       "Dapur",
       "Parkir"
     ],
-    "maxGuest": 4,
-    "numBedroom": 2,
-    "numBathroom": 1,
+    "capacity": 4,
     "price": 1113039,
-    "ratingCount": 5.0,
-    "soldCount": 2176,
-    "createdAt": "2025-05-01T10:54:14.546593",
-    "updatedAt": "2025-05-01T10:54:14.546596"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "46b47f41-e84c-4a50-af3c-ac6be2e1739e",
-    "hostId": "fccf21c2-fa54-4ede-868e-a05aa2c54863",
-    "province": "Sulawesi Utara",
-    "city": "Manado",
+    "location": {
+      "province": "Sulawesi Utara",
+      "city": "Manado"
+    },
     "category": "Villa",
     "title": "Penginapan Damai Damai 60",
     "description": "Penginapan Damai Damai 60 terletak di Manado, Sulawesi Utara. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1490,20 +1372,18 @@
       "AC",
       "WiFi"
     ],
-    "maxGuest": 3,
-    "numBedroom": 2,
-    "numBathroom": 3,
+    "capacity": 3,
     "price": 507577,
-    "ratingCount": 4.3,
-    "soldCount": 3303,
-    "createdAt": "2025-05-01T10:54:14.546634",
-    "updatedAt": "2025-05-01T10:54:14.546636"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "3f82c5c3-ddae-40a7-b307-2adad77826f1",
-    "hostId": "a59f3c86-dff2-4090-a96a-9771305e6e32",
-    "province": "Jawa Timur",
-    "city": "Surabaya",
+    "location": {
+      "province": "Jawa Timur",
+      "city": "Surabaya"
+    },
     "category": "Resort",
     "title": "Hotel Asri Nyaman 61",
     "description": "Hotel Asri Nyaman 61 terletak di Surabaya, Jawa Timur. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1515,20 +1395,18 @@
       "Parkir",
       "Kolam Renang"
     ],
-    "maxGuest": 8,
-    "numBedroom": 5,
-    "numBathroom": 1,
+    "capacity": 8,
     "price": 1165270,
-    "ratingCount": 4.8,
-    "soldCount": 247,
-    "createdAt": "2025-05-01T10:54:14.546656",
-    "updatedAt": "2025-05-01T10:54:14.546657"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "a93f68e1-74de-4a35-90c8-f469f14e2430",
-    "hostId": "2f762a01-4d4d-4e72-bb8c-4c02e4269a8d",
-    "province": "Maluku Utara",
-    "city": "Ternate",
+    "location": {
+      "province": "Maluku Utara",
+      "city": "Ternate"
+    },
     "category": "Villa",
     "title": "Villa Mewah Hijau 62",
     "description": "Villa Mewah Hijau 62 terletak di Ternate, Maluku Utara. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1540,20 +1418,18 @@
       "Dapur",
       "AC"
     ],
-    "maxGuest": 8,
-    "numBedroom": 5,
-    "numBathroom": 2,
+    "capacity": 8,
     "price": 771833,
-    "ratingCount": 5.0,
-    "soldCount": 1967,
-    "createdAt": "2025-05-01T10:54:14.546918",
-    "updatedAt": "2025-05-01T10:54:14.546923"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "98f6781a-f050-49be-a69f-7bcc4e1c0f64",
-    "hostId": "fc02c7b1-095d-4c9b-9664-207c00387dc4",
-    "province": "Bali",
-    "city": "Denpasar",
+    "location": {
+      "province": "Bali",
+      "city": "Denpasar"
+    },
     "category": "Villa",
     "title": "Resort Tenang Elok 63",
     "description": "Resort Tenang Elok 63 terletak di Denpasar, Bali. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1565,20 +1441,18 @@
       "Kolam Renang",
       "Sarapan"
     ],
-    "maxGuest": 3,
-    "numBedroom": 4,
-    "numBathroom": 2,
+    "capacity": 3,
     "price": 998977,
-    "ratingCount": 4.5,
-    "soldCount": 4419,
-    "createdAt": "2025-05-01T10:54:14.546999",
-    "updatedAt": "2025-05-01T10:54:14.547003"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "3670617a-8885-4695-ae41-181d18577c78",
-    "hostId": "0fa48789-f801-477c-ad32-e266ceb1dce1",
-    "province": "Sumatera Selatan",
-    "city": "Palembang",
+    "location": {
+      "province": "Sumatera Selatan",
+      "city": "Palembang"
+    },
     "category": "Villa",
     "title": "Villa Mewah Ceriah 64",
     "description": "Villa Mewah Ceriah 64 terletak di Palembang, Sumatera Selatan. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1590,20 +1464,18 @@
       "Dapur",
       "TV"
     ],
-    "maxGuest": 4,
-    "numBedroom": 3,
-    "numBathroom": 1,
+    "capacity": 4,
     "price": 751778,
-    "ratingCount": 4.4,
-    "soldCount": 2007,
-    "createdAt": "2025-05-01T10:54:14.547043",
-    "updatedAt": "2025-05-01T10:54:14.547045"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "d932631a-c591-472f-a860-e891b4dc6f16",
-    "hostId": "46ea3887-5a63-4b1f-b351-243c360810d0",
-    "province": "Jawa Timur",
-    "city": "Surabaya",
+    "location": {
+      "province": "Jawa Timur",
+      "city": "Surabaya"
+    },
     "category": "Hotel",
     "title": "Villa Hijau Elok 65",
     "description": "Villa Hijau Elok 65 terletak di Surabaya, Jawa Timur. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1615,20 +1487,18 @@
       "Sarapan",
       "TV"
     ],
-    "maxGuest": 6,
-    "numBedroom": 4,
-    "numBathroom": 3,
+    "capacity": 6,
     "price": 820402,
-    "ratingCount": 4.6,
-    "soldCount": 309,
-    "createdAt": "2025-05-01T10:54:14.547070",
-    "updatedAt": "2025-05-01T10:54:14.547072"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "bc8d6c8e-8da6-4d44-a72b-f42718a928a1",
-    "hostId": "5224e00b-2de4-49d4-af47-698bc5d97b64",
-    "province": "DIY",
-    "city": "Yogyakarta",
+    "location": {
+      "province": "DIY",
+      "city": "Yogyakarta"
+    },
     "category": "Resort",
     "title": "Villa Damai Indah 66",
     "description": "Villa Damai Indah 66 terletak di Yogyakarta, DIY. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1640,20 +1510,18 @@
       "WiFi",
       "AC"
     ],
-    "maxGuest": 10,
-    "numBedroom": 5,
-    "numBathroom": 1,
+    "capacity": 10,
     "price": 1034700,
-    "ratingCount": 4.7,
-    "soldCount": 2984,
-    "createdAt": "2025-05-01T10:54:14.547096",
-    "updatedAt": "2025-05-01T10:54:14.547098"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "b5fa448d-7309-480b-9a21-1048d0a31556",
-    "hostId": "3d7982fa-cbe5-4260-9cc1-5d12f369540b",
-    "province": "Riau",
-    "city": "Pekanbaru",
+    "location": {
+      "province": "Riau",
+      "city": "Pekanbaru"
+    },
     "category": "Resort",
     "title": "Hotel Ceriah Asri 67",
     "description": "Hotel Ceriah Asri 67 terletak di Pekanbaru, Riau. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1665,20 +1533,18 @@
       "AC",
       "Sarapan"
     ],
-    "maxGuest": 7,
-    "numBedroom": 2,
-    "numBathroom": 2,
+    "capacity": 7,
     "price": 1013981,
-    "ratingCount": 4.4,
-    "soldCount": 2089,
-    "createdAt": "2025-05-01T10:54:14.547118",
-    "updatedAt": "2025-05-01T10:54:14.547119"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "8d455e8a-f5b0-4a45-a456-b618daa4d5fd",
-    "hostId": "1b5a5121-9fdd-40e4-b4cb-7ae3e0ca9e3c",
-    "province": "Kalimantan Timur",
-    "city": "Balikpapan",
+    "location": {
+      "province": "Kalimantan Timur",
+      "city": "Balikpapan"
+    },
     "category": "Resort",
     "title": "Villa Indah Nyaman 68",
     "description": "Villa Indah Nyaman 68 terletak di Balikpapan, Kalimantan Timur. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1690,20 +1556,18 @@
       "TV",
       "Sarapan"
     ],
-    "maxGuest": 3,
-    "numBedroom": 2,
-    "numBathroom": 1,
+    "capacity": 3,
     "price": 920727,
-    "ratingCount": 4.5,
-    "soldCount": 2706,
-    "createdAt": "2025-05-01T10:54:14.547341",
-    "updatedAt": "2025-05-01T10:54:14.547348"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "de1618ac-27f5-4514-bf4d-a10c30f5f465",
-    "hostId": "fbb0156e-1e88-46c4-b35b-4a5a6412da02",
-    "province": "NTT",
-    "city": "Kupang",
+    "location": {
+      "province": "NTT",
+      "city": "Kupang"
+    },
     "category": "Resort",
     "title": "Hotel Damai Elok 69",
     "description": "Hotel Damai Elok 69 terletak di Kupang, NTT. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1715,20 +1579,18 @@
       "TV",
       "Kolam Renang"
     ],
-    "maxGuest": 2,
-    "numBedroom": 1,
-    "numBathroom": 1,
+    "capacity": 2,
     "price": 834044,
-    "ratingCount": 4.6,
-    "soldCount": 2725,
-    "createdAt": "2025-05-01T10:54:14.547388",
-    "updatedAt": "2025-05-01T10:54:14.547390"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "c1c037b8-b783-4d0d-a168-8e451fbf027a",
-    "hostId": "c5b71fd8-1dab-4165-8356-470e73debf81",
-    "province": "Jawa Barat",
-    "city": "Bandung",
+    "location": {
+      "province": "Jawa Barat",
+      "city": "Bandung"
+    },
     "category": "Resort",
     "title": "Penginapan Hijau Tenang 70",
     "description": "Penginapan Hijau Tenang 70 terletak di Bandung, Jawa Barat. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1740,20 +1602,18 @@
       "Dapur",
       "AC"
     ],
-    "maxGuest": 3,
-    "numBedroom": 3,
-    "numBathroom": 1,
+    "capacity": 3,
     "price": 555343,
-    "ratingCount": 4.9,
-    "soldCount": 4387,
-    "createdAt": "2025-05-01T10:54:14.547430",
-    "updatedAt": "2025-05-01T10:54:14.547432"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "8914f694-621c-442a-bb1a-d1eac7535e9e",
-    "hostId": "da71bff4-045b-4c91-90fa-9f752b2e5d51",
-    "province": "Kalimantan Barat",
-    "city": "Pontianak",
+    "location": {
+      "province": "Kalimantan Barat",
+      "city": "Pontianak"
+    },
     "category": "Hotel",
     "title": "Hotel Indah Hijau 71",
     "description": "Hotel Indah Hijau 71 terletak di Pontianak, Kalimantan Barat. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1765,20 +1625,18 @@
       "TV",
       "WiFi"
     ],
-    "maxGuest": 9,
-    "numBedroom": 2,
-    "numBathroom": 2,
+    "capacity": 9,
     "price": 1180988,
-    "ratingCount": 4.7,
-    "soldCount": 2352,
-    "createdAt": "2025-05-01T10:54:14.547478",
-    "updatedAt": "2025-05-01T10:54:14.547481"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "362b3151-af1d-460d-8420-263753911a05",
-    "hostId": "67ffc98b-384c-4124-9fcd-0b908ad9e81f",
-    "province": "Papua",
-    "city": "Jayapura",
+    "location": {
+      "province": "Papua",
+      "city": "Jayapura"
+    },
     "category": "Hotel",
     "title": "Penginapan Asri Nyaman 72",
     "description": "Penginapan Asri Nyaman 72 terletak di Jayapura, Papua. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1790,20 +1648,18 @@
       "Dapur",
       "Sarapan"
     ],
-    "maxGuest": 6,
-    "numBedroom": 3,
-    "numBathroom": 2,
+    "capacity": 6,
     "price": 752356,
-    "ratingCount": 4.9,
-    "soldCount": 4526,
-    "createdAt": "2025-05-01T10:54:14.547523",
-    "updatedAt": "2025-05-01T10:54:14.547526"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "5ae57975-6262-41e5-b066-584131381bc7",
-    "hostId": "dc424fda-ceb1-4698-adce-f2d3f3022171",
-    "province": "Sumatera Selatan",
-    "city": "Palembang",
+    "location": {
+      "province": "Sumatera Selatan",
+      "city": "Palembang"
+    },
     "category": "Hotel",
     "title": "Villa Asri Asri 73",
     "description": "Villa Asri Asri 73 terletak di Palembang, Sumatera Selatan. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1815,20 +1671,18 @@
       "Parkir",
       "Dapur"
     ],
-    "maxGuest": 6,
-    "numBedroom": 3,
-    "numBathroom": 3,
+    "capacity": 6,
     "price": 896814,
-    "ratingCount": 4.6,
-    "soldCount": 3565,
-    "createdAt": "2025-05-01T10:54:14.547557",
-    "updatedAt": "2025-05-01T10:54:14.547559"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "c824e0ff-9ec4-46af-a3c5-19564f475baa",
-    "hostId": "4e8d3849-9807-4540-b8bd-5f67df3c648c",
-    "province": "Riau",
-    "city": "Pekanbaru",
+    "location": {
+      "province": "Riau",
+      "city": "Pekanbaru"
+    },
     "category": "Hotel",
     "title": "Penginapan Tenang Indah 74",
     "description": "Penginapan Tenang Indah 74 terletak di Pekanbaru, Riau. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1840,20 +1694,18 @@
       "TV",
       "Kolam Renang"
     ],
-    "maxGuest": 7,
-    "numBedroom": 2,
-    "numBathroom": 2,
+    "capacity": 7,
     "price": 1060657,
-    "ratingCount": 4.4,
-    "soldCount": 4395,
-    "createdAt": "2025-05-01T10:54:14.547587",
-    "updatedAt": "2025-05-01T10:54:14.547590"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "aeb38450-7a44-4de8-8f78-0e6c748c2f57",
-    "hostId": "27c2925d-1122-406b-ab99-24767dc92490",
-    "province": "Jawa Barat",
-    "city": "Bandung",
+    "location": {
+      "province": "Jawa Barat",
+      "city": "Bandung"
+    },
     "category": "Villa",
     "title": "Penginapan Mewah Indah 75",
     "description": "Penginapan Mewah Indah 75 terletak di Bandung, Jawa Barat. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1865,20 +1717,18 @@
       "TV",
       "Sarapan"
     ],
-    "maxGuest": 4,
-    "numBedroom": 4,
-    "numBathroom": 3,
+    "capacity": 4,
     "price": 992762,
-    "ratingCount": 4.9,
-    "soldCount": 1059,
-    "createdAt": "2025-05-01T10:54:14.547640",
-    "updatedAt": "2025-05-01T10:54:14.547643"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "0dc3d3eb-ed5a-46f0-aabe-c8643e3e1de0",
-    "hostId": "c0f4d87f-825d-4404-b154-35a6c2d67769",
-    "province": "Papua",
-    "city": "Jayapura",
+    "location": {
+      "province": "Papua",
+      "city": "Jayapura"
+    },
     "category": "Hotel",
     "title": "Penginapan Mewah Asri 76",
     "description": "Penginapan Mewah Asri 76 terletak di Jayapura, Papua. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1890,20 +1740,18 @@
       "TV",
       "Sarapan"
     ],
-    "maxGuest": 2,
-    "numBedroom": 2,
-    "numBathroom": 3,
+    "capacity": 2,
     "price": 512998,
-    "ratingCount": 4.3,
-    "soldCount": 1275,
-    "createdAt": "2025-05-01T10:54:14.547674",
-    "updatedAt": "2025-05-01T10:54:14.547677"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "0198ba9e-2d64-4436-a758-c61d8fb602ee",
-    "hostId": "24b8ce70-9266-4a55-95d9-226704eb1277",
-    "province": "Jawa Timur",
-    "city": "Surabaya",
+    "location": {
+      "province": "Jawa Timur",
+      "city": "Surabaya"
+    },
     "category": "Resort",
     "title": "Penginapan Damai Indah 77",
     "description": "Penginapan Damai Indah 77 terletak di Surabaya, Jawa Timur. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1915,20 +1763,18 @@
       "WiFi",
       "Dapur"
     ],
-    "maxGuest": 5,
-    "numBedroom": 1,
-    "numBathroom": 3,
+    "capacity": 5,
     "price": 593202,
-    "ratingCount": 4.5,
-    "soldCount": 2070,
-    "createdAt": "2025-05-01T10:54:14.547714",
-    "updatedAt": "2025-05-01T10:54:14.547716"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "b0f5419c-7cbf-4bee-b0de-8247bcb21051",
-    "hostId": "56005980-9b69-42e9-b6ca-9fca2d13c199",
-    "province": "NTT",
-    "city": "Kupang",
+    "location": {
+      "province": "NTT",
+      "city": "Kupang"
+    },
     "category": "Hotel",
     "title": "Resort Hijau Alam 78",
     "description": "Resort Hijau Alam 78 terletak di Kupang, NTT. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1940,20 +1786,18 @@
       "Sarapan",
       "WiFi"
     ],
-    "maxGuest": 2,
-    "numBedroom": 1,
-    "numBathroom": 2,
+    "capacity": 2,
     "price": 490542,
-    "ratingCount": 4.5,
-    "soldCount": 661,
-    "createdAt": "2025-05-01T10:54:14.547737",
-    "updatedAt": "2025-05-01T10:54:14.547739"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "7ffb5a98-03ea-4d56-bd13-9ed6e26dcb10",
-    "hostId": "7cabe593-5eee-4509-8e08-04eaaa20d317",
-    "province": "Sulawesi Utara",
-    "city": "Manado",
+    "location": {
+      "province": "Sulawesi Utara",
+      "city": "Manado"
+    },
     "category": "Villa",
     "title": "Hotel Mewah Hijau 79",
     "description": "Hotel Mewah Hijau 79 terletak di Manado, Sulawesi Utara. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1965,20 +1809,18 @@
       "Sarapan",
       "Kolam Renang"
     ],
-    "maxGuest": 3,
-    "numBedroom": 4,
-    "numBathroom": 3,
+    "capacity": 3,
     "price": 490422,
-    "ratingCount": 4.7,
-    "soldCount": 4189,
-    "createdAt": "2025-05-01T10:54:14.547758",
-    "updatedAt": "2025-05-01T10:54:14.547760"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "6506f31a-9f5a-4e74-a5ee-a0b5c68373e8",
-    "hostId": "cf32edae-7cde-4a84-b598-bde35af49ebc",
-    "province": "Papua",
-    "city": "Jayapura",
+    "location": {
+      "province": "Papua",
+      "city": "Jayapura"
+    },
     "category": "Resort",
     "title": "Hotel Asri Hijau 80",
     "description": "Hotel Asri Hijau 80 terletak di Jayapura, Papua. Tempat ini nyaman dan cocok untuk liburan.",
@@ -1990,20 +1832,18 @@
       "TV",
       "Parkir"
     ],
-    "maxGuest": 7,
-    "numBedroom": 3,
-    "numBathroom": 2,
+    "capacity": 7,
     "price": 1216685,
-    "ratingCount": 4.7,
-    "soldCount": 3655,
-    "createdAt": "2025-05-01T10:54:14.547778",
-    "updatedAt": "2025-05-01T10:54:14.547779"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "3a65c169-ab2b-4216-ba76-3ab86e278d05",
-    "hostId": "15e067fa-013d-4f51-9ac8-dfeccc4d4a8a",
-    "province": "Jawa Barat",
-    "city": "Bandung",
+    "location": {
+      "province": "Jawa Barat",
+      "city": "Bandung"
+    },
     "category": "Resort",
     "title": "Hotel Tenang Alam 81",
     "description": "Hotel Tenang Alam 81 terletak di Bandung, Jawa Barat. Tempat ini nyaman dan cocok untuk liburan.",
@@ -2015,20 +1855,18 @@
       "Dapur",
       "Parkir"
     ],
-    "maxGuest": 3,
-    "numBedroom": 1,
-    "numBathroom": 1,
+    "capacity": 3,
     "price": 542360,
-    "ratingCount": 4.8,
-    "soldCount": 3651,
-    "createdAt": "2025-05-01T10:54:14.547818",
-    "updatedAt": "2025-05-01T10:54:14.547821"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "45bb2bfc-cd6c-454d-a101-1d44fe7c71e3",
-    "hostId": "2248900b-73f0-47bc-81d8-c043c75a2682",
-    "province": "Kalimantan Timur",
-    "city": "Samarinda",
+    "location": {
+      "province": "Kalimantan Timur",
+      "city": "Samarinda"
+    },
     "category": "Villa",
     "title": "Penginapan Indah Elok 82",
     "description": "Penginapan Indah Elok 82 terletak di Samarinda, Kalimantan Timur. Tempat ini nyaman dan cocok untuk liburan.",
@@ -2040,20 +1878,18 @@
       "AC",
       "Kolam Renang"
     ],
-    "maxGuest": 10,
-    "numBedroom": 5,
-    "numBathroom": 2,
+    "capacity": 10,
     "price": 571171,
-    "ratingCount": 4.4,
-    "soldCount": 710,
-    "createdAt": "2025-05-01T10:54:14.547876",
-    "updatedAt": "2025-05-01T10:54:14.547880"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "f493e5e7-06d0-4f2c-81fb-dfc170e2c438",
-    "hostId": "3fb97a01-0686-49c4-a08f-ba2c6441c6d6",
-    "province": "Kalimantan Barat",
-    "city": "Pontianak",
+    "location": {
+      "province": "Kalimantan Barat",
+      "city": "Pontianak"
+    },
     "category": "Penginapan",
     "title": "Villa Damai Hijau 83",
     "description": "Villa Damai Hijau 83 terletak di Pontianak, Kalimantan Barat. Tempat ini nyaman dan cocok untuk liburan.",
@@ -2065,20 +1901,18 @@
       "WiFi",
       "Dapur"
     ],
-    "maxGuest": 10,
-    "numBedroom": 3,
-    "numBathroom": 3,
+    "capacity": 10,
     "price": 1020218,
-    "ratingCount": 4.7,
-    "soldCount": 542,
-    "createdAt": "2025-05-01T10:54:14.547924",
-    "updatedAt": "2025-05-01T10:54:14.547928"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "b4841456-1757-4171-a84a-a93221b44134",
-    "hostId": "bec12229-2b17-472a-8bbd-c8274763390c",
-    "province": "Kalimantan Barat",
-    "city": "Pontianak",
+    "location": {
+      "province": "Kalimantan Barat",
+      "city": "Pontianak"
+    },
     "category": "Hotel",
     "title": "Resort Asri Indah 84",
     "description": "Resort Asri Indah 84 terletak di Pontianak, Kalimantan Barat. Tempat ini nyaman dan cocok untuk liburan.",
@@ -2090,20 +1924,18 @@
       "Parkir",
       "AC"
     ],
-    "maxGuest": 7,
-    "numBedroom": 3,
-    "numBathroom": 2,
+    "capacity": 7,
     "price": 1107668,
-    "ratingCount": 4.7,
-    "soldCount": 2939,
-    "createdAt": "2025-05-01T10:54:14.547966",
-    "updatedAt": "2025-05-01T10:54:14.547968"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "bf6dd772-2f59-4fda-adb0-f447453c3965",
-    "hostId": "e4ad6226-551d-4d08-9a42-60e1b23573ad",
-    "province": "NTT",
-    "city": "Kupang",
+    "location": {
+      "province": "NTT",
+      "city": "Kupang"
+    },
     "category": "Penginapan",
     "title": "Hotel Mewah Alam 85",
     "description": "Hotel Mewah Alam 85 terletak di Kupang, NTT. Tempat ini nyaman dan cocok untuk liburan.",
@@ -2115,20 +1947,18 @@
       "AC",
       "WiFi"
     ],
-    "maxGuest": 3,
-    "numBedroom": 1,
-    "numBathroom": 1,
+    "capacity": 3,
     "price": 1114922,
-    "ratingCount": 5.0,
-    "soldCount": 1502,
-    "createdAt": "2025-05-01T10:54:14.548000",
-    "updatedAt": "2025-05-01T10:54:14.548001"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "51e087eb-804e-4905-a10b-44b5885048ff",
-    "hostId": "5c1045f8-e41d-44ea-a561-e1df2f3613fe",
-    "province": "NTB",
-    "city": "Lombok",
+    "location": {
+      "province": "NTB",
+      "city": "Lombok"
+    },
     "category": "Villa",
     "title": "Villa Hijau Damai 86",
     "description": "Villa Hijau Damai 86 terletak di Lombok, NTB. Tempat ini nyaman dan cocok untuk liburan.",
@@ -2140,20 +1970,18 @@
       "AC",
       "Kolam Renang"
     ],
-    "maxGuest": 9,
-    "numBedroom": 1,
-    "numBathroom": 1,
+    "capacity": 9,
     "price": 979553,
-    "ratingCount": 4.8,
-    "soldCount": 1808,
-    "createdAt": "2025-05-01T10:54:14.548025",
-    "updatedAt": "2025-05-01T10:54:14.548028"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "817d7429-cf25-4264-848b-336c8d763be8",
-    "hostId": "ea24065e-9893-40c1-95d3-cbab4cf1183d",
-    "province": "Maluku Utara",
-    "city": "Ternate",
+    "location": {
+      "province": "Maluku Utara",
+      "city": "Ternate"
+    },
     "category": "Penginapan",
     "title": "Penginapan Elok Mewah 87",
     "description": "Penginapan Elok Mewah 87 terletak di Ternate, Maluku Utara. Tempat ini nyaman dan cocok untuk liburan.",
@@ -2165,20 +1993,18 @@
       "Dapur",
       "AC"
     ],
-    "maxGuest": 10,
-    "numBedroom": 3,
-    "numBathroom": 2,
+    "capacity": 10,
     "price": 1087913,
-    "ratingCount": 4.6,
-    "soldCount": 964,
-    "createdAt": "2025-05-01T10:54:14.548069",
-    "updatedAt": "2025-05-01T10:54:14.548080"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "b7fe8d19-1523-4b58-a4dc-0082a192ff84",
-    "hostId": "cf2f18a2-7cb5-4a68-929f-82e3518cf01c",
-    "province": "Sumatera Utara",
-    "city": "Medan",
+    "location": {
+      "province": "Sumatera Utara",
+      "city": "Medan"
+    },
     "category": "Resort",
     "title": "Resort Hijau Hijau 88",
     "description": "Resort Hijau Hijau 88 terletak di Medan, Sumatera Utara. Tempat ini nyaman dan cocok untuk liburan.",
@@ -2190,20 +2016,18 @@
       "WiFi",
       "Dapur"
     ],
-    "maxGuest": 8,
-    "numBedroom": 2,
-    "numBathroom": 1,
+    "capacity": 8,
     "price": 1010396,
-    "ratingCount": 4.6,
-    "soldCount": 207,
-    "createdAt": "2025-05-01T10:54:14.548113",
-    "updatedAt": "2025-05-01T10:54:14.548115"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "37daed6e-70d5-41f4-b3ed-4ae21d405c30",
-    "hostId": "a2706d5d-a5ce-4e90-ab42-ee541ac06ca5",
-    "province": "Sulawesi Utara",
-    "city": "Manado",
+    "location": {
+      "province": "Sulawesi Utara",
+      "city": "Manado"
+    },
     "category": "Villa",
     "title": "Villa Tenang Indah 89",
     "description": "Villa Tenang Indah 89 terletak di Manado, Sulawesi Utara. Tempat ini nyaman dan cocok untuk liburan.",
@@ -2215,20 +2039,18 @@
       "Kolam Renang",
       "AC"
     ],
-    "maxGuest": 6,
-    "numBedroom": 3,
-    "numBathroom": 2,
+    "capacity": 6,
     "price": 1210608,
-    "ratingCount": 4.5,
-    "soldCount": 3660,
-    "createdAt": "2025-05-01T10:54:14.548134",
-    "updatedAt": "2025-05-01T10:54:14.548136"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "e97d8a22-df60-4b2a-a87b-af4a69182617",
-    "hostId": "ca39abf1-11e8-4d41-8029-fb70235f6230",
-    "province": "NTB",
-    "city": "Lombok",
+    "location": {
+      "province": "NTB",
+      "city": "Lombok"
+    },
     "category": "Penginapan",
     "title": "Resort Indah Ceriah 90",
     "description": "Resort Indah Ceriah 90 terletak di Lombok, NTB. Tempat ini nyaman dan cocok untuk liburan.",
@@ -2240,20 +2062,18 @@
       "Sarapan",
       "Kolam Renang"
     ],
-    "maxGuest": 10,
-    "numBedroom": 2,
-    "numBathroom": 3,
+    "capacity": 10,
     "price": 682101,
-    "ratingCount": 4.8,
-    "soldCount": 1085,
-    "createdAt": "2025-05-01T10:54:14.548175",
-    "updatedAt": "2025-05-01T10:54:14.548178"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "8a7d9b8f-08b9-4297-9e71-204bf8f1690d",
-    "hostId": "7c3cedb2-c400-4ff8-b493-31b5fdff7d57",
-    "province": "Maluku",
-    "city": "Ambon",
+    "location": {
+      "province": "Maluku",
+      "city": "Ambon"
+    },
     "category": "Hotel",
     "title": "Penginapan Ceriah Hijau 91",
     "description": "Penginapan Ceriah Hijau 91 terletak di Ambon, Maluku. Tempat ini nyaman dan cocok untuk liburan.",
@@ -2265,20 +2085,18 @@
       "Kolam Renang",
       "TV"
     ],
-    "maxGuest": 6,
-    "numBedroom": 4,
-    "numBathroom": 3,
+    "capacity": 6,
     "price": 540354,
-    "ratingCount": 4.9,
-    "soldCount": 1729,
-    "createdAt": "2025-05-01T10:54:14.548223",
-    "updatedAt": "2025-05-01T10:54:14.548225"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "87e0f1f9-18fd-4f7a-98ca-006dafe17969",
-    "hostId": "5563b8a7-603e-4a91-8dd8-a51f4f822470",
-    "province": "Kalimantan Selatan",
-    "city": "Banjarmasin",
+    "location": {
+      "province": "Kalimantan Selatan",
+      "city": "Banjarmasin"
+    },
     "category": "Penginapan",
     "title": "Resort Asri Tenang 92",
     "description": "Resort Asri Tenang 92 terletak di Banjarmasin, Kalimantan Selatan. Tempat ini nyaman dan cocok untuk liburan.",
@@ -2290,20 +2108,18 @@
       "Kolam Renang",
       "Parkir"
     ],
-    "maxGuest": 5,
-    "numBedroom": 4,
-    "numBathroom": 1,
+    "capacity": 5,
     "price": 951303,
-    "ratingCount": 4.5,
-    "soldCount": 4173,
-    "createdAt": "2025-05-01T10:54:14.548245",
-    "updatedAt": "2025-05-01T10:54:14.548246"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "27ba610d-c78c-4db8-acd4-a096e1189732",
-    "hostId": "2572e94a-6139-4ba1-b974-11e6cc54e894",
-    "province": "Maluku",
-    "city": "Ambon",
+    "location": {
+      "province": "Maluku",
+      "city": "Ambon"
+    },
     "category": "Villa",
     "title": "Resort Hijau Elok 93",
     "description": "Resort Hijau Elok 93 terletak di Ambon, Maluku. Tempat ini nyaman dan cocok untuk liburan.",
@@ -2315,20 +2131,18 @@
       "AC",
       "Sarapan"
     ],
-    "maxGuest": 3,
-    "numBedroom": 1,
-    "numBathroom": 2,
+    "capacity": 3,
     "price": 497827,
-    "ratingCount": 4.8,
-    "soldCount": 2415,
-    "createdAt": "2025-05-01T10:54:14.548266",
-    "updatedAt": "2025-05-01T10:54:14.548268"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "cfc60322-7338-41ef-8910-cc1ff6a92c4b",
-    "hostId": "d91125b8-679e-4018-8961-6881773d432b",
-    "province": "Jawa Timur",
-    "city": "Surabaya",
+    "location": {
+      "province": "Jawa Timur",
+      "city": "Surabaya"
+    },
     "category": "Villa",
     "title": "Penginapan Hijau Indah 94",
     "description": "Penginapan Hijau Indah 94 terletak di Surabaya, Jawa Timur. Tempat ini nyaman dan cocok untuk liburan.",
@@ -2340,20 +2154,18 @@
       "Dapur",
       "Parkir"
     ],
-    "maxGuest": 2,
-    "numBedroom": 3,
-    "numBathroom": 3,
+    "capacity": 2,
     "price": 534629,
-    "ratingCount": 5.0,
-    "soldCount": 3106,
-    "createdAt": "2025-05-01T10:54:14.548297",
-    "updatedAt": "2025-05-01T10:54:14.548300"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "a486b7b6-719e-4a93-946b-4da9bfa89aaa",
-    "hostId": "9ce9035b-a05b-40bf-9f6d-0e5c1c2cc153",
-    "province": "DIY",
-    "city": "Yogyakarta",
+    "location": {
+      "province": "DIY",
+      "city": "Yogyakarta"
+    },
     "category": "Hotel",
     "title": "Resort Elok Nyaman 95",
     "description": "Resort Elok Nyaman 95 terletak di Yogyakarta, DIY. Tempat ini nyaman dan cocok untuk liburan.",
@@ -2365,20 +2177,18 @@
       "WiFi",
       "Sarapan"
     ],
-    "maxGuest": 5,
-    "numBedroom": 5,
-    "numBathroom": 2,
+    "capacity": 5,
     "price": 1115411,
-    "ratingCount": 4.6,
-    "soldCount": 1862,
-    "createdAt": "2025-05-01T10:54:14.548355",
-    "updatedAt": "2025-05-01T10:54:14.548358"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "19659551-f753-4ed1-a5eb-dbf905409b0c",
-    "hostId": "ad6337d9-cf54-4d05-9841-22017245c4cf",
-    "province": "Maluku",
-    "city": "Ambon",
+    "location": {
+      "province": "Maluku",
+      "city": "Ambon"
+    },
     "category": "Penginapan",
     "title": "Resort Hijau Asri 96",
     "description": "Resort Hijau Asri 96 terletak di Ambon, Maluku. Tempat ini nyaman dan cocok untuk liburan.",
@@ -2390,20 +2200,18 @@
       "Dapur",
       "WiFi"
     ],
-    "maxGuest": 4,
-    "numBedroom": 5,
-    "numBathroom": 3,
+    "capacity": 4,
     "price": 511868,
-    "ratingCount": 5.0,
-    "soldCount": 3487,
-    "createdAt": "2025-05-01T10:54:14.548401",
-    "updatedAt": "2025-05-01T10:54:14.548403"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "625c87b3-3e2c-45a6-a988-11b0ee62ea4b",
-    "hostId": "0a54168a-bd41-414a-a133-bb8ee671ff4f",
-    "province": "Kalimantan Barat",
-    "city": "Pontianak",
+    "location": {
+      "province": "Kalimantan Barat",
+      "city": "Pontianak"
+    },
     "category": "Villa",
     "title": "Resort Alam Damai 97",
     "description": "Resort Alam Damai 97 terletak di Pontianak, Kalimantan Barat. Tempat ini nyaman dan cocok untuk liburan.",
@@ -2415,20 +2223,18 @@
       "AC",
       "WiFi"
     ],
-    "maxGuest": 7,
-    "numBedroom": 3,
-    "numBathroom": 1,
+    "capacity": 7,
     "price": 564893,
-    "ratingCount": 4.8,
-    "soldCount": 3773,
-    "createdAt": "2025-05-01T10:54:14.548437",
-    "updatedAt": "2025-05-01T10:54:14.548438"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "de887755-cc9a-4d98-8458-cb154e23dbe3",
-    "hostId": "5e0918cc-8684-4ddf-8dce-198e84c9dc90",
-    "province": "Riau",
-    "city": "Pekanbaru",
+    "location": {
+      "province": "Riau",
+      "city": "Pekanbaru"
+    },
     "category": "Resort",
     "title": "Resort Nyaman Nyaman 98",
     "description": "Resort Nyaman Nyaman 98 terletak di Pekanbaru, Riau. Tempat ini nyaman dan cocok untuk liburan.",
@@ -2440,20 +2246,18 @@
       "Sarapan",
       "AC"
     ],
-    "maxGuest": 8,
-    "numBedroom": 4,
-    "numBathroom": 2,
+    "capacity": 8,
     "price": 791463,
-    "ratingCount": 4.8,
-    "soldCount": 1432,
-    "createdAt": "2025-05-01T10:54:14.548483",
-    "updatedAt": "2025-05-01T10:54:14.548487"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "b646463b-fb28-45e6-865b-9c1644cec442",
-    "hostId": "21cd04c8-4808-4de9-af61-255efeb7797a",
-    "province": "NTB",
-    "city": "Lombok",
+    "location": {
+      "province": "NTB",
+      "city": "Lombok"
+    },
     "category": "Penginapan",
     "title": "Hotel Damai Elok 99",
     "description": "Hotel Damai Elok 99 terletak di Lombok, NTB. Tempat ini nyaman dan cocok untuk liburan.",
@@ -2465,20 +2269,18 @@
       "Parkir",
       "Kolam Renang"
     ],
-    "maxGuest": 3,
-    "numBedroom": 5,
-    "numBathroom": 3,
+    "capacity": 3,
     "price": 493704,
-    "ratingCount": 5.0,
-    "soldCount": 1312,
-    "createdAt": "2025-05-01T10:54:14.548524",
-    "updatedAt": "2025-05-01T10:54:14.548526"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   },
   {
-    "_id": "cb89d49c-cf1e-432a-812d-4ab54f358ccf",
-    "hostId": "856142da-ce60-4782-8143-ab79d940042a",
-    "province": "Riau",
-    "city": "Pekanbaru",
+    "location": {
+      "province": "Riau",
+      "city": "Pekanbaru"
+    },
     "category": "Resort",
     "title": "Resort Asri Hijau 100",
     "description": "Resort Asri Hijau 100 terletak di Pekanbaru, Riau. Tempat ini nyaman dan cocok untuk liburan.",
@@ -2490,13 +2292,11 @@
       "AC",
       "TV"
     ],
-    "maxGuest": 8,
-    "numBedroom": 5,
-    "numBathroom": 3,
+    "capacity": 8,
     "price": 564414,
-    "ratingCount": 4.6,
-    "soldCount": 1618,
-    "createdAt": "2025-05-01T10:54:14.548551",
-    "updatedAt": "2025-05-01T10:54:14.548555"
+    "host": "68278956b98fb0b92839d146",
+    "bookings": [],
+    "reviews": [],
+    "wishlists": []
   }
 ]

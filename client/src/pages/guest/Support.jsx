@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Hero from "../components/Hero";
-import NabarSupport from "../components/NavbarSupport";
-import CardSupport from "../components/CardSupport";
-import AboutUs from "../components/AboutUs";
+import Hero from "../../ui/Hero";
+import NabarSupport from "../../ui/NavbarSupport";
+import CardSupport from "../../ui/CardSupport";
+import AboutUs from "../../ui/AboutUs";
 
 export default function Support() {
   const [about, setAbout] = useState("aboutRent");

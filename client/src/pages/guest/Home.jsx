@@ -1,7 +1,7 @@
-import Accomodation from "../components/Accomodation";
-import Carousel from "../components/Carousel";
-import Headline from "../components/Headline";
-import Hero from "../components/Hero";
+import Accomodation from "../../ui/Accomodation";
+import Carousel from "../../ui/Carousel";
+import Headline from "../../ui/Headline";
+import Hero from "../../ui/Hero";
 
 export default function Home() {
   return (

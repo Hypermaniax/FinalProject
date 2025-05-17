@@ -1,8 +1,15 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import LoginOrSignUp from "../pages/LoginOrSignUp";
+import LoginOrSignUp from "../pages/guest/LoginOrSignUp";
 
+const navLinks = [
+  { path: "/", label: "Home" },
+  { path: "/space", label: "Space" },
+  { path: "/bookings", label: "Bookings" },
+  { path: "/support", label: "Support" },
+  // { path: "/host", label: "Host" },
+];
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [login, setlogin] = useState(false);
@@ -12,16 +19,9 @@ export default function Header() {
     setToken(localStorage?.accessToken);
   }, [localStorage?.accessToken]);
 
-  const navLinks = [
-    { path: "/", label: "Home" },
-    { path: "/space", label: "Space" },
-    { path: "/bookings", label: "Bookings" },
-    { path: "/support", label: "Support" },
-    { path: "/host", label: "Host" },
-  ];
   return (
     <nav className="bg-white sticky top-0 shadow-lg z-50">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto ">
         <div className="flex justify-between items-center py-4">
           <h1 className="font-extrabold text-2xl">
             <span className="text-black">Stay</span>

@@ -9,7 +9,9 @@ export default {
       'pink': '#F75A5A',
       'white': '#FFFFFF',
       'darkWhite': '#F4F4F4',
-      'black': '#000000'
+      'black': '#000000',
+      'silver':'#F5F5F5',
+      'redCustom' : '#FF1B1B'
     },
     extend: {
       fontFamily: {

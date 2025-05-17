@@ -23,6 +23,7 @@ const Input = forwardRef(function Input(
       e.preventDefault();
     }
   };
+  const bookedDates = [new Date("2025-05-11")];
 
   return (
     <div className={grid}>
@@ -37,11 +38,17 @@ const Input = forwardRef(function Input(
       ) : typeInput === "date" ? (
         <DatePicker
           showIcon
+          excludeDates={bookedDates}
           icon={<CalendarDays />}
-          className="border-b-2  border-pink outline-none w-full font-normal text-center text-sm"
+          className="border-b-2 border-pink outline-none w-full font-normal text-center text-sm"
           selected={startDate}
           minDate={new Date()}
           onChange={(date) => setStartDate(date)}
+          dayClassName={(date) =>
+            bookedDates.some((d) => d.toDateString() === date.toDateString())
+              ? "text-red-500 line-through cursor-not-allowed pointer-events-none"
+              : ""
+          }
         />
       ) : (
         <input

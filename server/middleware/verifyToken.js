@@ -10,7 +10,7 @@ function verifyToken(req, res, next) {
         req.payload = decode
         
         next()
-    } catch (error) {z
+    } catch (error) {
         res.status(401).json('Invalid token')
     }
 }

@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-export default function Login({ handleClick, handleClose }) {
+export default function Login({ handleClick, heading }) {
   const { onsubmit, loading, response } = UseLogin();
   const userLogin = useRef();
   const passwordLogin = useRef();
@@ -16,7 +16,7 @@ export default function Login({ handleClick, handleClose }) {
       ? toast.success(response?.data.message, {
           position: "top-center",
           autoClose: false,
-          closeButton : false
+          closeButton: false,
         })
       : toast.error(response?.data, {
           position: "top-center",
@@ -29,14 +29,13 @@ export default function Login({ handleClick, handleClose }) {
         notify();
         if (response.status === 200) {
           await delay(3000);
-          handleClose();
-          handleClick(localStorage)
+          handleClick(localStorage);
         }
       }
     };
 
     handleResponse();
-  }, [response, handleClose]);
+  }, [response]);
 
   return (
     <>
@@ -45,16 +44,29 @@ export default function Login({ handleClick, handleClose }) {
         <Loading />
       ) : (
         <>
-          <h1 className="text-2xl">
-            Welcome to Stay<span className="text-pink">Nesia</span>
-          </h1>
+          {heading ? (
+            <div className="text-center mb-8">
+              <h1 className="text-3xl">
+                Welcome Back, <span className="text-pink">Host!</span>
+              </h1>
+              <h1 className="text-lg">
+                Please sign in to manage your{" "}
+                <span className="text-pink">listings</span> and
+                <span className="text-pink"> reservations.</span>
+              </h1>
+            </div>
+          ) : (
+            <h1 className="text-2xl">
+              Welcome to Stay<span className="text-pink">Nesia</span>
+            </h1>
+          )}
           <Input label="Email or Username" ref={userLogin} />
-          <Input label="Password" typeInput ='password' ref={passwordLogin} />
+          <Input label="Password" typeInput="password" ref={passwordLogin} />
           <button
             onClick={() =>
               onsubmit({
-                userLogin: userLogin.current.value(),
-                passwordLogin: passwordLogin.current.value(),
+                username: userLogin.current.value(),
+                password: passwordLogin.current.value(),
               })
             }
             className="bg-pink bg-opacity-80 hover:bg-opacity-100 rounded-xl py-1.5 text-white"
@@ -70,8 +82,10 @@ export default function Login({ handleClick, handleClose }) {
               Sign up here
             </span>
           </p>
+          <></>
         </>
       )}
     </>
   );
 }
+//

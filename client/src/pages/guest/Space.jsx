@@ -1,7 +1,7 @@
-import Pagination from "../components/Pagination";
-import data from "../jsonFile/hotelAndVilla";
+import Pagination from "../../ui/Pagination";
+import data from "../../jsonFile/hotelAndVilla";
 import { useState } from "react";
-import Filter from "../components/Filter";
+import Filter from "../../ui/Filter";
 
 export default function Spaces() {
   const [check, setCheck] = useState(undefined);
