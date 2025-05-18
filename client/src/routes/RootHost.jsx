@@ -6,7 +6,7 @@ import DashboardLayout from "../ui/DashboardLayout";
 import Listings from "../pages/host/Listings";
 
 export default function RootHost() {
-  // localStorage.clear()
+  localStorage.clear()
 
   return (
     <Routes>
