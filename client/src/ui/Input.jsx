@@ -36,20 +36,27 @@ const Input = forwardRef(function Input(
       {text ? (
         <p>Monday, 17 oktober 2045</p>
       ) : typeInput === "date" ? (
+        <div className="w-full  max-w-sm">
         <DatePicker
-          showIcon
-          excludeDates={bookedDates}
-          icon={<CalendarDays />}
-          className="border-b-2 border-pink outline-none w-full font-normal text-center text-sm"
           selected={startDate}
-          minDate={new Date()}
           onChange={(date) => setStartDate(date)}
+          minDate={new Date()}
+          excludeDates={bookedDates}
+          showIcon
+          icon={
+            <div className="w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center">
+              <CalendarDays className="w-4 h-4 text-pink-500" />
+            </div>
+          }
+          className="border rounded-xl px-4 py-2 pl-12 w-full text-sm text-black font-normal text-center outline-none shadow-sm"
           dayClassName={(date) =>
             bookedDates.some((d) => d.toDateString() === date.toDateString())
-              ? "text-red-500 line-through cursor-not-allowed pointer-events-none"
-              : ""
+              ? 'text-red-500 line-through cursor-not-allowed pointer-events-none'
+              : ''
           }
         />
+      </div>
+      
       ) : (
         <input
           placeholder={placeHolder}

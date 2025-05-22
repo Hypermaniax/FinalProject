@@ -3,6 +3,7 @@ import Hero from "../../ui/Hero";
 import NabarSupport from "../../ui/NavbarSupport";
 import CardSupport from "../../ui/CardSupport";
 import AboutUs from "../../ui/AboutUs";
+import WrapperContent from "../../ui/WrapperContent";
 
 export default function Support() {
   const [about, setAbout] = useState("aboutRent");
@@ -39,8 +40,10 @@ export default function Support() {
           Any Information about our Website
         </h4>
       </Hero>
+      <WrapperContent>
       <NabarSupport handleClick={setAbout} />
       {content}
+      </WrapperContent>
     </>
   );
 }

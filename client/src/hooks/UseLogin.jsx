@@ -14,13 +14,13 @@ export default function UseLogin() {
       setLoading(true);
       try {
         const token = await axios.post(
-          "http://localhost:3000/login-host",
+          "http://localhost:3000/login-guest",
           formData
         );
         setResponse(token);
         
         localStorage.setItem("accessToken", JSON.stringify(token.data.result.token));
-        nav('/host/dashboard')
+        nav('/bookings')
       } catch (error) {        
         setResponse(error.response);
       } finally {

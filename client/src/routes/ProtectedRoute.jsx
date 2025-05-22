@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import Loading from "../ui/Loading";
 import { ProtectContext } from "./Context";
 import { useNavigate } from "react-router-dom";
+import { jwtDecode } from "jwt-decode";
+
 
 export default function ProtectedRoutesProvider({ children,riderect,role }) {
   const [protect, setProtect] = useState();
@@ -10,6 +12,8 @@ export default function ProtectedRoutesProvider({ children,riderect,role }) {
 
   const token = localStorage.getItem("accessToken");
   const navigate = useNavigate()
+
+  
 
   useEffect(() => {
     try {
