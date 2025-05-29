@@ -9,7 +9,6 @@ import { AuthContext } from "./AuthContext";
 
 export default function RootHost() {
   const {user} = useContext(AuthContext)
-  console.log(user);
   
   return (
     <Routes>

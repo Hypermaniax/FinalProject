@@ -3,7 +3,7 @@ import SidebarHost from "../ui/SidebarHost";
 import ProtectedRoute from "../routes/ProtectRoute";
 
 export default function DashboardLayout() {
-
+  
   return (
     <ProtectedRoute>
       <div className="grid grid-cols-8">
