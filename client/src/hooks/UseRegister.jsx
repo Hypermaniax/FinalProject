@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export default function UseRegister() {
+export default function UseRegister(regist) {
   const [formData, setFormData] = useState(undefined);
   const [response, setResponse] = useState(undefined);
   const [loading, setLoading] = useState(false);
@@ -11,10 +11,7 @@ export default function UseRegister() {
     (async () => {
       try {
         setLoading(true);
-        const post = await axios.post(
-          "http://localhost:3000/regist-host",
-          formData
-        );
+        const post = await axios.post(regist, formData);
         setLoading(false);
         setResponse(post);
       } catch (error) {

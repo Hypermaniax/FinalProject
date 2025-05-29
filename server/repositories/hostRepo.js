@@ -17,4 +17,13 @@ const registHost = async (data) => {
   return host.save();
 };
 
-module.exports = { findEmailOrUsername, registHost, existEmailOrUsername };
+const getIdHost = async (id) => {
+  return Host.findById(id);
+};
+
+module.exports = {
+  findEmailOrUsername,
+  registHost,
+  existEmailOrUsername,
+  getIdHost,
+};

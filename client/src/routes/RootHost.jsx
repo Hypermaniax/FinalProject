@@ -1,13 +1,16 @@
 import { Route, Routes } from "react-router-dom";
-import LoginOrSignupHost from "../pages/host/LoginOrSignupHost";
+import LoginOrSignupHost from "../pages/host/HostHome";
 
 import DashboardHost from "../pages/host/DashboardHost";
 import DashboardLayout from "../ui/DashboardLayout";
 import Listings from "../pages/host/Listings";
+import { useContext } from "react";
+import { AuthContext } from "./AuthContext";
 
 export default function RootHost() {
-  localStorage.clear()
-
+  const {user} = useContext(AuthContext)
+  console.log(user);
+  
   return (
     <Routes>
       {/* Root login/signup */}

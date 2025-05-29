@@ -21,9 +21,14 @@ const updateGuest = async (id) => {
   return await Guest.findByIdAndUpdate(id);
 };
 
+const getIdGuest = async (id) => {
+  return Guest.findById(id)
+}
+
 module.exports = {
   findEmailOrUsername,
   existEmailOrUsername,
   registGuest,
   updateGuest,
+  getIdGuest
 };

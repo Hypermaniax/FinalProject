@@ -1,20 +1,30 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import LoginOrSignUp from "../pages/guest/LoginOrSignUp";
+import LoginOrSignUp from "../pages/LoginOrSignUp";
+import { useContext } from "react";
+import { AuthContext } from "../routes/AuthContext";
 
 const navLinks = [
   { path: "/", label: "Home" },
   { path: "/space", label: "Space" },
   { path: "/bookings", label: "Bookings" },
   { path: "/support", label: "Support" },
-  // { path: "/host", label: "Host" },
+  { path: "/host", label: "Host" },
 ];
+
+const loginGuest = "http://localhost:3000/login-guest";
+const registerGuest = "http://localhost:3000/regist-guest";
+const riderect = "/bookings"
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [login, setlogin] = useState(false);
-  const [token, setToken] = useState(false);
+  
   const navigate = useNavigate();
+
+  const {setToken,token,setUser} = useContext(AuthContext)
+  
   useEffect(() => {
     setToken(localStorage?.accessToken);
   }, [localStorage?.accessToken]);
@@ -27,7 +37,6 @@ export default function Header() {
             <span className="text-black">Stay</span>
             <span className="text-pink">Nesia</span>
           </h1>
-
           <ul className="hidden md:flex gap-8 font-medium text-lg">
             {navLinks.map((link) => (
               <li
@@ -43,7 +52,8 @@ export default function Header() {
             onClick={
               !!token
                 ? () => {
-                    setToken(localStorage.clear());
+                    setToken(localStorage.removeItem('accessToken'));
+                    setUser(null)
                     navigate("/");
                   }
                 : () => setlogin(!login)
@@ -52,7 +62,13 @@ export default function Header() {
           >
             {!!token ? "Logout" : "Login"}
           </button>
-          <LoginOrSignUp isOpen={login} handleClick={() => setlogin(!login)} />
+          <LoginOrSignUp
+            login={loginGuest}
+            ridrect={riderect}
+            register={registerGuest}
+            isOpen={login}
+            handleClick={() => setlogin(!login)}
+          />
           <button
             className="md:hidden text-pink-500 bg-pink p-2 rounded-lg"
             onClick={() => setIsOpen(!isOpen)}

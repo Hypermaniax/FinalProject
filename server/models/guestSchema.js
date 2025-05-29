@@ -1,7 +1,6 @@
 // models/Guest.js
 const mongoose = require("mongoose");
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+
 const { Schema } = mongoose;
 
 const guestSchema = new Schema(

@@ -4,13 +4,13 @@ import UseRegister from "../hooks/UseRegister";
 import Loading from "./Loading";
 import { ToastContainer, toast } from "react-toastify";
 
-export default function SignUp({ handleClick }) {
+export default function SignUp({ register,handleClick }) {
   const fullNameref = useRef();
   const usernameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
 
-  const { onSubmit, response, loading } = UseRegister();
+  const { onSubmit, response, loading } = UseRegister(register);
 
   const notify = () => {
     response?.status === 200

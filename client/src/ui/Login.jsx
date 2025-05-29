@@ -1,15 +1,25 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useContext } from "react";
 import UseLogin from "../hooks/UseLogin";
 import Input from "./Input";
 import Loading from "./Loading";
 import { ToastContainer, toast } from "react-toastify";
+import { AuthContext } from "../routes/AuthContext";
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-export default function Login({ handleClick, heading }) {
-  const { onsubmit, loading, response } = UseLogin();
+export default function Login({
+  riderect,
+  handleClick,
+  heading,
+  login,
+  handleClose,
+}) {
+  const { onsubmit, loading, response } = UseLogin(login, riderect);
+
   const userLogin = useRef();
   const passwordLogin = useRef();
+
+  const { setToken } = useContext(AuthContext);
 
   const notify = () => {
     response?.status === 200
@@ -26,10 +36,12 @@ export default function Login({ handleClick, heading }) {
   useEffect(() => {
     const handleResponse = async () => {
       if (response) {
+        setToken(JSON.stringify(response?.data.result.token));
         notify();
+
         if (response.status === 200) {
-          await delay(3000);
-          handleClick(localStorage);
+          await delay(1500);
+          handleClose();
         }
       }
     };

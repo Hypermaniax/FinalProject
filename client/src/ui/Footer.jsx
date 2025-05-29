@@ -16,7 +16,7 @@ const Hosting = ["About Host", "Benefit", "Responsibilities"];
 
 export default function Footer() {
   return (
-    <div className="bg-black mt-10 text-white p-9 ">
+    <div className="bg-black mt-10 relative bottom-0 text-white p-9 ">
       <WrapperContent>
         <div className="grid grid-cols-5 gap-16 content-center">
           <div className="col-span-1 items-center justify-center w-36">

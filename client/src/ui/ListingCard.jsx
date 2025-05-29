@@ -33,10 +33,10 @@ export default function ListingCard({ dummy, data }) {
 
             {/* Bottom buttons */}
             <div className="flex   gap-2 pt-4">
-              <button className="bg-blue-500 w-1/2 bg-black text-white px-4 py-2 rounded">
+              <button className="w-1/2 bg-black text-white px-4 py-2 rounded">
                 Edit
               </button>
-              <button className="bg-red-500 w-1/2 bg-redCustom text-white px-4 py-2 rounded">
+              <button className=" w-1/2 bg-redCustom text-white px-4 py-2 rounded">
                 Delete
               </button>
             </div>

@@ -2,6 +2,7 @@ const express = require("express");
 const registHostController = require("../controller/Host/registerHostController");
 const loginHostController = require("../controller/Host/loginControllerHost");
 const dataListingHost = require("../controller/Host/listingController");
+const { verifyToken } = require("../middleware/verifyToken");
 
 const route = express.Router();
 

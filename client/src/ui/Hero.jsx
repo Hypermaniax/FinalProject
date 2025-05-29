@@ -1,9 +1,11 @@
-export default function Hero({ children }) {
-
-  // you must remove the buttom scroll bar
-  
+export default function Hero({ children ,link }) {
   return (
-    <div className="w-full bg-pink text-white h-80  flex flex-col items-center justify-center">
+    <div className={`w-full ${!link && 'bg-pink items-center justify-center'} text-white h-80   flex flex-col `} style={link ? {
+        background: link,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        height:'500px'
+      } : undefined}>
       {children}
     </div>
   );

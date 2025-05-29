@@ -11,10 +11,10 @@ const loginGuestService = async (username, password) => {
   if (!isMatch) throw Error("Wrong Password");
 
   const token = jwt.sign({ id: guest._id }, process.env.JWT_TOKEN, {
-    expiresIn: "1h",
+    expiresIn: "24h",
   });
 
-  return { token, guest };
+  return { token };
 };
 
 module.exports = {loginGuestService}

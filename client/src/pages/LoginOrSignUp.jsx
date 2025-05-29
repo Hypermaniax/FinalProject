@@ -1,11 +1,18 @@
-import { useState, useEffect } from "react";
-import Login from "../../ui/Login";
-import SignUp from "../../ui/SignUp";
+import { useState } from "react";
+import Login from "../ui/Login";
+import SignUp from "../ui/SignUp";
 import { X } from "lucide-react";
 
-export default function LoginOrSignUp({ isOpen, handleClick }) {
+export default function LoginOrSignUp({
+  login,
+  register,
+  isOpen,
+  handleClick,
+  heading,
+  ridrect
+}) {
   if (!isOpen) return null;
-
+  
   const [signUp, setSignUp] = useState(false);
 
   return (
@@ -15,11 +22,17 @@ export default function LoginOrSignUp({ isOpen, handleClick }) {
           <X size={20} onClick={handleClick} />
         </div>
         {signUp ? (
-          <SignUp handleClick={() => setSignUp(!signUp)}  />
+          <SignUp register={register} handleClick={() => setSignUp(!signUp)} />
         ) : (
-          <Login handleClick={() => setSignUp(!signUp)} handleClose={handleClick} />
+          <Login
+            login = {login}
+            heading={heading}
+            riderect ={ridrect}
+            handleClick={() => setSignUp(!signUp)}
+            handleClose={handleClick}
+          />
         )}
       </div>
-    </div>
+    </div> 
   );
 }
