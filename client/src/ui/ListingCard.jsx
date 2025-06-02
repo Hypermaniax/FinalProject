@@ -11,12 +11,14 @@ export default function ListingCard({ data }) {
 
   const handleDelete = (id) => {
     setSelectedId(id);
-    deletePopup.open()
+    deletePopup.open();
   };
 
   return (
     <>
-      {deletePopup.state && <DeletePopup handleClose={deletePopup.toggle} />}
+      {deletePopup.state && (
+        <DeletePopup id={selectedId} handleClose={deletePopup.toggle} />
+      )}
       {data.map((item, index) => (
         <div
           key={index}
@@ -50,7 +52,7 @@ export default function ListingCard({ data }) {
                 Edit
               </button>
               <button
-                onClick={()=>handleDelete(item._id)}
+                onClick={() => handleDelete(item._id)}
                 className=" w-1/2 bg-redCustom text-white px-4 py-2 rounded"
               >
                 Delete

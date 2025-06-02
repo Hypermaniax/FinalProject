@@ -13,5 +13,7 @@ const addNewListing = async (params) => {
 
   return await listing.save();
 };
-
-module.exports = { getAllData,addNewListing };
+const deleteListingById = async (id) => {
+  return await Listing.findByIdAndDelete(id);
+};
+module.exports = { getAllData, addNewListing, deleteListingById };

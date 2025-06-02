@@ -74,7 +74,7 @@ export default function NewListing({ handleClose }) {
   };
 
   return (
-    <div className="fixed inset-0 backdrop-blur-sm bg-transparent flex items-center justify-center z-50">
+    <div className="fixed inset-0 backdrop-blur-sm bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-darkWhite relative text-gray grid font-bold px-16 py-5   text-left rounded-2xl space-y-4 w-2/6">
         <div className="flex items-center  justify-between">
           <h1 className="text-3xl">New Listing</h1>
