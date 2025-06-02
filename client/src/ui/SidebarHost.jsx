@@ -2,7 +2,6 @@ import {
   Cog,
   House,
   LayoutDashboard,
-  MessageSquareText,
   Paperclip,
   Star,
   Wallet,
@@ -11,12 +10,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const navLinks = [
-  { path: 'dashboard-host', label: 'Dashboard', icon: <LayoutDashboard /> },
-  { path: 'booking-host', label: 'Bookings', icon: <Paperclip /> },
-  { path: 'listing-host', label: 'Listing', icon: <House /> },
-  { path: 'message-host', label: 'Message', icon: <MessageSquareText /> },
-  { path: 'review-host', label: 'Reviews', icon: <Star /> },
-  { path: 'payout-host', label: 'Payouts', icon: <Wallet /> },
+  { path: "dashboard-host", label: "Dashboard", icon: <LayoutDashboard /> },
+  { path: "booking-host", label: "Bookings", icon: <Paperclip /> },
+  { path: "listing-host", label: "Listing", icon: <House /> },
+  { path: "review-host", label: "Reviews", icon: <Star /> },
+  { path: "payout-host", label: "Payouts", icon: <Wallet /> },
 ];
 
 export default function SidebarHost() {

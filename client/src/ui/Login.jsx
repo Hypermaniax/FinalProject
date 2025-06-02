@@ -20,7 +20,7 @@ export default function Login({
   const passwordLogin = useRef();
 
   const { setToken } = useContext(AuthContext);
-
+  
   const notify = () => {
     response?.status === 200
       ? toast.success(response?.data.message, {
@@ -38,7 +38,6 @@ export default function Login({
       if (response) {
         setToken(JSON.stringify(response?.data.result.token));
         notify();
-
         if (response.status === 200) {
           await delay(1500);
           handleClose();

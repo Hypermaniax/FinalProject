@@ -2,6 +2,7 @@ const { loginGuestService } = require("../../service/Guest/loginGuestService");
 
 const loginGuestController = async (req, res) => {
   try {
+    
     const { username, password } = req.body;
     
     const result = await loginGuestService(username, password);

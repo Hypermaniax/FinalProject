@@ -22,6 +22,13 @@ const ListingSchema = new Schema(
   { timestamps: true }
 );
 
+ListingSchema.post("save", async function (doc) {
+  const Host = require("./host");
+  await Host.findByIdAndUpdate(doc.host, {
+    $addToSet: { listings: doc._id },
+  });
+});
+
 const Listing = mongoose.model("Listing", ListingSchema);
 
-module.exports = Listing
+module.exports = Listing;

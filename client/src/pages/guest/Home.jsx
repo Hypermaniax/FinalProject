@@ -3,7 +3,7 @@ import Carousel from "../../ui/Carousel";
 import Headline from "../../ui/Headline";
 import Hero from "../../ui/Hero";
 import WrapperContent from "../../ui/WrapperContent";
-WrapperContent;
+import Ordering from "./Ordering";
 export default function Home() {
   return (
     <>
@@ -22,7 +22,6 @@ export default function Home() {
         />
         <Carousel heading={"PROMOTION"} title={"Trendy Space"} text />
       </WrapperContent>
-      
     </>
   );
 }

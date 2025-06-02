@@ -1,9 +1,22 @@
+import { useState } from "react";
 import image from "../assets/Rectangle8.png";
+import useToggle from "../hooks/UseToggle";
+import DeletePopup from "./DeletePopup";
 import Loading from "./Loading";
-export default function ListingCard({ dummy, data }) {
-  if (!data) return <Loading />
+
+export default function ListingCard({ data }) {
+  const deletePopup = useToggle();
+  const [selectedId, setSelectedId] = useState();
+  if (!data) return <Loading />;
+
+  const handleDelete = (id) => {
+    setSelectedId(id);
+    deletePopup.open()
+  };
+
   return (
     <>
+      {deletePopup.state && <DeletePopup handleClose={deletePopup.toggle} />}
       {data.map((item, index) => (
         <div
           key={index}
@@ -36,14 +49,21 @@ export default function ListingCard({ dummy, data }) {
               <button className="w-1/2 bg-black text-white px-4 py-2 rounded">
                 Edit
               </button>
-              <button className=" w-1/2 bg-redCustom text-white px-4 py-2 rounded">
+              <button
+                onClick={()=>handleDelete(item._id)}
+                className=" w-1/2 bg-redCustom text-white px-4 py-2 rounded"
+              >
                 Delete
               </button>
             </div>
           </section>
           <div className="relative h-64 w-full">
             <img
-              src={Array.isArray(item.imgUrl) ? item.imgUrl[0] : item.imgUrl}
+              src={
+                Array.isArray(item.imgUrl)
+                  ? `http://localhost:3000/uploads/${item.imgUrl[0]}`
+                  : item.imgUrl
+              }
               alt={item.title || "Property image"}
               className="absolute inset-0 w-full h-full object-cover rounded"
             />

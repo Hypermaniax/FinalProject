@@ -1,28 +1,57 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Select from "react-select";
 import province from "../jsonFile/provinceAndCity.json";
 import allLodgingSubtypes from "../jsonFile/types";
 import facilityOptions from "../jsonFile/facilities";
 import { X } from "lucide-react";
+import UseAddListing from "../hooks/UseAddListing";
+import { useRef } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../routes/AuthContext";
 
-export default function NewListing() {
+export default function NewListing({ handleClose }) {
   const [selectedProvince, setSelectedProvince] = useState();
   const [selectedCity, setSelectedCity] = useState();
+  const [category, setCategory] = useState();
+  const title = useRef();
+  const description = useRef();
+  const [photo, setPhoto] = useState();
   const [image, setImage] = useState(null);
   const [selectedFacilities, setSelectedFacilities] = useState(null);
+  const capacity = useRef();
+  const price = useRef();
+
+  const { user } = useContext(AuthContext);
+
+  const { setAddListing } = UseAddListing();
 
   const provinceOption = Object.keys(province).map((key) => ({
     value: key,
     label: key,
   }));
 
-  const cityOption = selectedProvince
-    ? province[selectedProvince?.value].map((city) => ({
-        value: city,
-        label: city,
-      }))
-    : [];
-  console.log(selectedFacilities);
+  const cityOption = useMemo(() => {
+    if (!selectedProvince) return [];
+    return province[selectedProvince?.value].map((city) => ({
+      value: city,
+      label: city,
+    }));
+  }, [selectedProvince]);
+
+  const confirm = () => {
+    setAddListing({
+      id: user._id,
+      photo,
+      selectedFacilities: selectedFacilities.map((item) => item.value),
+      selectedProvince: selectedProvince.value,
+      selectedCity: selectedCity.value,
+      category: category.value,
+      title: title.current.value,
+      capacity: capacity.current.value,
+      price: price.current.value,
+      description: description.current.value,
+    });
+  };
 
   const handleDrop = (e) => {
     e.preventDefault();
@@ -40,15 +69,16 @@ export default function NewListing() {
     const file = e.target.files[0];
     if (file && file.type.startsWith("image/")) {
       setImage(URL.createObjectURL(file));
+      setPhoto(file); // not wrapped in { photo: file }
     }
   };
 
   return (
     <div className="fixed inset-0 backdrop-blur-sm bg-transparent flex items-center justify-center z-50">
-      <div className="bg-white relative text-gray grid font-bold px-16 py-5   text-left rounded-2xl space-y-4 w-2/6">
+      <div className="bg-darkWhite relative text-gray grid font-bold px-16 py-5   text-left rounded-2xl space-y-4 w-2/6">
         <div className="flex items-center  justify-between">
           <h1 className="text-3xl">New Listing</h1>
-          <X className="relative left-12 -top-3 "/>
+          <X onClick={handleClose} className="relative left-12 -top-3 " />
         </div>
         <div className="space-y-1">
           <label className="text-base">Location</label>
@@ -78,6 +108,7 @@ export default function NewListing() {
             options={allLodgingSubtypes}
             className="w-1/2 font-normal"
             placeholder="Category"
+            onChange={setCategory}
           />
         </div>
         <div className="space-y-1  grid">
@@ -85,6 +116,7 @@ export default function NewListing() {
 
           <input
             type="text"
+            ref={title}
             className="p-2 font-normal outline-none text-black border "
             placeholder="Add Tittle..."
           />
@@ -94,6 +126,7 @@ export default function NewListing() {
           <textarea
             className="w-full border outline-none font-normal  p-2 rounded resize-none"
             rows={4}
+            ref={description}
             placeholder="Add Description ..."
           />
         </div>
@@ -144,6 +177,7 @@ export default function NewListing() {
               type="number"
               min={0}
               max={100}
+              ref={capacity}
               step={1}
               className="border-2 px-3 py-2  font-normal rounded "
               placeholder="Capacity "
@@ -154,6 +188,7 @@ export default function NewListing() {
             <input
               type="number"
               min={0}
+              ref={price}
               max={100}
               step={1}
               className="border-2 px-3 py-2  font-normal rounded "
@@ -161,33 +196,15 @@ export default function NewListing() {
             />
           </div>
         </div>
-        <div className="space-y-1 grid">
-          <label className="text-base font-semibold">Price</label>
-          <input
-            type="number"
-            min={0}
-            max={100}
-            step={1}
-            className="border-2 px-3 py-2 w-1/2 font-normal rounded "
-            placeholder="Price "
-          />
-        </div>
         <div className="text-center">
-          <button className="bg-green-700 py-1 text-white px-4 rounded-lg">
+          <button
+            onClick={confirm}
+            className="bg-green-700 py-1 text-white px-4 rounded-lg"
+          >
             Confirm
           </button>
         </div>
       </div>
     </div>
   );
-}
-{
-  /* <input
-  type="text"
-  inputmode="numeric"
-  pattern="[0-9\s]{13,19}"
-  autocomplete="cc-number"
-  maxlength="19"
-  placeholder="xxxx xxxx xxxx xxxx"
-/> */
 }
