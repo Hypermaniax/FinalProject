@@ -27,6 +27,7 @@ const allLodgingSubtypes = [
   { value: "Modern House", label: "Modern House" },
   { value: "Luxury Home", label: "Luxury Home" },
   { value: "Designer Home", label: "Designer Home" },
+  { value: "Traditional House", label: "Traditional House" }, // ✅ Added
 
   // 🏰 Mansions & Castles
   { value: "Classic Mansion", label: "Classic Mansion" },
@@ -41,6 +42,15 @@ const allLodgingSubtypes = [
 
   // 🎭 Others
   { value: "Auditorium Access", label: "Auditorium Access" },
+  { value: "Cabin", label: "Cabin" },
+  { value: "Bungalow", label: "Bungalow" },
+  { value: "Cottage", label: "Cottage" },
+  { value: "Treehouse", label: "Treehouse" },
+  { value: "Yurt", label: "Yurt" },
+  { value: "Boathouse", label: "Boathouse" },
+  { value: "Houseboat", label: "Houseboat" },
+  { value: "Tent", label: "Tent" },
+  { value: "Tiny Home", label: "Tiny Home" },
 ];
 
 export default allLodgingSubtypes;

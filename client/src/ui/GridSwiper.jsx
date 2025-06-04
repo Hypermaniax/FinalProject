@@ -38,24 +38,36 @@ export default function GridSwiper() {
     : "opacity-0 transition-opacity duration-200 ease-out";
 
   return (
-    <div className="grid justify-center grid-cols-2 items-center gap-1">
-      <img
-        key={`large-${getImage(0)}`}
-        src={getImage(0)}
-        alt="Large"
-        className={`w-[600px] h-[600px] mx-auto object-fill rounded-lg ${fadeClass}`}
-      />
+    <div className=" mx-auto grid grid-cols-3 gap-2 ">
+      {/* Gambar besar */}
+      <div className="col-span-2 aspect-video">
+        <img
+          key={`large-${getImage(0)}`}
+          src={getImage(0)}
+          alt="Large"
+          className={`w-full h-full object-cover rounded-lg ${fadeClass}`}
+        />
+      </div>
 
-      <div className="col-span-1 grid grid-cols-2 gap-1 ">
+      {/* Gambar kecil */}
+      <div className="grid grid-cols-2 gap-1 ">
         {[1, 2, 3, 4].map((offset, idx) => (
-          <img
-            key={`small-${getImage(offset)}-${idx}`} // unique key for fade effect
-            src={getImage(offset)}
-            alt={`Small ${idx + 1}`}
-            className={`w-[300px] h-[300px] col-span-1 object-fill rounded-lg ${fadeClass}`}
-          />
+          <div
+            key={`small-${getImage(offset)}-${idx}`}
+            className="w-full aspect-square h-full"
+          >
+            <img
+              src={getImage(offset)}
+              alt={`Small ${idx + 1}`}
+              className={`w-full h-full object-cover rounded-lg ${fadeClass}`}
+            />
+          </div>
         ))}
       </div>
     </div>
   );
 }
+
+
+
+    

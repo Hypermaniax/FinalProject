@@ -2,23 +2,27 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function UsePagination() {
-  const [page, setPage] = useState(1);
-  const [limit, setLimit] = useState();
+  const [currentPage, setCurrentPage] = useState(1);
+  const [paginationData, setPaginationData] = useState([]);
+  const [totalPage, setTotalPage] = useState(1);
 
   useEffect(() => {
     (async () => {
       try {
-        const res = axios.post("", { page, limit });
-        setPage(res);
-        setLimit(limit);
+        const res = await axios.get(
+          `http://localhost:3000/space/?page=${currentPage}&limit=16`
+        );
+        setPaginationData(res.data.data);
+        setTotalPage(res.data.totalPage);
       } catch (error) {}
     })();
-  }, [page]);
+  }, [currentPage]);
 
   return {
-    setPage,
-    page,
-    limit,
-    setLimit,
+    currentPage,
+    paginationData,
+    setCurrentPage,
+    itemFilter: paginationData, // langsung pakai data
+    totalPage,
   };
 }

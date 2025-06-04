@@ -9,6 +9,38 @@ import { useRef } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../routes/AuthContext";
 
+import { components } from "react-select";
+
+const CustomOption = (props) => {
+  const {
+    data: { label, icon: Icon },
+  } = props;
+
+  return (
+    <components.Option {...props}>
+      <div className="flex items-center gap-2">
+        {Icon && <Icon className="w-4 h-4 text-muted-foreground" />}
+        <span>{label}</span>
+      </div>
+    </components.Option>
+  );
+};
+
+const CustomMultiValueLabel = (props) => {
+  const {
+    data: { label, icon: Icon },
+  } = props;
+
+  return (
+    <components.MultiValueLabel {...props}>
+      <div className="flex items-center gap-1">
+        {Icon && <Icon className="w-3 h-3 text-muted-foreground" />}
+        <span>{label}</span>
+      </div>
+    </components.MultiValueLabel>
+  );
+};
+
 export default function NewListing({ handleClose }) {
   const [selectedProvince, setSelectedProvince] = useState();
   const [selectedCity, setSelectedCity] = useState();
@@ -168,6 +200,10 @@ export default function NewListing({ handleClose }) {
             defaultValue={selectedFacilities}
             placeholder="Facilities"
             className="font-normal"
+            components={{
+              Option: CustomOption,
+              MultiValueLabel: CustomMultiValueLabel,
+            }}
           />
         </div>
         <div className="space-y-1 grid-cols-2 grid gap-5">
