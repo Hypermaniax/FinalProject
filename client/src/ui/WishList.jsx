@@ -1,5 +1,5 @@
 import { Star } from "lucide-react";
-import damn from "../assets/damn.png";
+import damn from "../assets/spongebob.jpeg";
 export default function Wishlist() {
   return (
     <>

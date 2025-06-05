@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import damn from "../assets/damn.png";
+import damn from "../assets/spongebob.jpeg";
 
 export default function ProfileUser({menu,user}) {
   return (

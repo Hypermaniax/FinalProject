@@ -1,4 +1,4 @@
-import img from "../assets/damn.png";
+import img from "../assets/spongebob.jpeg";
 
 export default function DashboardGuest() {
   return (

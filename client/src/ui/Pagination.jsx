@@ -35,8 +35,9 @@ export default function Pagination({
                   className="bg-white transition-all duration-300 ease-in-out transform hover:translate-y-[-10px] rounded-3xl w-full cursor-pointer shadow-[0_8px_10px_-4px_rgba(0,0,0,0.2)] overflow-hidden "
                   key={index}
                 >
+                  {/* http://localhost:3000//uploads/${item.imgUrl[0]} */}
                   <img
-                    src={`http://localhost:3000/uploads/${item.imgUrl[0]}`}
+                    src={`http://localhost:3000//uploads/${item.imgUrl[0]}`}
                     className="w-full h-60 object-cover"
                     alt="Monas"
                   />

@@ -1,5 +1,5 @@
 import { Dot } from "lucide-react";
-import profile from "../assets/damn.png";
+import profile from "../assets/spongebob.jpeg";
 import DatePicker from "react-datepicker";
 import { useState } from "react";
 

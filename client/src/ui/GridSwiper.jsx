@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import monas from "../assets/Monas.png";
-import damn from "../assets/damn.png";
+import damn from "../assets/spongebob.jpeg";
 import logo1 from "../assets/logosn1.png";
 import logo2 from "../assets/logosn2.png";
 import host from "../assets/hostIMG.png";
