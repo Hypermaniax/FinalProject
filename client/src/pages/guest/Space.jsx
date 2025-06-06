@@ -10,15 +10,14 @@ import { useState } from "react";
 export default function Spaces() {
   const { paginationData, currentPage, totalPage, setCurrentPage, itemFilter } =
     UsePagination();
-  const [idData, setIdData] = useState();
+  const [selected, setSelected] = useState();
   const { state, toggle } = useToggle();
-  console.log(paginationData);
-  
+  console.log(selected);
   
   return (
     <>
       {state ? (
-        <Ordering />
+        <Ordering data={selected} />
       ) : (
         <>
           <Hero>
@@ -52,6 +51,7 @@ export default function Spaces() {
               setCurrentPage={setCurrentPage}
               itemFilter={itemFilter}
               toggle={toggle}
+              setSelected={setSelected}
             />
           </WrapperContent>
         </>

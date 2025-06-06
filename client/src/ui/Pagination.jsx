@@ -10,6 +10,7 @@ export default function Pagination({
   setCurrentPage,
   itemFilter,
   toggle,
+  setSelected,
 }) {
   return (
     <section className=" grid mt-14 grid-cols-5">
@@ -29,10 +30,14 @@ export default function Pagination({
         </div>
         {!!paginationData && (
           <>
-            <div className="grid grid-cols-4 gap-5" onClick={toggle}>
+            <div className="grid grid-cols-4 gap-5">
               {itemFilter.map((item, index) => (
                 <div
                   className="bg-white transition-all duration-300 ease-in-out transform hover:translate-y-[-10px] rounded-3xl w-full cursor-pointer shadow-[0_8px_10px_-4px_rgba(0,0,0,0.2)] overflow-hidden "
+                  onClick={() => {
+                    setSelected(item);
+                    toggle();
+                  }}
                   key={index}
                 >
                   {/* http://localhost:3000//uploads/${item.imgUrl[0]} */}

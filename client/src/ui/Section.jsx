@@ -8,7 +8,7 @@ export default function Section({ link, content, search }) {
           <h1 className="whitespace-pre-line font-bold italic text-lg md:text-5xl">
             {content.head}
           </h1>
-          <p className="text-gray-600 mt-6 leading-relaxed whitespace-pre-line text-base font-thin">
+          <p className=" mt-6 leading-relaxed whitespace-pre-line text-base text-gray-500">
             {content.text}
           </p>
           {search ? (

@@ -48,7 +48,6 @@ const paginationGuest = async (query) => {
       queryObject,
       sorted
     );
-    console.log(filtered);
     
     return filtered;
   } catch (e) {

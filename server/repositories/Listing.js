@@ -47,11 +47,13 @@ const getListingsByPagination = async (page, limit, query, sortBy) => {
 
   // Query Logic
   const listing = await Listing.find()
-    .populate([{ path: "host", select: ["username", "imageUrl"] }])
+  .populate([
+    { path: "host", select: ["username", "imageUrl"] },
+    ])
     .sort(sortBy)
     .skip(skip)
     .limit(limit);
-
+    
   // Pagination Logic
   const total = await Listing.countDocuments();
   const totalPages = Math.ceil(total / limit);
