@@ -55,7 +55,12 @@ export default function Pagination({
                       ⭐{item.rating}({item.reviews})
                     </p>
                     <p className="text-start font-semibold">
-                      Rp.{item.price} / night
+                      {new Intl.NumberFormat("id-ID", {
+                        style: "currency",
+                        currency: "IDR",
+                        minimumFractionDigits: 0,
+                      }).format(item.price)}{" "}
+                      / night
                     </p>
                   </div>
                 </div>

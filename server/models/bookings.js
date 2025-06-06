@@ -1,4 +1,3 @@
-
 // models/Booking.js
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
@@ -15,5 +14,21 @@ const BookingSchema = new Schema(
   },
   { timestamps: true }
 );
+
+BookingSchema.post("save", async function (doc) {
+  const guest = require("./guestSchema");
+  const listing = require("./listing");
+  const payment = require("./payment");
+
+  await listing.findByIdAndUpdate(doc._id, {
+    $pull: { bookings: doc._id },
+  });
+  await guest.findByIdAndUpdate(doc._id, {
+    $pull: { bookings: doc._id },
+  });
+  await payment.findByIdAndUpdate(doc._id, {
+    $pull: { bookings: doc._id },
+  });
+});
 
 module.exports = mongoose.model("Booking", BookingSchema);

@@ -1,8 +1,6 @@
 import axios from "axios";
-import { useContext } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { AuthContext } from "../routes/AuthContext";
 
 export default function UseAddListing() {
   const [addListing, setAddListing] = useState(null);
@@ -37,6 +35,5 @@ export default function UseAddListing() {
     uploadListing();
   }, [addListing]);
 
-  
   return { setAddListing };
 }

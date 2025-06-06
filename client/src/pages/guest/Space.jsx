@@ -12,7 +12,6 @@ export default function Spaces() {
     UsePagination();
   const [selected, setSelected] = useState();
   const { state, toggle } = useToggle();
-  console.log(selected);
   
   return (
     <>

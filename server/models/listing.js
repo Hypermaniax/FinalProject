@@ -35,9 +35,6 @@ ListingSchema.post("findOneAndDelete", async function (doc) {
     await Host.findByIdAndUpdate(doc.host, {
       $pull: { listings: doc._id },
     });
-
-    // Optionally, also remove related images or other cleanup
-    console.log(`Deleted listing ${doc._id}`);
   }
 });
 

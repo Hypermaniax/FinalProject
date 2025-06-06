@@ -13,34 +13,38 @@ export default function OrderContent({ data }) {
 
   const booksDate = { checkIn, checkOut };
 
-  const bookedDates = [
-    [
-      new Date("Tue Jun 10 2025 00:00:00 GMT+0700 (Western Indonesia Time)"),
-      new Date("Thu Jun 12 2025 00:00:00 GMT+0700 (Western Indonesia Time)"),
-    ],
-    [
-      new Date("Tue Jun 15 2025 00:00:00 GMT+0700 (Western Indonesia Time)"),
-      new Date("Thu Jun 20 2025 00:00:00 GMT+0700 (Western Indonesia Time)"),
-    ],
-  ];
+  // function getExcludedDates(ranges) {
+  //   const excluded = [];
 
-  function getExcludedDates(ranges) {
-    const excluded = [];
+  //   ranges.forEach(([start, end]) => {
+  //     const current = new Date(start);
+  //     const last = new Date(end);
 
-    ranges.forEach(([start, end]) => {
-      const current = new Date(start);
-      const last = new Date(end);
+  //     while (current <= last) {
+  //       excluded.push(new Date(current));
+  //       current.setDate(current.getDate() + 1);
+  //     }
+  //   });
 
-      while (current <= last) {
-        excluded.push(new Date(current));
-        current.setDate(current.getDate() + 1);
-      }
-    });
+  //   return excluded;
+  // }
 
-    return excluded;
+  function longDays() {
+    const current = new Date(checkIn);
+    const last = new Date(checkOut);
+
+    const time = last - current;
+    const daysDiff = time / (1000 * 60 * 60 * 24);
+
+    return daysDiff;
   }
 
-  const excludeDates = getExcludedDates(bookedDates);
+  const formatted = new Intl.NumberFormat("id-ID", {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(data.price);
+
+  // const excludeDates = getExcludedDates(bookedDates);
 
   const handleClick = () => {
     if (!checkIn && !checkOut) return;
@@ -49,10 +53,21 @@ export default function OrderContent({ data }) {
 
   const { toggle, state } = useToggle();
 
+  const requestData = {
+    id: data._id,
+    checkIn,
+    checkOut,
+    guests,
+    formatted,
+    days: longDays(),
+    title: data.title,
+    category: data.category,
+  };
+
   return (
     <>
       {state ? (
-        <RequestToBook data={data} date={booksDate} back={toggle} />
+        <RequestToBook data={requestData} date={booksDate} back={toggle} />
       ) : (
         <>
           <GridSwiper data={data} />
@@ -87,7 +102,7 @@ export default function OrderContent({ data }) {
               <div className="w-80 p-4 rounded-xl shadow-md border bg-white">
                 <div className="mb-4">
                   <span className="text-lg font-semibold">
-                    <span className="underline">Rp5,000,000</span>
+                    <span className="underline">Rp.{formatted}</span>
                   </span>
                   <span className="text-sm text-gray-600"> for 1 night</span>
                 </div>
@@ -97,7 +112,7 @@ export default function OrderContent({ data }) {
                     <DatePicker
                       selected={checkIn}
                       minDate={new Date()}
-                      excludeDates={excludeDates}
+                      // excludeDates={excludeDates}
                       onChange={(date) => setCheckIn(date)}
                       placeholderText="Check In"
                       className="w-full p-2 text-sm outline-none"
@@ -105,7 +120,7 @@ export default function OrderContent({ data }) {
                     <DatePicker
                       selected={checkOut}
                       minDate={new Date()}
-                      excludeDates={excludeDates}
+                      // excludeDates={excludeDates}
                       onChange={(date) => setCheckOut(date)}
                       placeholderText="Check Out"
                       className="w-full p-2 text-sm outline-none"
