@@ -1,6 +1,6 @@
 const {
   paginationGuest,
-} = require("../../service/Guest/PaginationGuestService");
+} = require("../../service/Listing/pagiantionListing");
 
 const pagination = async (req, res) => {
   try {

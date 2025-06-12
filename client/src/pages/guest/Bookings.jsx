@@ -14,6 +14,7 @@ import Wishlist from "../../ui/WishList";
 import AccountSetting from "../../ui/AccountSetting";
 import { useContext } from "react";
 import { AuthContext } from "../../routes/AuthContext";
+import RequestToBook from "../../ui/RequestTobook";
 
 const menus = [
   { label: "My Booking", icon: BookText, path: "bookings" },
@@ -24,18 +25,25 @@ const menus = [
 ];
 
 export default function Bookings() {
-  const {user} = useContext(AuthContext)
+  const { user } = useContext(AuthContext);
 
   return (
     <WrapperContent>
-      <div className="grid-cols-4 gap-16 mt-10 grid">
+      <div className="grid-cols-4  gap-16 mt-10 grid">
         <Routes>
-          <Route path="/" element={<ProfileUser menu={menus} user={user} />}>
-            <Route path="bookings" element={<DashboardGuest/>} />
-            <Route path="wishlist" element={<Wishlist/>} />
+          <Route
+            path="/"
+            element={<ProfileUser menu={menus} user={user?.guest} />}
+          >
+            <Route
+              path="bookings"
+              element={<DashboardGuest listingCard={user?.bookings} />}
+            />
+            <Route path="wishlist" element={<Wishlist />} />
             <Route path="transaction" element={<>Transaction</>} />
-            <Route path="account" element={<AccountSetting/>} />
+            <Route path="account" element={<AccountSetting />} />
             <Route path="logout" element={<>logout</>} />
+            <Route path="payment-bookings" element={<RequestToBook />} />
           </Route>
         </Routes>
       </div>

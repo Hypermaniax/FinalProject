@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import LoginOrSignUp from "../pages/LoginOrSignUp";
 import { useContext } from "react";
 import { AuthContext } from "../routes/AuthContext";
 
@@ -13,18 +12,14 @@ const navLinks = [
   { path: "/host", label: "Host" },
 ];
 
-const loginGuest = "http://localhost:3000/login-guest";
-const registerGuest = "http://localhost:3000/regist-guest";
-const riderect = "/bookings"
-
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [login, setlogin] = useState(false);
-  
+
   const navigate = useNavigate();
 
-  const {setToken,token,setUser} = useContext(AuthContext)
-  
+  const { setToken, token, setUser } = useContext(AuthContext);
+
   useEffect(() => {
     setToken(localStorage?.accessToken);
   }, [localStorage?.accessToken]);
@@ -52,23 +47,17 @@ export default function Header() {
             onClick={
               !!token
                 ? () => {
-                    setToken(localStorage.removeItem('accessToken'));
-                    setUser(null)
-                    navigate("/");
+                    setToken(localStorage.removeItem("accessToken"));
+                    setUser(null);
+                     navigate("/");
                   }
-                : () => setlogin(!login)
+                : () => navigate("/login-guest")
             }
             className=" hidden md:flex bg-pink-500 text-white px-5 py-2 bg-pink rounded-lg text-lg font-bold hover:bg-pink-600 transition-colors"
           >
             {!!token ? "Logout" : "Login"}
           </button>
-          <LoginOrSignUp
-            login={loginGuest}
-            ridrect={riderect}
-            register={registerGuest}
-            isOpen={login}
-            handleClick={() => setlogin(!login)}
-          />
+
           <button
             className="md:hidden text-pink-500 bg-pink p-2 rounded-lg"
             onClick={() => setIsOpen(!isOpen)}

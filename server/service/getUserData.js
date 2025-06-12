@@ -1,6 +1,8 @@
 const jwt = require("jsonwebtoken");
 const { getIdGuest } = require("../repositories/guestRepo");
 const { getIdHost } = require("../repositories/hostRepo");
+const { findBookingByid } = require("../repositories/bookings");
+const { getListingByBookings } = require("../repositories/Listing");
 
 const getUser = async (token) => {
   let verify;
@@ -19,7 +21,11 @@ const getUser = async (token) => {
   if (host) return host;
 
   const guest = await getIdGuest(id);
-  if (guest) return guest;
+  if (guest) {
+    const bookings = await findBookingByid(guest.bookings);
+    const listing = await getListingByBookings(bookings.listingId);
+    return { guest, bookings };
+  }
 
   throw Error("User not Found");
 };

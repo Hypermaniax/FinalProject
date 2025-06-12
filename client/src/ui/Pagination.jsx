@@ -2,6 +2,7 @@ import Input from "./Input";
 import Filter from "./Filter";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import SelectMenu from "./SelectMenu";
+import { Link } from 'react-router-dom';
 
 export default function Pagination({
   paginationData,
@@ -32,12 +33,9 @@ export default function Pagination({
           <>
             <div className="grid grid-cols-4 gap-5">
               {itemFilter.map((item, index) => (
-                <div
+                <Link
                   className="bg-white transition-all duration-300 ease-in-out transform hover:translate-y-[-10px] rounded-3xl w-full cursor-pointer shadow-[0_8px_10px_-4px_rgba(0,0,0,0.2)] overflow-hidden "
-                  onClick={() => {
-                    setSelected(item);
-                    toggle();
-                  }}
+                  to={`/space/${item._id}`}
                   key={index}
                 >
                   {/* http://localhost:3000//uploads/${item.imgUrl[0]} */}
@@ -63,7 +61,7 @@ export default function Pagination({
                       / night
                     </p>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </>

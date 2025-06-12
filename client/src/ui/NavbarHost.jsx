@@ -1,13 +1,10 @@
-import { useState } from "react";
-import logoSn1 from "../assets/logosn1.png";
-import LoginOrSignUp from "../pages/LoginOrSignUp";
 
-const loginHost = "http://localhost:3000/login-host";
-const registerHost = "http://localhost:3000/regist-host";
-const riderect = '/host/dashboard/dashboard-host'
+import logoSn1 from "../assets/logosn1.png";
+import { useNavigate } from "react-router-dom";
+
 
 export default function NavbarHost() {
-  const [isOPen, setIsopen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -22,7 +19,7 @@ export default function NavbarHost() {
               </h1>
             </div>
             <button
-              onClick={() => setIsopen(!isOPen)}
+              onClick={() => navigate("/host/login-host")}
               className=" hidden md:flex bg-pink-500 text-white px-5 py-1 bg-pink rounded-lg text-lg font-bold hover:bg-pink-600 transition-colors"
             >
               Login
@@ -30,14 +27,14 @@ export default function NavbarHost() {
           </div>
         </div>
       </nav>
-      <LoginOrSignUp
+      {/* <LoginOrSignUp
         login={loginHost}
         register={registerHost}
-        ridrect = {riderect}
+        ridrect={riderect}
         heading
-        isOpen={isOPen}
-        handleClick={() => setIsopen(!isOPen)}
-      />
+        // isOpen={isOPen}
+        // handleClick={() => setIsopen(!isOPen)}
+      /> */}
     </>
   );
 }

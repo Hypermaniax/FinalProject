@@ -16,18 +16,15 @@ const BookingSchema = new Schema(
 );
 
 BookingSchema.post("save", async function (doc) {
-  const guest = require("./guestSchema");
-  const listing = require("./listing");
-  const payment = require("./payment");
+  const Guest = require("./guestSchema");
+  const Listing = require("./listing");
 
-  await listing.findByIdAndUpdate(doc._id, {
-    $pull: { bookings: doc._id },
+  await Guest.findByIdAndUpdate(doc.guestId, {
+    $addToSet: { bookings: doc._id },
   });
-  await guest.findByIdAndUpdate(doc._id, {
-    $pull: { bookings: doc._id },
-  });
-  await payment.findByIdAndUpdate(doc._id, {
-    $pull: { bookings: doc._id },
+
+  await Listing.findByIdAndUpdate(doc.listingId, {
+    $addToSet: { bookings: doc._id },
   });
 });
 

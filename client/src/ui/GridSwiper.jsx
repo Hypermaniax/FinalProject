@@ -38,7 +38,7 @@ export default function GridSwiper() {
     : "opacity-0 transition-opacity duration-200 ease-out";
 
   return (
-    <div className=" mx-auto grid grid-cols-3 gap-2 ">
+    <div className=" mx-auto mt-10 grid grid-cols-3 gap-2 ">
       {/* Gambar besar */}
       <div className="col-span-2 aspect-video">
         <img

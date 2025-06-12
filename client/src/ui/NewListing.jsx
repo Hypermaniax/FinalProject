@@ -51,7 +51,7 @@ export default function NewListing({ handleClose }) {
   const [image, setImage] = useState(null);
   const [selectedFacilities, setSelectedFacilities] = useState(null);
   const capacity = useRef();
-  const price = useRef();
+  const [formatted , setFormatted] =useState()
 
   const { user } = useContext(AuthContext);
 
@@ -80,7 +80,7 @@ export default function NewListing({ handleClose }) {
       category: category.value,
       title: title.current.value,
       capacity: capacity.current.value,
-      price: price.current.value,
+      price: formatted,
       description: description.current.value,
     });
   };
@@ -103,6 +103,11 @@ export default function NewListing({ handleClose }) {
       setImage(URL.createObjectURL(file));
       setPhoto(file); // not wrapped in { photo: file }
     }
+  };
+  const handleChange = (e) => {
+    const raw = e.target.value.replace(/\D/g, ""); // Remove all non-digits
+    const formatted = new Intl.NumberFormat("id-ID").format(raw);
+    setFormatted(formatted)
   };
 
   return (
@@ -222,13 +227,11 @@ export default function NewListing({ handleClose }) {
           <div className=" grid">
             <label className="text-base font-semibold">Price</label>
             <input
-              type="number"
-              min={0}
-              ref={price}
-              max={100}
-              step={1}
-              className="border-2 px-3 py-2  font-normal rounded "
-              placeholder="Capacity "
+              type="text"
+              value={formatted}
+              onChange={handleChange}
+              className="border-2 px-3 py-2 font-normal rounded w-full"
+              placeholder="0"
             />
           </div>
         </div>

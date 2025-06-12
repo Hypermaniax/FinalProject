@@ -4,10 +4,6 @@ const getAllData = async (id) => {
   return await Listing.find({ host: id });
 };
 
-const Pagination = async (page) => {
-  return await Listing.find().limit(page);
-};
-
 const addNewListing = async (params) => {
   const listing = new Listing(params);
 
@@ -20,6 +16,12 @@ const deleteListingById = async (id) => {
 
 const getListing = async () => {
   return await Listing.find({});
+};
+
+const getLisitingById = async (id) => {
+  return await Listing.findById(id).populate([
+    { path: "host", select: ["username", "imageUrl"] },
+  ]);
 };
 
 const getListingsWithRating = async () => {
@@ -47,13 +49,12 @@ const getListingsByPagination = async (page, limit, query, sortBy) => {
 
   // Query Logic
   const listing = await Listing.find()
-  .populate([
-    { path: "host", select: ["username", "imageUrl"] },
-    ])
+    .select("title location _id price imgUrl")
+    .populate([{ path: "host", select: ["username", "imageUrl"] }])
     .sort(sortBy)
     .skip(skip)
     .limit(limit);
-    
+
   // Pagination Logic
   const total = await Listing.countDocuments();
   const totalPages = Math.ceil(total / limit);
@@ -66,6 +67,10 @@ const getListingsByPagination = async (page, limit, query, sortBy) => {
   };
 };
 
+const getListingByBookings = async (id) => {
+  return await Listing.find({ _id: { $in: id } }).select();
+};
+
 module.exports = {
   getAllData,
   addNewListing,
@@ -73,4 +78,6 @@ module.exports = {
   getListing,
   getListingsByPagination,
   getListingsWithRating,
+  getLisitingById,
+  getListingByBookings,
 };

@@ -10,21 +10,8 @@ export default function SignUp({ register,handleClick }) {
   const emailRef = useRef();
   const passwordRef = useRef();
 
-  const { onSubmit, response, loading } = UseRegister(register);
+  const { onSubmit,  loading } = UseRegister(register);
 
-  const notify = () => {
-    response?.status === 200
-      ? toast.success(response?.data, {
-          position: "top-center",
-        })
-      : toast.error(response?.data, {
-          position: "top-center",
-        });
-  };
-
-  useEffect(() => {
-    notify();
-  }, [response]);
 
   return (
     <>

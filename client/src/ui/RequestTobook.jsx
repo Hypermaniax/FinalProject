@@ -1,29 +1,51 @@
 import { ArrowLeft, Star } from "lucide-react";
 import damn from "../assets/damn.png";
 import PaymentMethod from "./PaymentMethod";
+import UseBookings from "../hooks/UseBookings";
+import { useContext } from "react";
+import { AuthContext } from "../routes/AuthContext";
+import { useState } from "react";
+import WrapperContent from "./WrapperContent";
 
-export default function RequestToBook({ date, back, data }) {
+export default function RequestToBook({ date, data }) {
+  const { setBookings } = UseBookings();
+  const [selectedMethod, setSelectedMethod] = useState();
+
+  // function calculate() {
+  //   const raw = parseInt(data.formatted.replace(/\./g, "")); // Remove dots and convert to number
+  //   const ppn = raw * 0.12;
+  //   const total = raw * data.days + ppn + 105000;
+  //   const tax = ppn + 105000;
+  //   return {
+  //     ppn: ppn.toLocaleString("id-ID"),
+  //     total: total.toLocaleString("id-ID"),
+  //     tax: tax.toLocaleString("id-ID"),
+  //   }; // Format back with dots
+  // }
+  const { user } = useContext(AuthContext);
+  console.log(user);
   
-  function calculate() {
-    const raw = parseInt(data.formatted.replace(/\./g, "")); // Remove dots and convert to number
-    const ppn = raw * 0.12;
-    const total = raw * data.days + ppn + 105000;
-    const tax = ppn + 105000;
-    return {
-      ppn: ppn.toLocaleString("id-ID"),
-      total: total.toLocaleString("id-ID"),
-      tax: tax.toLocaleString("id-ID"),
-    }; // Format back with dots
-  }
 
-  const { ppn, total, tax } = calculate();
+  // const { ppn, total, tax } = calculate();
+  
+  // const confirm = () => {
+  //   if (!selectedMethod) return;
+  //   setBookings({
+  //     checkIn: data.checkIn,
+  //     checkOut: data.checkOut,
+  //     totalPrice: total,
+  //     listingId: data.id,
+  //     guestId: user._id,
+  //     payment: selectedMethod,
+  //   });
+  // };
 
   return (
-    <>
-      <header className="flex gap-5 items-center">
+    <WrapperContent>
+      <header className="flex gap-5 mt-10 items-center">
         <ArrowLeft
-          onClick={back}
-          className="hover:bg-pink hover:text-white rounded-full"
+          // onClick={back}
+          className="hover:bg-pink hover:text-white transition-colors ease-in-out duration-300 rounded-full"
           size={30}
         />
         <span className="text-xl font-bold">Request to Book</span>
@@ -35,11 +57,11 @@ export default function RequestToBook({ date, back, data }) {
               Trip Details
             </span>
             <p>
-              {data.checkIn.toDateString()} - {data.checkOut.toDateString()}
+              {/* {data.checkIn.toDateString()} - {data.checkOut.toDateString()} */} Date
             </p>
             <p>1 Guest</p>
           </div>
-          <PaymentMethod />
+          <PaymentMethod setSelectedMethod={setSelectedMethod} />
         </div>
         <div className=" space-y-5 my-5 ">
           <div className="bg-white rounded-xl text-gray-600 space-y-3 shadow-2xl p-5">
@@ -59,7 +81,7 @@ export default function RequestToBook({ date, back, data }) {
               />
               <div className="text-sm">
                 <span className="text-black text-base font-medium">
-                  {data.title}
+                  title
                 </span>
                 <span className="flex ">
                   <Star className="text-pink" />
@@ -73,20 +95,26 @@ export default function RequestToBook({ date, back, data }) {
                 <span className="text-gray-800 font-medium">
                   Price of the venue
                 </span>
-                <span className="font-medium">Rp{data.formatted}</span>
+                <span className="font-medium">Rp
+                  {/* {data.formatted} */}
+                  </span>
               </div>
               <p className="text-gray-500 mb-4">
-                ({data.days}×) {data.category} ({data.days} malam)
+                {/* ({data.days}×) {data.category} ({data.days} malam) */}ddd
               </p>
 
               <div className="flex justify-between mb-1">
                 <span className="text-gray-800 font-medium">Tax and Fee</span>
-                <span className="font-medium">Rp{tax}</span>
+                <span className="font-medium">Rp
+                  {/* {tax} */} tax
+                  </span>
               </div>
               <div className=" text-gray-500 text-sm">
                 <div className="flex justify-between">
                   <span>PPN 12%</span>
-                  <span>Rp.{ppn}</span>
+                  <span>Rp.
+                    {/* {ppn} */}PPN
+                    </span>
                 </div>
                 <div className="flex justify-between">
                   <span>StayNesia Fee</span>
@@ -96,19 +124,24 @@ export default function RequestToBook({ date, back, data }) {
             </section>
             <section className="flex justify-between">
               <span>Total Price</span>
-              <span className="font-bold">Rp{total}</span>
+              <span className="font-bold">Rp
+                {/* {total} */}
+                </span>
             </section>
           </div>
           <div className="grid gap-2 grid-cols-2">
             <button className="bg-white border-pink border rounded-lg py-1">
               Cancel booking
             </button>
-            <button className="bg-red-400 text-white hover:bg-pink transition-colors ease-in-out rounded-lg py-1">
+            <button
+              // onClick={confirm}
+              className="bg-red-400 text-white hover:bg-pink transition-colors ease-in-out duration-300 rounded-lg py-1"
+            >
               Request to book
             </button>
           </div>
         </div>
       </section>
-    </>
+    </WrapperContent>
   );
 }
