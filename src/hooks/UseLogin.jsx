@@ -8,16 +8,12 @@ export default function UseLogin(role) {
   const [formData, setFormData] = useState(null);
   const [response, setResponse] = useState(null);
   const [loading, setLoading] = useState(false);
-  const { setToken } = useContext(AuthContext);
-
+  const { handleLogin } = useContext(AuthContext);
   const navigate = useNavigate();
-  const url =
-    role === "guest"
-      ? "http://localhost:3000/api/v1/auth/login/guest"
-      : "http://localhost:3000/api/v1/auth/login/host";
+  const url = "http://localhost:3000/api/v1/auth/login";
 
   const ridercerUrl =
-    role === "guest" ? "/bookings" : "/host/dashboard/dashboard-host";
+    role === "Guest" ? "/bookings" : "/host/dashboard/dashboard-host";
 
   useEffect(() => {
     if (!formData) return;
@@ -25,12 +21,9 @@ export default function UseLogin(role) {
       setLoading(true);
       try {
         const token = await axios.post(url, formData);
-        console.log(token)
         setResponse(token);
-
-        localStorage.setItem("accessToken", JSON.stringify(token.data.token));
-
-        localStorage.setItem("validation", role);
+        localStorage.setItem("Token", JSON.stringify(token.data.user) || "");
+        handleLogin();
         navigate(ridercerUrl);
       } catch (error) {
         setResponse(error.response);
@@ -45,7 +38,6 @@ export default function UseLogin(role) {
       if (!response) return;
       if (response.status === 200) {
         toast.success(response?.data.message);
-        setToken(JSON.stringify(response?.data.token));
       } else {
         toast.error(response?.data.message);
       }

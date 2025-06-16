@@ -25,7 +25,7 @@ export default function RootGuest() {
           <Route
             path="bookings/*"
             element={
-              <ProtectedRoute role={'guest'}>
+              <ProtectedRoute role={'Guest'}>
                 <Bookings />
               </ProtectedRoute>
             }

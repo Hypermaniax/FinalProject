@@ -9,7 +9,7 @@ export default function SignUpHost({handleClick}) {
   const emailRef = useRef();
   const passwordRef = useRef();
 
-  const { onSubmit, loading } = UseRegister("host");
+  const { onSubmit, loading } = UseRegister("Host");
   
   return (
     <>

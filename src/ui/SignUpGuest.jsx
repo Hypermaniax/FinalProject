@@ -10,7 +10,7 @@ export default function SignUpGuest({ handleClick }) {
   const passwordRef = useRef();
   const confirmPasswordRef = useRef();
 
-  const { onSubmit, loading } = UseRegister("guest");
+  const { onSubmit, loading } = UseRegister("Guest");
 
   return (
     <>

@@ -2,6 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 import damn from "../assets/spongebob.jpeg";
 
 export default function ProfileUser({ menu, user }) {
+
   return (
     <>
       <div className="col-span-1 p-3 h-fit rounded-xl bg-white">

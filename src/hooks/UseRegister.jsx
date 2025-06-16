@@ -7,10 +7,8 @@ export default function UseRegister(role) {
   const [response, setResponse] = useState(undefined);
   const [loading, setLoading] = useState(false);
 
-  const url =
-    role === "guest"
-      ? "http://localhost:3000/api/v1/auth/register/guest"
-      : "http://localhost:3000/api/v1/auth/register/host";
+  const url = "http://localhost:3000/api/v1/auth/register";
+
   useEffect(() => {
     if (!formData) return;
     (async () => {
@@ -29,7 +27,7 @@ export default function UseRegister(role) {
   useEffect(() => {
     const handleResponse = async () => {
       if (!response) return;
-      if (response.status === 200) {
+      if (response.status === 201) {
         toast.success(response?.data.message);
       } else {
         toast.error(response?.data.message);
@@ -46,6 +44,7 @@ export default function UseRegister(role) {
       email,
       password,
       confirmPassword,
+      role
     });
   }
 

@@ -4,7 +4,7 @@ import Loading from "./Loading";
 import Input from "./Input";
 
 export default function LoginHost({handleClick}) {
-  const { onsubmit, loading } = UseLogin("host");
+  const { onsubmit, loading } = UseLogin("Host");
 
   const userLogin = useRef();
   const passwordLogin = useRef();

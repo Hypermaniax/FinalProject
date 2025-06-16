@@ -33,7 +33,7 @@ export default function Bookings() {
         <Routes>
           <Route
             path="/"
-            element={<ProfileUser menu={menus} user={user?.guest} />}
+            element={<ProfileUser menu={menus} user={user} />}
           >
             <Route
               path="bookings"
