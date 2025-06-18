@@ -3,14 +3,15 @@ import Input from "./Input";
 import Loading from "./Loading";
 import UseRegister from "../hooks/UseRegister";
 
-export default function SignUpHost({handleClick}) {
+export default function SignUpHost({ handleClick }) {
   const fullNameref = useRef();
   const usernameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
+  const passwordConfirm = useRef();
 
   const { onSubmit, loading } = UseRegister("Host");
-  
+
   return (
     <>
       <header className="text-center">
@@ -34,14 +35,21 @@ export default function SignUpHost({handleClick}) {
             spaceBar
             ref={passwordRef}
           />
+          <Input
+            label="password"
+            typeInput="password"
+            spaceBar
+            ref={passwordConfirm}
+          />
           <button
             className="bg-pink rounded-xl bg-opacity-80 hover:bg-opacity-100  hover:bg-pink py-1.5 text-white"
             onClick={() =>
               onSubmit({
-                fullNameref: fullNameref.current.value(),
-                usernameRef: usernameRef.current.value(),
-                emailRef: emailRef.current.value(),
-                passwordRef: passwordRef.current.value(),
+                name: fullNameref.current.value(),
+                username: usernameRef.current.value(),
+                email: emailRef.current.value(),
+                password: passwordRef.current.value(),
+                confirmPassword : passwordConfirm.current.value(),
               })
             }
           >
@@ -51,7 +59,7 @@ export default function SignUpHost({handleClick}) {
             already a member ?{" "}
             <span
               className="hover:text-pink cursor-pointer"
-                onClick={handleClick}
+              onClick={handleClick}
             >
               Login
             </span>{" "}

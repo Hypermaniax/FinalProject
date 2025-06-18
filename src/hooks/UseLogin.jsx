@@ -10,8 +10,6 @@ export default function UseLogin(role) {
   const [loading, setLoading] = useState(false);
   const { handleLogin } = useContext(AuthContext);
   const navigate = useNavigate();
-  const url = "http://localhost:3000/api/v1/auth/login";
-
   const ridercerUrl =
     role === "Guest" ? "/bookings" : "/host/dashboard/dashboard-host";
 
@@ -20,7 +18,10 @@ export default function UseLogin(role) {
     (async () => {
       setLoading(true);
       try {
-        const token = await axios.post(url, formData);
+        const token = await axios.post(
+          import.meta.env.VITE_API_URL_LOGIN,
+          formData
+        );
         setResponse(token);
         localStorage.setItem("Token", JSON.stringify(token.data.user) || "");
         handleLogin();

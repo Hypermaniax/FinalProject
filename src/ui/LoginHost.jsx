@@ -31,8 +31,8 @@ export default function LoginHost({handleClick}) {
           <button
             onClick={() =>
               onsubmit({
-                username: userLogin.current.value(),
-                password: passwordLogin.current.value(),
+                field1: userLogin.current.value(),
+                field2: passwordLogin.current.value(),
               })
             }
             className="bg-pink bg-opacity-80 hover:bg-opacity-100 rounded-xl py-1.5 text-white"

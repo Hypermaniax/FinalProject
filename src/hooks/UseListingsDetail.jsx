@@ -11,9 +11,8 @@ export default function UseListingDetail(id) {
       setLoading(true);
       try {
         const req = await axios.get(
-          // `http://localhost:3000/spaces/${id}`
-          `http://localhost:3000/api/v1/public/listing/${id}`
-        );     
+          `${import.meta.env.VITE_API_URL_LOGIN}${id}`
+        );
         setHotel(req.data.result);
       } catch (error) {
         setHotel(error.message);

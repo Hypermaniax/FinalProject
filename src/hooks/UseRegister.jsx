@@ -7,14 +7,12 @@ export default function UseRegister(role) {
   const [response, setResponse] = useState(undefined);
   const [loading, setLoading] = useState(false);
 
-  const url = "http://localhost:3000/api/v1/auth/register";
-
   useEffect(() => {
     if (!formData) return;
     (async () => {
       try {
         setLoading(true);
-        const req = await axios.post(url, formData);
+        const req = await axios.post(import.meta.env.VITE_API_URL_REGISTER, formData);
         setResponse(req);
       } catch (error) {
         setResponse(error.response);
