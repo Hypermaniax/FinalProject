@@ -8,7 +8,7 @@ import UseAddListing from "../hooks/UseAddListing";
 import { useRef } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../routes/AuthContext";
-
+import rulesTime from "../jsonFile/time.json";
 import { components } from "react-select";
 
 const CustomOption = (props) => {
@@ -42,18 +42,17 @@ const CustomMultiValueLabel = (props) => {
 };
 
 export default function NewListing({ handleClose }) {
-  const [selectedProvince, setSelectedProvince] = useState();
-  const [selectedCity, setSelectedCity] = useState();
-  const [category, setCategory] = useState();
-  const title = useRef();
-  const description = useRef();
-  const addres = useRef();
-  const [photo, setPhoto] = useState([]);
-  const [image, setImage] = useState([]);
-  const [selectedFacilities, setSelectedFacilities] = useState([]);
-  const capacity = useRef();
-  const [formatted, setFormatted] = useState();
-
+  const [form, setForm] = useState({
+    location: { province: null, city: null, addres: null },
+    category: null,
+    title: null,
+    description: null,
+    rules: { checkIn: null, checkOut: null, nightTime: [], additional: null },
+    imgUrl: [],
+    facility: [],
+    capacity: null,
+    price: null,
+  });
   const { user } = useContext(AuthContext);
 
   const { setAddListing } = UseAddListing();
@@ -64,26 +63,16 @@ export default function NewListing({ handleClose }) {
   }));
 
   const cityOption = useMemo(() => {
-    if (!selectedProvince) return [];
-    return province[selectedProvince?.value].map((city) => ({
+    if (!form.location.province) return [];
+
+    return province[form.location?.province].map((city) => ({
       value: city,
       label: city,
     }));
-  }, [selectedProvince]);
+  }, [form.location?.province]);
 
   const confirm = () => {
-    setAddListing({
-      id: user._id,
-      listingImg: photo,
-      selectedFacilities: selectedFacilities.map((item) => item.value),
-      selectedProvince: selectedProvince?.value,
-      selectedCity: selectedCity?.value,
-      category: category?.value,
-      title: title.current?.value,
-      capacity: capacity.current?.value,
-      price: formatted,
-      description: description.current?.value,
-    });
+    setAddListing(form);
   };
 
   const handleDrop = (e) => {
@@ -91,6 +80,10 @@ export default function NewListing({ handleClose }) {
     const file = e.dataTransfer.files[0];
     if (file && file.type.startsWith("image/")) {
       setImage((prev) => [...prev, URL.createObjectURL(file)]);
+      setForm((prev) => ({
+        ...prev,
+        imgUrl: [...prev.imgUrl, URL.createObjectURL(file)],
+      }));
     }
   };
 
@@ -102,14 +95,19 @@ export default function NewListing({ handleClose }) {
     const file = e.target.files[0];
     if (file && file.type.startsWith("image/")) {
       setImage((prev) => [...prev, URL.createObjectURL(file)]);
+      setForm((prev) => ({
+        ...prev,
+        imgUrl: [...prev.imgUrl, URL.createObjectURL(file)],
+      }));
       setPhoto((prev) => [...prev, file]); // not wrapped in { photo: file }
     }
   };
   const handleChange = (e) => {
-    const raw = e.target.value.replace(/\D/g, ""); // Remove all non-digits
-    const formatted = new Intl.NumberFormat("id-ID").format(raw);
-    setFormatted(formatted);
+    const raw = e.target.value.replace(/\D/g, ""); // hanya angka
+    setForm((prev) => ({ ...prev, price: raw }));
   };
+
+  console.log(form);
 
   return (
     <div className="fixed inset-0 backdrop-blur-sm bg-black bg-opacity-50 z-50 overflow-y-auto">
@@ -119,26 +117,56 @@ export default function NewListing({ handleClose }) {
             <h1 className="text-3xl">New Listing</h1>
             <X onClick={handleClose} className="relative left-12 -top-3 " />
           </div>
-          <div className="space-y-1">
+          <div className="space-y-5">
             <label className="text-base">Location</label>
             <div className="flex gap-5">
               <Select
                 className="w-1/2 font-normal"
                 options={provinceOption}
-                onChange={setSelectedProvince}
-                defaultValue={selectedProvince}
+                onChange={(e) =>
+                  setForm((prev) => ({
+                    ...prev,
+                    location: {
+                      ...prev.location,
+                      province: e.value,
+                      city: null,
+                    },
+                  }))
+                }
+                defaultValue={form.location?.province}
                 placeholder="Province"
               />
 
-              {!!selectedProvince && (
+              {!!form.location?.province && (
                 <Select
                   className="w-1/2 font-normal"
                   options={cityOption}
-                  onChange={setSelectedCity}
-                  defaultValue={selectedCity}
+                  onChange={(e) =>
+                    setForm((prev) => ({
+                      ...prev,
+                      location: {
+                        ...prev.location,
+                        city: e.value,
+                      },
+                    }))
+                  }
+                  defaultValue={form.location?.city}
                   placeholder="City"
                 />
               )}
+            </div>
+            <div className="space-y-1 grid">
+              <textarea
+                className="w-full border outline-none font-normal  p-2 rounded resize-none"
+                rows={8}
+                onChange={(e) =>
+                  setForm((prev) => ({
+                    ...prev,
+                    location: { ...prev.location, addres: e.target.value },
+                  }))
+                }
+                placeholder="Add Addres ..."
+              />
             </div>
           </div>
           <div className="space-y-1 grid">
@@ -147,14 +175,18 @@ export default function NewListing({ handleClose }) {
               options={allLodgingSubtypes}
               className="w-1/2 font-normal"
               placeholder="Category"
-              onChange={setCategory}
+              onChange={(e) =>
+                setForm((prev) => ({ ...prev, category: e.value }))
+              }
             />
           </div>
           <div className="space-y-1  grid">
             <label className="text-base">Title</label>
             <input
               type="text"
-              ref={title}
+              onChange={(e) =>
+                setForm((prev) => ({ ...prev, title: e.target.value }))
+              }
               className="p-2 font-normal outline-none text-black border "
               placeholder="Add Tittle..."
             />
@@ -163,60 +195,114 @@ export default function NewListing({ handleClose }) {
             <label className="text-base">Description</label>
             <textarea
               className="w-full border outline-none font-normal  p-2 rounded resize-none"
-              rows={5}
-              ref={description}
+              rows={8}
+              onChange={(e) =>
+                setForm((prev) => ({ ...prev, description: e.target.value }))
+              }
               placeholder="Add Description ..."
             />
           </div>
-          <div className="space-y-1 grid">
-            <label className="text-base">Addres</label>
-            <textarea
-              className="w-full border outline-none font-normal  p-2 rounded resize-none"
-              rows={4}
-              ref={addres}
-              placeholder="Add Addres ..."
-            />
-          </div>
+
           <div className="space-y-1  grid">
             <label className="text-base">Rules</label>
             <div className="grid gap-4 grid-cols-2">
-              <Select
-                isMulti
-                options={facilityOptions}
-                onChange={setSelectedFacilities}
-                defaultValue={selectedFacilities}
-                placeholder="Check In"
-                className="font-normal"
-                components={{
-                  Option: CustomOption,
-                  MultiValueLabel: CustomMultiValueLabel,
-                }}
-              />
-              <Select
-                isMulti
-                options={facilityOptions}
-                onChange={setSelectedFacilities}
-                defaultValue={selectedFacilities}
-                placeholder="Check Out"
-                className="font-normal"
-                components={{
-                  Option: CustomOption,
-                  MultiValueLabel: CustomMultiValueLabel,
-                }}
-              />
-              <Select
-                isMulti
-                options={facilityOptions}
-                onChange={setSelectedFacilities}
-                defaultValue={selectedFacilities}
-                placeholder="nightTime"
-                className="font-normal "
-                components={{
-                  Option: CustomOption,
-                  MultiValueLabel: CustomMultiValueLabel,
-                }}
-              />
-              <input type="text" placeholder="Additional" className="p-2 font-normal outline-none text-black border" />
+              <label className="ml-4">Check In & Check Out</label>
+              <div className="col-span-2 ml-4 grid-cols-2 gap-4 grid">
+                <Select
+                  options={rulesTime}
+                  onChange={(e) =>
+                    setForm((prev) => ({
+                      ...prev,
+                      rules: {
+                        ...prev.rules,
+                        checkIn: e.value,
+                      },
+                    }))
+                  }
+                  defaultValue={form.rules.checkIn}
+                  placeholder="Check In"
+                  className="font-normal"
+                  components={{
+                    Option: CustomOption,
+                    MultiValueLabel: CustomMultiValueLabel,
+                  }}
+                />
+                <Select
+                  options={rulesTime}
+                  onChange={(e) =>
+                    setForm((prev) => ({
+                      ...prev,
+                      rules: {
+                        ...prev.rules,
+                        checkOut: e.value,
+                      },
+                    }))
+                  }
+                  defaultValue={form.rules.checkOut}
+                  placeholder="Check Out"
+                  className="font-normal"
+                  components={{
+                    Option: CustomOption,
+                    MultiValueLabel: CustomMultiValueLabel,
+                  }}
+                />
+              </div>
+              <label className="ml-4">Night Time</label>
+              <div className="col-span-2 ml-4 grid-cols-2 gap-4 grid">
+                <Select
+                  options={rulesTime}
+                  onChange={(e) =>
+                    setForm((prev) => ({
+                      ...prev,
+                      rules: {
+                        ...prev.rules,
+                        nightTime: [e.value],
+                      },
+                    }))
+                  }
+                  placeholder="Start night Time"
+                  className="font-normal "
+                  components={{
+                    Option: CustomOption,
+                    MultiValueLabel: CustomMultiValueLabel,
+                  }}
+                />
+                {form.rules.nightTime.length > 0 && (
+                  <Select
+                    options={rulesTime}
+                    onChange={(e) =>
+                      setForm((prev) => ({
+                        ...prev,
+                        rules: {
+                          ...prev.rules,
+                          nightTime: [...prev.rules.nightTime, e.value],
+                        },
+                      }))
+                    }
+                    placeholder="End night Time"
+                    className="font-normal "
+                    components={{
+                      Option: CustomOption,
+                      MultiValueLabel: CustomMultiValueLabel,
+                    }}
+                  />
+                )}
+                <textarea
+                  type="text"
+                  rows={8}
+                  onChange={(e) =>
+                    setForm((prev) => ({
+                      ...prev,
+                      rules: {
+                        ...prev.rules,
+                        additional: e.target.value,
+                      },
+                    }))
+                  }
+                  placeholder="Additional"
+                  className="p-2 font-normal outline-none col-span-2 text-black border"
+                />
+              </div>
             </div>
           </div>
           <div className="space-y-1">
@@ -240,9 +326,9 @@ export default function NewListing({ handleClose }) {
                 Drag & Drop image here or{" "}
                 <span className="text-pink underline">Browse</span>
               </label>
-              {image.length > 0 && (
+              {form.imgUrl.length > 0 && (
                 <div className="mt-4 flex flex-wrap gap-4">
-                  {image.map((src, index) => (
+                  {form.imgUrl.map((src, index) => (
                     <img
                       key={index}
                       src={src}
@@ -259,8 +345,12 @@ export default function NewListing({ handleClose }) {
             <Select
               isMulti
               options={facilityOptions}
-              onChange={setSelectedFacilities}
-              defaultValue={selectedFacilities}
+              onChange={(e) =>
+                setForm((prev) => ({
+                  ...prev,
+                  facility: e.map((item) => item.value),
+                }))
+              }
               placeholder="Facilities"
               className="font-normal"
               components={{
@@ -276,7 +366,12 @@ export default function NewListing({ handleClose }) {
                 type="number"
                 min={0}
                 max={100}
-                ref={capacity}
+                onChange={(e) =>
+                  setForm((prev) => ({
+                    ...prev,
+                    price: e.target.value,
+                  }))
+                }
                 step={1}
                 className="border-2 px-3 py-2  font-normal rounded "
                 placeholder="Capacity "
@@ -286,7 +381,12 @@ export default function NewListing({ handleClose }) {
               <label className="text-base font-semibold">Price</label>
               <input
                 type="text"
-                value={formatted}
+                min={0}
+                value={
+                  form.price
+                    ? new Intl.NumberFormat("id-ID").format(form.price)
+                    : ""
+                }
                 onChange={handleChange}
                 className="border-2 px-3 py-2 font-normal rounded w-full"
                 placeholder="0"

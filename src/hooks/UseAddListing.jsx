@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function UseAddListing() {
   const [addListing, setAddListing] = useState(null);
   const [res, setRes] = useState();
-  console.log(addListing);
+  // console.log(addListing);
 
   useEffect(() => {
     if (!addListing) return;
@@ -23,9 +23,12 @@ export default function UseAddListing() {
           city: addListing.selectedCity,
         })
       );
-      formData.append('rules',JSON.stringify({
-        checkIn : ''
-      }))
+      formData.append(
+        "rules",
+        JSON.stringify({
+          checkIn: "",
+        })
+      );
       formData.append("category", addListing.category);
       formData.append("title", addListing.title);
       formData.append("capacity", addListing.capacity);
