@@ -6,7 +6,7 @@ import RecentBookings from "../../ui/RecentBookings";
 
 const stats = [
   {
-    label: "Total Revenue",
+    label: "Total Revenues",
     value: "$5,230 this month",
   },
   {
