@@ -11,7 +11,7 @@ export default function UseListingDetail(id) {
       setLoading(true);
       try {
         const req = await axios.get(
-          `${import.meta.env.VITE_API_URL_LOGIN}${id}`
+          `${import.meta.env.VITE_API_URL_LISTING_SELECTED}${id}`
         );
         setHotel(req.data.result);
       } catch (error) {

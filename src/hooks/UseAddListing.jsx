@@ -1,52 +1,43 @@
 import axios from "axios";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useState } from "react";
+import { AuthContext } from "../routes/AuthContext";
+import { useNavigate } from "react-router-dom";
 
-export default function UseAddListing() {
+export default function UseAddListing(handleClose) {
   const [addListing, setAddListing] = useState(null);
+  const [loading, setLoading] = useState(false);
   const [res, setRes] = useState();
-  // console.log(addListing);
 
+  const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
   useEffect(() => {
     if (!addListing) return;
     const uploadListing = async () => {
       const formData = new FormData();
-      addListing.listingImg.forEach((file) => {
+
+      formData.append("form", JSON.stringify({ ...addListing }));
+      formData.append("host", user.id);
+      addListing.imgUrl.forEach((file, index) => {
         formData.append("listingImg", file);
       });
-      formData.append("id", addListing.id);
-      formData.append("facilities", addListing.selectedFacilities);
-      formData.append(
-        "location",
-        JSON.stringify({
-          province: addListing.selectedProvince,
-          city: addListing.selectedCity,
-        })
-      );
-      formData.append(
-        "rules",
-        JSON.stringify({
-          checkIn: "",
-        })
-      );
-      formData.append("category", addListing.category);
-      formData.append("title", addListing.title);
-      formData.append("capacity", addListing.capacity);
-      formData.append("price", addListing.price);
-      formData.append("description", addListing.description);
+
       try {
+        setLoading(true);
         const res = await axios.post(
           import.meta.env.VITE_API_URL_LISTING_CREATE,
           formData
         );
         setRes(res);
+        handleClose();
       } catch (error) {
-        console.error("Upload error:", error);
+        setRes("Upload error:", error);
+      } finally {
+        setLoading(false);
       }
     };
-
     uploadListing();
   }, [addListing]);
 
-  return { setAddListing };
+  return { setAddListing, res, loading };
 }

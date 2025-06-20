@@ -5,11 +5,9 @@ import allLodgingSubtypes from "../jsonFile/types";
 import facilityOptions from "../jsonFile/facilities";
 import { X } from "lucide-react";
 import UseAddListing from "../hooks/UseAddListing";
-import { useRef } from "react";
-import { useContext } from "react";
-import { AuthContext } from "../routes/AuthContext";
 import rulesTime from "../jsonFile/time.json";
 import { components } from "react-select";
+import Loading from "./Loading";
 
 const CustomOption = (props) => {
   const {
@@ -43,19 +41,23 @@ const CustomMultiValueLabel = (props) => {
 
 export default function NewListing({ handleClose }) {
   const [form, setForm] = useState({
-    location: { province: null, city: null, addres: null },
+    address: null,
+    city: null,
+    province: null,
     category: null,
     title: null,
     description: null,
-    rules: { checkIn: null, checkOut: null, nightTime: [], additional: null },
+    checkIn: null,
+    checkOut: null,
+    nightTime: [],
+    additional: null,
     imgUrl: [],
     facility: [],
     capacity: null,
     price: null,
   });
-  const { user } = useContext(AuthContext);
 
-  const { setAddListing } = UseAddListing();
+  const { setAddListing, loading } = UseAddListing(handleClose);
 
   const provinceOption = Object.keys(province).map((key) => ({
     value: key,
@@ -63,13 +65,13 @@ export default function NewListing({ handleClose }) {
   }));
 
   const cityOption = useMemo(() => {
-    if (!form.location.province) return [];
+    if (!form.province) return [];
 
-    return province[form.location?.province].map((city) => ({
+    return province[form.province].map((city) => ({
       value: city,
       label: city,
     }));
-  }, [form.location?.province]);
+  }, [form.province]);
 
   const confirm = () => {
     setAddListing(form);
@@ -79,10 +81,9 @@ export default function NewListing({ handleClose }) {
     e.preventDefault();
     const file = e.dataTransfer.files[0];
     if (file && file.type.startsWith("image/")) {
-      setImage((prev) => [...prev, URL.createObjectURL(file)]);
       setForm((prev) => ({
         ...prev,
-        imgUrl: [...prev.imgUrl, URL.createObjectURL(file)],
+        imgUrl: [...prev.imgUrl, file],
       }));
     }
   };
@@ -93,26 +94,29 @@ export default function NewListing({ handleClose }) {
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
+    console.log(file);
+
     if (file && file.type.startsWith("image/")) {
-      setImage((prev) => [...prev, URL.createObjectURL(file)]);
       setForm((prev) => ({
         ...prev,
-        imgUrl: [...prev.imgUrl, URL.createObjectURL(file)],
+        imgUrl: [...prev.imgUrl, file],
       }));
-      setPhoto((prev) => [...prev, file]); // not wrapped in { photo: file }
     }
   };
   const handleChange = (e) => {
-    const raw = e.target.value.replace(/\D/g, ""); // hanya angka
-    setForm((prev) => ({ ...prev, price: raw }));
+    const raw = e.target.value.replace(/\D/g, "");
+    setForm((prev) => ({ ...prev, price: parseInt(raw) }));
   };
-
-  console.log(form);
 
   return (
     <div className="fixed inset-0 backdrop-blur-sm bg-black bg-opacity-50 z-50 overflow-y-auto">
       <div className="min-h-screen flex items-center justify-center px-4 py-8">
         <div className="bg-darkWhite relative text-gray grid font-bold px-16 py-5   text-left rounded-2xl space-y-4 w-2/6">
+          {loading && (
+            <div className="absolute inset-0 bg-white bg-opacity-70 flex items-center justify-center z-50 rounded-2xl">
+              <Loading />
+            </div>
+          )}
           <div className="flex items-center  justify-between">
             <h1 className="text-3xl">New Listing</h1>
             <X onClick={handleClose} className="relative left-12 -top-3 " />
@@ -126,31 +130,25 @@ export default function NewListing({ handleClose }) {
                 onChange={(e) =>
                   setForm((prev) => ({
                     ...prev,
-                    location: {
-                      ...prev.location,
-                      province: e.value,
-                      city: null,
-                    },
+                    province: e.value,
+                    city: null,
                   }))
                 }
-                defaultValue={form.location?.province}
+                defaultValue={form.province}
                 placeholder="Province"
               />
 
-              {!!form.location?.province && (
+              {!!form?.province && (
                 <Select
                   className="w-1/2 font-normal"
                   options={cityOption}
                   onChange={(e) =>
                     setForm((prev) => ({
                       ...prev,
-                      location: {
-                        ...prev.location,
-                        city: e.value,
-                      },
+                      city: e.value,
                     }))
                   }
-                  defaultValue={form.location?.city}
+                  defaultValue={form.city}
                   placeholder="City"
                 />
               )}
@@ -162,7 +160,7 @@ export default function NewListing({ handleClose }) {
                 onChange={(e) =>
                   setForm((prev) => ({
                     ...prev,
-                    location: { ...prev.location, addres: e.target.value },
+                    address: e.target.value,
                   }))
                 }
                 placeholder="Add Addres ..."
@@ -202,7 +200,6 @@ export default function NewListing({ handleClose }) {
               placeholder="Add Description ..."
             />
           </div>
-
           <div className="space-y-1  grid">
             <label className="text-base">Rules</label>
             <div className="grid gap-4 grid-cols-2">
@@ -213,13 +210,10 @@ export default function NewListing({ handleClose }) {
                   onChange={(e) =>
                     setForm((prev) => ({
                       ...prev,
-                      rules: {
-                        ...prev.rules,
-                        checkIn: e.value,
-                      },
+                      checkIn: e.value,
                     }))
                   }
-                  defaultValue={form.rules.checkIn}
+                  defaultValue={form.checkIn}
                   placeholder="Check In"
                   className="font-normal"
                   components={{
@@ -232,13 +226,10 @@ export default function NewListing({ handleClose }) {
                   onChange={(e) =>
                     setForm((prev) => ({
                       ...prev,
-                      rules: {
-                        ...prev.rules,
-                        checkOut: e.value,
-                      },
+                      checkOut: e.value,
                     }))
                   }
-                  defaultValue={form.rules.checkOut}
+                  defaultValue={form.checkOut}
                   placeholder="Check Out"
                   className="font-normal"
                   components={{
@@ -254,10 +245,8 @@ export default function NewListing({ handleClose }) {
                   onChange={(e) =>
                     setForm((prev) => ({
                       ...prev,
-                      rules: {
-                        ...prev.rules,
-                        nightTime: [e.value],
-                      },
+
+                      nightTime: [e.value],
                     }))
                   }
                   placeholder="Start night Time"
@@ -267,16 +256,13 @@ export default function NewListing({ handleClose }) {
                     MultiValueLabel: CustomMultiValueLabel,
                   }}
                 />
-                {form.rules.nightTime.length > 0 && (
+                {form.nightTime.length > 0 && (
                   <Select
                     options={rulesTime}
                     onChange={(e) =>
                       setForm((prev) => ({
                         ...prev,
-                        rules: {
-                          ...prev.rules,
-                          nightTime: [...prev.rules.nightTime, e.value],
-                        },
+                        nightTime: [...prev.nightTime, e.value],
                       }))
                     }
                     placeholder="End night Time"
@@ -293,10 +279,7 @@ export default function NewListing({ handleClose }) {
                   onChange={(e) =>
                     setForm((prev) => ({
                       ...prev,
-                      rules: {
-                        ...prev.rules,
-                        additional: e.target.value,
-                      },
+                      additional: e.target.value,
                     }))
                   }
                   placeholder="Additional"
@@ -331,7 +314,7 @@ export default function NewListing({ handleClose }) {
                   {form.imgUrl.map((src, index) => (
                     <img
                       key={index}
-                      src={src}
+                      src={URL.createObjectURL(src)}
                       alt={`Preview ${index}`}
                       className="w-24 h-24 object-cover rounded"
                     />
@@ -369,7 +352,7 @@ export default function NewListing({ handleClose }) {
                 onChange={(e) =>
                   setForm((prev) => ({
                     ...prev,
-                    price: e.target.value,
+                    capacity: parseInt(e.target.value),
                   }))
                 }
                 step={1}
@@ -397,8 +380,9 @@ export default function NewListing({ handleClose }) {
             <button
               onClick={confirm}
               className="bg-green-700 py-1 text-white px-4 rounded-lg"
+              disabled={loading} // optional: disable to prevent double submit
             >
-              Confirm
+              {loading ? "Uploading..." : "Confirm"}
             </button>
           </div>
         </div>

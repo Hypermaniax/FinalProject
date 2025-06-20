@@ -13,7 +13,7 @@ export default function ListingCard({ data }) {
     setSelectedId(id);
     deletePopup.open();
   };
-
+  
   return (
     <>
       {deletePopup.state && (
@@ -28,9 +28,8 @@ export default function ListingCard({ data }) {
             {/* Top content */}
             <div>
               <h1 className="font-bold">{item.title}</h1>
-              <p>Place: {item.location.province}</p>
+              <p>Address: {item.location.address}</p>
               <p>Category: {item.category}</p>
-
               <div className="grid grid-cols-[auto_1fr] gap-x-2">
                 <span>Facilities:</span>
                 <span>
@@ -66,7 +65,7 @@ export default function ListingCard({ data }) {
                   ? `http://localhost:3000/uploads/${item.imgUrl[0]}`
                   : item.imgUrl
               }
-              alt={item.title || "Property image"}
+              alt={item.imgUrl[0] || "Property image"}
               className="absolute inset-0 w-full h-full object-cover rounded"
             />
           </div>

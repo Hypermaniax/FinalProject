@@ -23,7 +23,7 @@ export default function UseLogin(role) {
           formData
         );
         setResponse(token);
-        localStorage.setItem("Token", JSON.stringify(token.data.user) || "");
+        localStorage.setItem("Token", JSON.stringify(token.data.token) || "");
         handleLogin();
         navigate(ridercerUrl);
       } catch (error) {

@@ -6,7 +6,7 @@ import useToggle from "../../hooks/UseToggle";
 
 export default function Listings() {
   const newListing = useToggle();
-  // const { listingDashboard } = UseListing();
+  const { listingDashboard } = UseListing();
 
   return (
     <div className="text-black">
@@ -16,7 +16,7 @@ export default function Listings() {
         <CircleUserRound />
       </div>
       <section className="grid gap-6 grid-cols-4">
-        {/* <ListingCard data={listingDashboard} /> */}
+        <ListingCard data={listingDashboard} />
       </section>
       <div className=" text-center my-6 ">
         <button
