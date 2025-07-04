@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const highligt = "bg-pink text-white";
 
-export default function DashboardGuest({ handleClick }) {
+export default function DashboardGuest() {
   const { booking, handleSelectStatus, status } = UseGetGuestBookings();
   return (
     <>
@@ -92,7 +92,6 @@ export default function DashboardGuest({ handleClick }) {
                   </div>
                   {status === "pending" && (
                     <Link
-                      onClick={() => handleClick(item)}
                       to={`payment-bookings/${item._id}`}
                       className="absolute right-4 text-white bottom-5 bg-red-400 hover:bg-pink  px-2 rounded-lg transition-colors ease-in-out delay-350 "
                     >
