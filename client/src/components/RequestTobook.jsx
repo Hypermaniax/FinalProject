@@ -1,16 +1,16 @@
 import { ArrowLeft, Star } from "lucide-react";
-import damn from "../assets/damn.png";
 import PaymentMethod from "./PaymentMethod";
 import WrapperContent from "./WrapperContent";
 import UsePaymentCreate from "../hooks/payment/UsePaymentCreate";
 import { Link, useParams } from "react-router-dom";
 import Loading from "./Loading";
+import UseGetGuestBookings from "../hooks/booking/UseGetGuestBooking";
 
 export default function RequestToBook() {
   const { id } = useParams();
+  const { handleRemoveListing } = UseGetGuestBookings();
   const { setSelectedMethod, dataPayment } = UsePaymentCreate(id);
-  console.log(dataPayment);
-
+  
   return (
     <>
       {!dataPayment ? (
@@ -19,7 +19,7 @@ export default function RequestToBook() {
         <>
           <WrapperContent>
             <header className="flex gap-5 mt-10 items-center">
-              <Link to={'../bookings'}>
+              <Link to={"../bookings"}>
                 <ArrowLeft
                   // onClick={back}
                   className="hover:bg-pink hover:text-white transition-colors ease-in-out duration-300 rounded-full"
@@ -120,13 +120,14 @@ export default function RequestToBook() {
                   </section>
                 </div>
                 <div className="grid gap-2 grid-cols-2">
-                  <button className="bg-white border-pink border rounded-lg py-1">
-                    Cancel booking
-                  </button>
-                  <button
-                    // onClick={confirm}
-                    className="bg-red-400 text-white hover:bg-pink transition-colors ease-in-out duration-300 rounded-lg py-1"
+                  <Link
+                    to={`../bookings`}
+                    onClick={() => handleRemoveListing(dataPayment._id)}
+                    className="bg-white text-center border-pink border rounded-lg py-1"
                   >
+                    Cancel booking
+                  </Link>
+                  <button className="bg-red-400 text-white hover:bg-pink transition-colors ease-in-out duration-300 rounded-lg py-1">
                     Request to book
                   </button>
                 </div>

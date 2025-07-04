@@ -14,11 +14,9 @@ export default function UseBookings() {
     if (!bookings) return;
     const fetch = async () => {
       try {
-        const booking = await createBookings(bookings)
-        
-        // refreshUser();
+        const booking = await createBookings(bookings);
         toast.success(booking);
-        return navigate("/payment-bookings");
+        return navigate("../../bookings");
       } catch (error) {
         toast.success(error);
       }
@@ -27,7 +25,6 @@ export default function UseBookings() {
   }, [bookings]);
 
   const handleSubmit = useCallback((data) => {
-    console.log(data)
     if (!data) return;
     if (!data?.checkIn || !data?.checkOut)
       return toast.error("you must input the Check in and Check Out Date");
