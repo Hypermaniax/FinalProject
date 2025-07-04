@@ -15,5 +15,17 @@ export const getPayment = async (status) => {
     }
   );
 
-  return payment;
+  return payment.data.data;
+};
+
+export const getPaymentById = async (id) => {
+  const token = localStorage.getItem("Token");
+  const payment = await axios.get(
+    `${import.meta.env.VITE_API_URL_SELECTED_BOOKING}/${id}`,
+    {
+      headers: { Authorization: `Bearer ${token}` },
+      // params: { id },
+    }
+  );
+  console.log(payment)
 };

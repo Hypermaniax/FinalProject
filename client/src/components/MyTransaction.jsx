@@ -2,6 +2,7 @@ import UseGetGuestPayment from "../hooks/payment/UseGetGuestPayment";
 
 export default function MyTransaction() {
   const {payment,handleSelectStatus} = UseGetGuestPayment()
+  console.log(payment)
   return (
     <>
       <h1 className="font-bold text-2xl ">My Trasaction</h1>

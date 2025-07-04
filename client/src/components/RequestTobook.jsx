@@ -2,8 +2,13 @@ import { ArrowLeft, Star } from "lucide-react";
 import damn from "../assets/damn.png";
 import PaymentMethod from "./PaymentMethod";
 import WrapperContent from "./WrapperContent";
+import UsePaymentCreate from "../hooks/payment/UsePaymentCreate";
+import { useParams } from "react-router-dom";
 
-export default function RequestToBook({ handleMethod, obj }) {
+export default function RequestToBook() {
+  const {id} =  useParams()
+  const { setSelectedMethod } = UsePaymentCreate(id);
+  
   return (
     <WrapperContent>
       <header className="flex gap-5 mt-10 items-center">
@@ -26,7 +31,7 @@ export default function RequestToBook({ handleMethod, obj }) {
             </p>
             <p>1 Guest</p>
           </div>
-          <PaymentMethod setSelectedMethod={handleMethod} />
+          <PaymentMethod setSelectedMethod={setSelectedMethod} />
         </div>
         <div className=" space-y-5 my-5 ">
           <div className="bg-white rounded-xl text-gray-600 space-y-3 shadow-2xl p-5">
@@ -40,7 +45,7 @@ export default function RequestToBook({ handleMethod, obj }) {
             </header>
             <section className="flex space-x-4">
               <img
-                src={damn}
+                // src={damn}
                 alt={damn}
                 className="w-32 h-24 object-fill rounded-lg"
               />
@@ -64,7 +69,7 @@ export default function RequestToBook({ handleMethod, obj }) {
                 </span>
               </div>
               <p className="text-gray-500 mb-4">
-                ({obj.diffDays}×) ({obj.diffDays} malam)ddd
+                {/* ({obj.diffDays}×) ({obj.diffDays} malam)ddd */}
               </p>
 
               <div className="flex justify-between mb-1">

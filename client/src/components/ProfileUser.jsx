@@ -13,7 +13,7 @@ const menus = [
 ];
 
 export default function ProfileUser() {
-  const {user} = useContext(AuthContext)
+  const { user } = useContext(AuthContext);
   return (
     <>
       <div className="col-span-1 p-3 h-fit rounded-xl bg-white">
@@ -33,15 +33,16 @@ export default function ProfileUser() {
         <div className="mt-10 mx-auto">
           <ul className="space-y-6 ">
             {menus.map((item, index) => (
-              <Link to={item.path} key={index} className="flex gap-5 mx-7">
+              <Link
+                to={`/bookings/${item.path === "bookings" ? "" : item.path}`}
+                key={index}
+                className="flex gap-5 mx-7"
+              >
                 <item.icon /> <span className="text-base">{item.label}</span>
               </Link>
             ))}
           </ul>
         </div>
-      </div>
-      <div className="col-span-3">
-        <Outlet />
       </div>
     </>
   );

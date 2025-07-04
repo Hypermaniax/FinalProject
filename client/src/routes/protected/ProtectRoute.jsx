@@ -10,6 +10,7 @@ export default function ProtectedRoute({ children, role }) {
     return;
   }
   if (!user) return <>Need to 2Login First</>;
+
   if (user?.role !== role) return <>You Dont have an acces for this</>;
 
   return children;
