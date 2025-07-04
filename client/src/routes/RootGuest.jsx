@@ -15,7 +15,6 @@ import MyTransaction from "../components/MyTransaction";
 import AccountSetting from "../components/AccountSetting";
 import RequestToBook from "../components/RequestTobook";
 
-
 export default function RootGuest() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -29,7 +28,7 @@ export default function RootGuest() {
           <Route
             path="bookings"
             element={
-              <ProtectedRoute role='guest'>
+              <ProtectedRoute role="guest">
                 <Bookings />
               </ProtectedRoute>
             }
@@ -40,8 +39,8 @@ export default function RootGuest() {
             <Route path="transaction" element={<MyTransaction />} />
             <Route path="account" element={<AccountSetting />} />
             <Route path="logout" element={<>logout</>} />
-            <Route path="payment-bookings/:id" element={<RequestToBook />} />
           </Route>
+          <Route path="payment-bookings/:id" element={<RequestToBook />} />
           <Route path="support" element={<Support />} />
           <Route path="login-guest" element={<AuthModalGuest />} />
         </Routes>

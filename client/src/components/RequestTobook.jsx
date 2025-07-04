@@ -3,117 +3,138 @@ import damn from "../assets/damn.png";
 import PaymentMethod from "./PaymentMethod";
 import WrapperContent from "./WrapperContent";
 import UsePaymentCreate from "../hooks/payment/UsePaymentCreate";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import Loading from "./Loading";
 
 export default function RequestToBook() {
-  const {id} =  useParams()
-  const { setSelectedMethod } = UsePaymentCreate(id);
-  
-  return (
-    <WrapperContent>
-      <header className="flex gap-5 mt-10 items-center">
-        <ArrowLeft
-          // onClick={back}
-          className="hover:bg-pink hover:text-white transition-colors ease-in-out duration-300 rounded-full"
-          size={30}
-        />
-        <span className="text-xl font-bold">Request to Book</span>
-      </header>
-      <section className="grid grid-cols-3 gap-4 w-11/12 mx-auto">
-        <div className="col-span-2  space-y-5 my-5">
-          <div className="bg-white  text-gray-500 text-sm space-y-3 shadow-lg rounded-xl p-5">
-            <span className="font-semibold text-black text-lg">
-              Trip Details
-            </span>
-            <p>
-              {/* {data.checkIn.toDateString()} - {data.checkOut.toDateString()} */}{" "}
-              Date
-            </p>
-            <p>1 Guest</p>
-          </div>
-          <PaymentMethod setSelectedMethod={setSelectedMethod} />
-        </div>
-        <div className=" space-y-5 my-5 ">
-          <div className="bg-white rounded-xl text-gray-600 space-y-3 shadow-2xl p-5">
-            <header>
-              <span className="font-semibold text-black text-lg">
-                Payment Details
-              </span>
-              <p className="text-xs">
-                Please check your payment details before proceeding.
-              </p>
-            </header>
-            <section className="flex space-x-4">
-              <img
-                // src={damn}
-                alt={damn}
-                className="w-32 h-24 object-fill rounded-lg"
-              />
-              <div className="text-sm">
-                <span className="text-black text-base font-medium">title</span>
-                <span className="flex ">
-                  <Star className="text-pink" />
-                  4.75 (2001)
-                </span>
-                <span>Pending</span>
-              </div>
-            </section>
-            <section className="text-sm py-5 border-b-2 border-t-2">
-              <div className="flex justify-between mb-1">
-                <span className="text-gray-800 font-medium">
-                  Price of the venue
-                </span>
-                <span className="font-medium">
-                  Rp
-                  {/* {data.formatted} */}
-                </span>
-              </div>
-              <p className="text-gray-500 mb-4">
-                {/* ({obj.diffDays}×) ({obj.diffDays} malam)ddd */}
-              </p>
+  const { id } = useParams();
+  const { setSelectedMethod, dataPayment } = UsePaymentCreate(id);
+  console.log(dataPayment);
 
-              <div className="flex justify-between mb-1">
-                <span className="text-gray-800 font-medium">Tax and Fee</span>
-                <span className="font-medium">
-                  Rp
-                  {/* {tax} */} tax
-                </span>
-              </div>
-              <div className=" text-gray-500 text-sm">
-                <div className="flex justify-between">
-                  <span>PPN 12%</span>
-                  <span>
-                    Rp.
-                    {/* {ppn} */}PPN
+  return (
+    <>
+      {!dataPayment ? (
+        <Loading />
+      ) : (
+        <>
+          <WrapperContent>
+            <header className="flex gap-5 mt-10 items-center">
+              <Link to={'../bookings'}>
+                <ArrowLeft
+                  // onClick={back}
+                  className="hover:bg-pink hover:text-white transition-colors ease-in-out duration-300 rounded-full"
+                  size={30}
+                />
+              </Link>
+              <span className="text-xl font-bold">Request to Book</span>
+            </header>
+            <section className="grid grid-cols-3 gap-4 w-11/12 mx-auto">
+              <div className="col-span-2  space-y-5 my-5">
+                <div className="bg-white  text-gray-500 text-sm space-y-3 shadow-lg rounded-xl p-5">
+                  <span className="font-semibold text-black text-lg">
+                    Trip Details
                   </span>
+                  <p>
+                    {new Date(dataPayment.checkIn).toDateString()} -{" "}
+                    {new Date(dataPayment.checkOut).toDateString()}
+                    Date
+                  </p>
+                  <p>{dataPayment?.numGuest} Guest</p>
                 </div>
-                <div className="flex justify-between">
-                  <span>StayNesia Fee</span>
-                  <span>Rp.105.000</span>
+                <PaymentMethod setSelectedMethod={setSelectedMethod} />
+              </div>
+              <div className=" space-y-5 my-5 ">
+                <div className="bg-white rounded-xl text-gray-600 space-y-3 shadow-2xl p-5">
+                  <header>
+                    <span className="font-semibold text-black text-lg">
+                      Payment Details
+                    </span>
+                    <p className="text-xs">
+                      Please check your payment details before proceeding.
+                    </p>
+                  </header>
+                  <section className="flex space-x-4">
+                    <img
+                      src={`${import.meta.env.VITE_API_URL_LISTING_IMG}${
+                        dataPayment.listingId.imgUrl[0]
+                      }`}
+                      alt={`${import.meta.env.VITE_API_URL_LISTING_IMG}${
+                        dataPayment.listingId.imgUrl[0]
+                      }`}
+                      className="w-32 h-24 object-fill rounded-lg"
+                    />
+                    <div className="text-sm">
+                      <span className="text-black text-base font-medium">
+                        {dataPayment.listingId.title}
+                      </span>
+                      <span className="flex ">
+                        <Star className="text-pink" />
+                        4.75 (2001)
+                      </span>
+                      <span>{dataPayment.statusBooking.toUpperCase()}</span>
+                    </div>
+                  </section>
+                  <section className="text-sm py-5 border-b-2 border-t-2">
+                    <div className="flex justify-between mb-1">
+                      <span className="text-gray-800 font-medium">
+                        Price of the venue
+                      </span>
+                      <span className="font-medium">
+                        Rp
+                        {/* {data.formatted} */}
+                      </span>
+                    </div>
+                    <p className="text-gray-500 mb-4">
+                      {/* ({obj.diffDays}×) ({obj.diffDays} malam)ddd */}
+                    </p>
+
+                    <div className="flex justify-between mb-1">
+                      <span className="text-gray-800 font-medium">
+                        Tax and Fee
+                      </span>
+                      <span className="font-medium">
+                        Rp
+                        {/* {tax} */} tax
+                      </span>
+                    </div>
+                    <div className=" text-gray-500 text-sm">
+                      <div className="flex justify-between">
+                        <span>PPN 12%</span>
+                        <span>
+                          Rp.
+                          {/* {ppn} */}PPN
+                        </span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>StayNesia Fee</span>
+                        <span>Rp.105.000</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section className="flex justify-between">
+                    <span>Total Price</span>
+                    <span className="font-bold">
+                      Rp
+                      {dataPayment.totalPrice.toLocaleString("id-ID")}
+                    </span>
+                  </section>
+                </div>
+                <div className="grid gap-2 grid-cols-2">
+                  <button className="bg-white border-pink border rounded-lg py-1">
+                    Cancel booking
+                  </button>
+                  <button
+                    // onClick={confirm}
+                    className="bg-red-400 text-white hover:bg-pink transition-colors ease-in-out duration-300 rounded-lg py-1"
+                  >
+                    Request to book
+                  </button>
                 </div>
               </div>
             </section>
-            <section className="flex justify-between">
-              <span>Total Price</span>
-              <span className="font-bold">
-                Rp
-                {/* {total} */}
-              </span>
-            </section>
-          </div>
-          <div className="grid gap-2 grid-cols-2">
-            <button className="bg-white border-pink border rounded-lg py-1">
-              Cancel booking
-            </button>
-            <button
-              // onClick={confirm}
-              className="bg-red-400 text-white hover:bg-pink transition-colors ease-in-out duration-300 rounded-lg py-1"
-            >
-              Request to book
-            </button>
-          </div>
-        </div>
-      </section>
-    </WrapperContent>
+          </WrapperContent>
+        </>
+      )}
+    </>
   );
 }

@@ -92,7 +92,7 @@ export default function DashboardGuest() {
                   </div>
                   {status === "pending" && (
                     <Link
-                      to={`payment-bookings/${item._id}`}
+                      to={`../payment-bookings/${item._id}`}
                       className="absolute right-4 text-white bottom-5 bg-red-400 hover:bg-pink  px-2 rounded-lg transition-colors ease-in-out delay-350 "
                     >
                       Paynow

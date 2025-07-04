@@ -24,8 +24,7 @@ export const getPaymentById = async (id) => {
     `${import.meta.env.VITE_API_URL_SELECTED_BOOKING}/${id}`,
     {
       headers: { Authorization: `Bearer ${token}` },
-      // params: { id },
     }
   );
-  console.log(payment)
+  return payment.data.data[0]
 };

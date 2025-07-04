@@ -1,4 +1,3 @@
-import axios from "axios";
 import { listingDelete } from "../../services/listing";
 
 export default function UseDeleteListing() {
