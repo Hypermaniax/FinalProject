@@ -88,7 +88,7 @@ export default function DashboardGuest() {
                     </div>
                     <div>
                       <p className="text-gray-500">Status</p>
-                      <p>{item.statusBooking}</p>
+                      <p>{item.bookingStatus}</p>
                     </div>
                   </div>
                   {status === "pending" && (
