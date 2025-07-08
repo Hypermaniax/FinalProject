@@ -52,7 +52,7 @@ export default function DashboardGuest() {
               <img
                 src={`${import.meta.env.VITE_API_URL_LISTING_IMG}${
                   item.listingId.imgUrl[0]
-                }`}
+                }.jpg`}
                 alt={item.listingId.imgUrl[0]}
                 className="h-48 w-48 object-cover col-span-1 rounded-xl"
               />
