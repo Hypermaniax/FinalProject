@@ -12,7 +12,7 @@ export const listingAdd = async (listingData) => {
   const token = localStorage.getItem("Token");
   formData.append("form", JSON.stringify({ ...listingData }));
 
-  listingData.imgUrl.forEach((file, index) => {
+  listingData.urlImg.forEach((file, index) => {
     formData.append("listingImg", file);
   });
 
