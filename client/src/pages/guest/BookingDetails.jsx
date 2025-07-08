@@ -24,11 +24,11 @@ export default function BookingDetails() {
     listingId: hotel._id,
     numGuest: guests,
   };
-  // console.log(hotel)
+  console.log(hotel.imgUrl)
   return (
     <>
       <WrapperContent>
-        <GridSwiper />
+        <GridSwiper imgUrl={hotel.imgUrl} />
         <section className="grid grid-cols-6 gap-20 mt-5">
           <div className="col-span-4">
             <header>

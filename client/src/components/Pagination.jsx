@@ -63,7 +63,7 @@ export default function Pagination() {
                     <img
                       src={`${import.meta.env.VITE_API_URL_LISTING_IMG}${
                         item.imgUrl[0]
-                      }`}
+                      }.jpg`}
                       className="w-full h-60 object-cover"
                       alt="Monas"
                     />

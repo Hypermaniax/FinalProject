@@ -10,7 +10,7 @@ import "swiper/css/autoplay";
 // Example: 10 images (repeat or replace as needed)
 const images = [damn, monas, damn, logo1, host, damn, logo2, damn, monas, damn];
 
-export default function GridSwiper() {
+export default function GridSwiper({ imgUrl }) {
   const [startIndex, setStartIndex] = useState(0);
   const [fade, setFade] = useState(true);
 
@@ -30,7 +30,7 @@ export default function GridSwiper() {
   }, []);
 
   const getImage = (offset) => {
-    return images[(startIndex + offset) % images.length];
+    return imgUrl[(startIndex + offset) % imgUrl.length];
   };
 
   const fadeClass = fade
@@ -43,7 +43,7 @@ export default function GridSwiper() {
       <div className="col-span-2 aspect-video">
         <img
           key={`large-${getImage(0)}`}
-          src={getImage(0)}
+          src={`${import.meta.env.VITE_API_URL_LISTING_IMG}${getImage(0)}.jpg`}
           alt="Large"
           className={`w-full h-full object-cover rounded-lg ${fadeClass}`}
         />
@@ -57,7 +57,9 @@ export default function GridSwiper() {
             className="w-full aspect-square h-full"
           >
             <img
-              src={getImage(offset)}
+              src={`${import.meta.env.VITE_API_URL_LISTING_IMG}${getImage(
+                offset
+              )}.jpg`}
               alt={`Small ${idx + 1}`}
               className={`w-full h-full object-cover rounded-lg ${fadeClass}`}
             />
@@ -67,7 +69,3 @@ export default function GridSwiper() {
     </div>
   );
 }
-
-
-
-    
