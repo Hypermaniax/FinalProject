@@ -1,12 +1,14 @@
 import axios from "axios";
 
-export const createPayment = async () => {
+export const createPayment = async (data) => {
   const token = localStorage.getItem("Token");
+
   const payment = await axios.post(
     `${import.meta.env.VITE_API_URL_PAYMENT_CREATE}`,
-    { data },
+    data,
     { headers: { Authorization: `Bearer ${token}` } }
   );
+  return payment.data;
 };
 
 export const getPayment = async (status) => {
@@ -19,8 +21,7 @@ export const getPayment = async (status) => {
       params: { statusFilter: status },
     }
   );
-
-  return payment.data.data;
+  return payment.data.data[0].payments;
 };
 
 export const getPaymentById = async (id) => {

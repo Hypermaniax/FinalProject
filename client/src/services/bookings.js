@@ -12,7 +12,9 @@ export const createBookings = async (bookings) => {
     }
   );
 
-  return booking.data.message;
+  console.log(booking.data)
+
+  return booking.data;
 };
 
 export const guestBookings = async (status) => {

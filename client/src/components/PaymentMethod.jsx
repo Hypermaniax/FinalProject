@@ -8,10 +8,9 @@ const classSection = (isOpen) =>
       : "max-h-0 -translate-y-1 opacity-0"
   }`;
 
-export default function PaymentMethod() {
+export default function PaymentMethod({setSelectedMethod,selectedMethod}) {
   const [openSection, setOpenSection] = useState("Virtual");
-  const [selectedMethod, setSelectedMethod] = useState();
-
+  // const [selectedMethod, setSelectedMethod] = useState();
   const toggleSection = (section) => {
     setOpenSection((prev) => (prev === section ? null : section));
   };

@@ -1,7 +1,6 @@
 import { useCallback, useContext } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { AuthContext } from "../../store/AuthContext";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { createBookings } from "../../services/bookings";
@@ -15,8 +14,8 @@ export default function UseBookings() {
     const fetch = async () => {
       try {
         const booking = await createBookings(bookings);
-        toast.success(booking);
-        return navigate("../../bookings");
+        toast.success(booking.message);
+        return navigate(`../request-to-book/${booking.id}`);
       } catch (error) {
         toast.success(error);
       }

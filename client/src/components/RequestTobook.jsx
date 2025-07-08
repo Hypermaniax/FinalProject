@@ -5,12 +5,21 @@ import UsePaymentCreate from "../hooks/payment/UsePaymentCreate";
 import { Link, useParams } from "react-router-dom";
 import Loading from "./Loading";
 import UseGetGuestBookings from "../hooks/booking/UseGetGuestBooking";
+import useToggle from "../hooks/UseToggle";
+import ChangeReservation from "./ChangeReservation";
+import { useContext } from "react";
+import { AuthContext } from "../store/AuthContext";
 
 export default function RequestToBook() {
   const { id } = useParams();
   const { handleRemoveListing } = UseGetGuestBookings();
-  const { setSelectedMethod, dataPayment } = UsePaymentCreate(id);
-  
+  const { dataPayment, handleCreate } = UsePaymentCreate(id);
+  const { toggle, state } = useToggle();
+  const { user } = useContext(AuthContext);
+
+  const taxAndFee =
+    parseInt(dataPayment?.taxAmount) + parseInt(dataPayment?.feeAmount);
+    
   return (
     <>
       {!dataPayment ? (
@@ -18,6 +27,7 @@ export default function RequestToBook() {
       ) : (
         <>
           <WrapperContent>
+            {!!state && <ChangeReservation back={toggle} />}
             <header className="flex gap-5 mt-10 items-center">
               <Link to={"../bookings"}>
                 <ArrowLeft
@@ -31,17 +41,38 @@ export default function RequestToBook() {
             <section className="grid grid-cols-3 gap-4 w-11/12 mx-auto">
               <div className="col-span-2  space-y-5 my-5">
                 <div className="bg-white  text-gray-500 text-sm space-y-3 shadow-lg rounded-xl p-5">
-                  <span className="font-semibold text-black text-lg">
-                    Trip Details
-                  </span>
-                  <p>
-                    {new Date(dataPayment.checkIn).toDateString()} -{" "}
-                    {new Date(dataPayment.checkOut).toDateString()}
-                    Date
-                  </p>
-                  <p>{dataPayment?.numGuest} Guest</p>
+                  <div className="space-y-3 border-b-2 pb-2">
+                    <div className="flex justify-between">
+                      <span className="font-semibold text-black text-lg">
+                        Trip Details
+                      </span>
+                      <button
+                        onClick={toggle}
+                        className="underline hover:text-black font-semibold transition-colors ease-in-out duration-300"
+                      >
+                        Change
+                      </button>
+                    </div>
+                    <p>
+                      {new Date(dataPayment.checkIn).toDateString()} -{" "}
+                      {new Date(dataPayment.checkOut).toDateString()}
+                      Date
+                    </p>
+                    <p>{dataPayment?.numGuest} Guest</p>
+                  </div>
+                  <div className="space-y-3">
+                    <p className="text-lg text-black  font-semibold">
+                      User Detail
+                    </p>
+
+                    <p>
+                      Name : <span>{user.name.toUpperCase()}</span>
+                    </p>
+                    <p>
+                      Email : <span>{user.email}</span>
+                    </p>
+                  </div>
                 </div>
-                <PaymentMethod setSelectedMethod={setSelectedMethod} />
               </div>
               <div className=" space-y-5 my-5 ">
                 <div className="bg-white rounded-xl text-gray-600 space-y-3 shadow-2xl p-5">
@@ -71,7 +102,7 @@ export default function RequestToBook() {
                         <Star className="text-pink" />
                         4.75 (2001)
                       </span>
-                      <span>{dataPayment.statusBooking.toUpperCase()}</span>
+                      <span>{dataPayment.bookingStatus}</span>
                     </div>
                   </section>
                   <section className="text-sm py-5 border-b-2 border-t-2">
@@ -80,12 +111,12 @@ export default function RequestToBook() {
                         Price of the venue
                       </span>
                       <span className="font-medium">
-                        Rp
-                        {/* {data.formatted} */}
+                        Rp.
+                        {dataPayment.calculatePrice.toLocaleString("id-ID")}
                       </span>
                     </div>
                     <p className="text-gray-500 mb-4">
-                      {/* ({obj.diffDays}×) ({obj.diffDays} malam)ddd */}
+                      ({dataPayment.duration}×) ({dataPayment.duration} malam)
                     </p>
 
                     <div className="flex justify-between mb-1">
@@ -93,8 +124,9 @@ export default function RequestToBook() {
                         Tax and Fee
                       </span>
                       <span className="font-medium">
-                        Rp
-                        {/* {tax} */} tax
+                        Rp.
+                        {taxAndFee.toLocaleString("id-ID")}
+                        tax
                       </span>
                     </div>
                     <div className=" text-gray-500 text-sm">
@@ -102,12 +134,14 @@ export default function RequestToBook() {
                         <span>PPN 12%</span>
                         <span>
                           Rp.
-                          {/* {ppn} */}PPN
+                          {dataPayment.taxAmount.toLocaleString("id-ID")}PPN
                         </span>
                       </div>
                       <div className="flex justify-between">
                         <span>StayNesia Fee</span>
-                        <span>Rp.105.000</span>
+                        <span>
+                          Rp.{dataPayment.feeAmount.toLocaleString("id-ID")}
+                        </span>
                       </div>
                     </div>
                   </section>
@@ -127,7 +161,10 @@ export default function RequestToBook() {
                   >
                     Cancel booking
                   </Link>
-                  <button className="bg-red-400 text-white hover:bg-pink transition-colors ease-in-out duration-300 rounded-lg py-1">
+                  <button
+                    onClick={handleCreate}
+                    className="bg-red-400 text-white hover:bg-pink transition-colors ease-in-out duration-300 rounded-lg py-1"
+                  >
                     Request to book
                   </button>
                 </div>

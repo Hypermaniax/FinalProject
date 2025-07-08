@@ -66,7 +66,7 @@ export const removeListingGuest = async (id) => {
       headers: { Authorization: `Bearer ${token}` },
     }
   );
-  return listing
+  return listing;
 };
 
 export const listingDelete = async (id) => {
@@ -74,4 +74,11 @@ export const listingDelete = async (id) => {
     `${import.meta.env.VITE_API_URL_LISTING_DELETE}${id}`
   );
   return listing;
+};
+
+export const topRated = async () => {
+  const listing = await axios.get(
+    `${import.meta.env.VITE_API_URL_TOP_RATED}`
+  );
+  return listing.data
 };

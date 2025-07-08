@@ -63,6 +63,7 @@ const data = [
 ];
 
 import pinkArrow from "../assets/icons/pinkArrow.svg";
+import UseTopRated from "../hooks/listing/UseTopRated";
 
 function generateRandomClassName(length = 8, prefix = "cls-") {
   const chars =
@@ -73,13 +74,14 @@ function generateRandomClassName(length = 8, prefix = "cls-") {
   }
   return className;
 }
+
 export default function Carousel({ heading, title, text }) {
   const [dummy, setDummy] = useState();
-
+  const {top} = UseTopRated()
   useEffect(() => {
     setDummy(data);
   }, []);
-
+  // console.log(top)
   const randomRight = useMemo(() => generateRandomClassName(), []);
   const randomLeft = useMemo(() => generateRandomClassName(), []);
 

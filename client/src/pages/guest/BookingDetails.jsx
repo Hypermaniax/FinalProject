@@ -25,7 +25,7 @@ export default function BookingDetails() {
     listingId: hotel._id,
     numGuest: guests,
   };
-
+  // console.log(hotel)
   return (
     <>
       <WrapperContent>

@@ -16,6 +16,7 @@ import AccountSetting from "../components/AccountSetting";
 import RequestToBook from "../components/RequestTobook";
 
 export default function RootGuest() {
+  
   return (
     <div className="flex flex-col min-h-screen">
       <ToastContainer />
@@ -40,12 +41,12 @@ export default function RootGuest() {
             <Route path="account" element={<AccountSetting />} />
             <Route path="logout" element={<>logout</>} />
           </Route>
-          <Route path="payment-bookings/:id" element={<RequestToBook />} />
+          <Route path="request-to-book/:id" element={<RequestToBook />} />
           <Route path="support" element={<Support />} />
           <Route path="login-guest" element={<AuthModalGuest />} />
         </Routes>
       </div>
-      <Footer />
+      <Footer /> 
     </div>
   );
 }

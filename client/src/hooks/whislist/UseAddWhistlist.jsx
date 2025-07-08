@@ -10,7 +10,7 @@ export default function UseAddWhistlist() {
     const fetch = async () => {
       try {
         const wishtList = await addWishList(whistlists);
-        console.log(wishtList);
+
         toast.success(wishtList);
       } catch (error) {}
     };
