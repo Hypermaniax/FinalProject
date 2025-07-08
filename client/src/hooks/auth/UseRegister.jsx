@@ -6,7 +6,7 @@ export default function UseRegister(role) {
   const [formData, setFormData] = useState(undefined);
   const [response, setResponse] = useState(undefined);
   const [loading, setLoading] = useState(false);
-  console.log(role)
+
   useEffect(() => {
     if (!formData) return;
     (async () => {
@@ -35,7 +35,14 @@ export default function UseRegister(role) {
   }, [response]);
   console.log(formData);
 
-  function handleCick({ name, username, email, password, confirmPassword }) {
+  function handleCick({
+    name,
+    username,
+    email,
+    password,
+    confirmPassword,
+    phone,
+  }) {
     setFormData({
       name,
       username,
@@ -43,6 +50,7 @@ export default function UseRegister(role) {
       password,
       confirmPassword,
       role,
+      phone,
     });
   }
 
