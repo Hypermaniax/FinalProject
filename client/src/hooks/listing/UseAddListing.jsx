@@ -14,6 +14,7 @@ export default function UseAddListing(handleClose) {
     const uploadListing = async () => {
       try {
         setLoading(true);
+        
         const listing = await listingAdd(addListing);
         setRes(listing);
         handleClose();

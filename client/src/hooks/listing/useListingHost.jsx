@@ -7,8 +7,7 @@ export default function useListingHost() {
   const { user } = useContext(AuthContext);
   const [listingDashboard, setListingDashboard] = useState();
   const { res } = UseAddListing();
-  console.log(listingDashboard);
-  
+
   useEffect(() => {
     (async () => {
       try {

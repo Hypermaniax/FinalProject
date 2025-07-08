@@ -10,9 +10,10 @@ export const listingDetail = async (id) => {
 export const listingAdd = async (listingData) => {
   const formData = new FormData();
   const token = localStorage.getItem("Token");
+
   formData.append("form", JSON.stringify({ ...listingData }));
 
-  listingData.urlImg.forEach((file, index) => {
+  listingData.imgUrl.forEach((file, index) => {
     formData.append("listingImg", file);
   });
 
@@ -25,6 +26,7 @@ export const listingAdd = async (listingData) => {
       },
     }
   );
+  // try
 
   return listing;
 };
