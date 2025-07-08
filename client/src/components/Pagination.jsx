@@ -1,5 +1,5 @@
 import Filter from "./Filter";
-import { ChevronLeft, ChevronRight, Heart } from "lucide-react";
+import { ChevronLeft, ChevronRight, Heart, Hotel } from "lucide-react";
 import DropDown from "./DropDown";
 import { Link } from "react-router-dom";
 import Select from "react-select";

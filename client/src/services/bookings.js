@@ -12,8 +12,6 @@ export const createBookings = async (bookings) => {
     }
   );
 
-  console.log(booking.data)
-
   return booking.data;
 };
 

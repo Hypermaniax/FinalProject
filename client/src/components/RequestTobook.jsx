@@ -7,7 +7,7 @@ import Loading from "./Loading";
 import UseGetGuestBookings from "../hooks/booking/UseGetGuestBooking";
 import useToggle from "../hooks/UseToggle";
 import ChangeReservation from "./ChangeReservation";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../store/AuthContext";
 
 export default function RequestToBook() {
@@ -21,7 +21,7 @@ export default function RequestToBook() {
     parseInt(dataPayment?.taxAmount) + parseInt(dataPayment?.feeAmount);
     
   return (
-    <>
+    <> 
       {!dataPayment ? (
         <Loading />
       ) : (

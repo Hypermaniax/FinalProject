@@ -8,14 +8,13 @@ import { createBookings } from "../../services/bookings";
 export default function UseBookings() {
   const [bookings, setBookings] = useState();
   const navigate = useNavigate();
-
   useEffect(() => {
     if (!bookings) return;
     const fetch = async () => {
       try {
         const booking = await createBookings(bookings);
         toast.success(booking.message);
-        return navigate(`../request-to-book/${booking.id}`);
+        return navigate(`../request-to-book/${booking.data}`);
       } catch (error) {
         toast.success(error);
       }

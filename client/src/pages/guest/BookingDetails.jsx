@@ -16,7 +16,6 @@ export default function BookingDetails() {
   const { id } = useParams();
   const { hotel, loading, booked, formatted } = UseListingDetail(id);
   const { handleSubmit } = UseBookings();
-
   if (loading) return <Loading />;
 
   const dataBookings = {

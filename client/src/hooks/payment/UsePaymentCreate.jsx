@@ -7,7 +7,7 @@ import { AuthContext } from "../../store/AuthContext";
 export default function UsePaymentCreate(id) {
   const [dataPayment, setDataPayment] = useState();
   const { user } = useContext(AuthContext);
-  console.log();
+
   const [data, setData] = useState({
     amount: Number,
     duration: Number,
