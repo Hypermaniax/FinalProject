@@ -1,11 +1,6 @@
-
 import logoSn1 from "../assets/logosn1.png";
-import { useNavigate } from "react-router-dom";
-
 
 export default function NavbarHost() {
-  const navigate = useNavigate();
-
   return (
     <>
       <nav className="bg-white flex sticky top-0 shadow-lg z-50">
@@ -18,23 +13,9 @@ export default function NavbarHost() {
                 <span className="text-pink">Nesia</span>
               </h1>
             </div>
-            <button
-              onClick={() => navigate("/host/login-host")}
-              className=" hidden md:flex bg-pink-500 text-white px-5 py-1 bg-pink rounded-lg text-lg font-bold hover:bg-pink-600 transition-colors"
-            >
-              Login
-            </button>
           </div>
         </div>
       </nav>
-      {/* <LoginOrSignUp
-        login={loginHost}
-        register={registerHost}
-        ridrect={riderect}
-        heading
-        // isOpen={isOPen}
-        // handleClick={() => setIsopen(!isOPen)}
-      /> */}
     </>
   );
 }
