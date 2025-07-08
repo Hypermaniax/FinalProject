@@ -7,13 +7,17 @@ import { useNavigate } from "react-router-dom";
 import SignInUser from "../../components/SignInUser";
 import SignUpUser from "../../components/SignUpUser";
 
-export default function AuthModalHost() {
+export default function Auth() {
   const { toggle, state } = useToggle();
-  const { user } = useContext(AuthContext);
   const navigate = useNavigate();
-
+  const { user } = useContext(AuthContext);
+  // console.log(!user)
   useEffect(() => {
-    if (user) return navigate("/host/dashboard/dashboard-host");
+    if (user?.role) {
+      return user?.role === "host"
+        ? navigate("/host/dashboard/dashboard-host")
+        : navigate("/bookings");
+    }
   }, [user]);
 
   return (

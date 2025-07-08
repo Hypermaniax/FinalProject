@@ -45,7 +45,7 @@ export default function Header() {
                 ? () => {
                     handleLogout();
                   }
-                : () => navigate("/login-guest")
+                : () => navigate("/login")
             }
             className=" hidden md:flex bg-pink-500 text-white px-5 py-2 bg-pink rounded-lg text-lg font-bold hover:bg-pink-600 transition-colors"
           >

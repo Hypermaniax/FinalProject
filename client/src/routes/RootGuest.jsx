@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 import Bookings from "../pages/guest/Bookings";
 import BookingDetails from "../pages/guest/BookingDetails";
 import { ToastContainer } from "react-toastify";
-import AuthModalGuest from "../pages/guest/AuthModalGuest";
+import Auth from "../pages/guest/Auth";
 import ProtectedRoute from "./protected/ProtectRoute";
 import DashboardGuest from "../components/DashboardGuest";
 import Wishlist from "../components/WishList";
@@ -43,7 +43,7 @@ export default function RootGuest() {
           </Route>
           <Route path="request-to-book/:id" element={<RequestToBook />} />
           <Route path="support" element={<Support />} />
-          <Route path="login-guest" element={<AuthModalGuest />} />
+          <Route path="login" element={<Auth />} />
         </Routes>
       </div>
       <Footer /> 
