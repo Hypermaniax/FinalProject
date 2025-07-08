@@ -2,15 +2,19 @@ import { useRef } from "react";
 import Input from "./Input";
 import Loading from "./Loading";
 import UseRegister from "../hooks/auth/UseRegister";
+import useToggle from "../hooks/UseToggle";
 
-export default function SignUpHost({ handleClick }) {
+export default function SignUpUser({ handleClick }) {
   const fullNameref = useRef();
   const usernameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
   const passwordConfirm = useRef();
+  const phoneRef = useRef();
 
-  const { onSubmit, loading } = UseRegister("Host");
+  const { open, close, state } = useToggle();
+
+  const { onSubmit, loading } = UseRegister(state ? "host" : "guest");
 
   return (
     <>
@@ -22,6 +26,29 @@ export default function SignUpHost({ handleClick }) {
           Come on and create an account
         </h4>
       </header>
+
+      <h1 className="text-center font-medium text-xl">Register As</h1>
+
+      <div className="bg-darkWhite p-2 font-normal flex justify-between rounded-full">
+        <button
+          onClick={close}
+          className={`w-full p-1.5 ${
+            !state &&
+            "bg-pink rounded-full transition-all font-semibold ease-in-out delay-200 text-white"
+          }`}
+        >
+          Guest
+        </button>
+        <button
+          onClick={open}
+          className={`w-full p-1.5 ${
+            state &&
+            "bg-pink rounded-full transition-all font-semibold ease-in-out delay-200 text-white"
+          }`}
+        >
+          Host
+        </button>
+      </div>
       {loading ? (
         <Loading />
       ) : (
@@ -29,6 +56,12 @@ export default function SignUpHost({ handleClick }) {
           <Input typeInput="text" label="Full name" ref={fullNameref} />
           <Input typeInput="text" spaceBar label="Username" ref={usernameRef} />
           <Input typeInput="email" spaceBar label="Email" ref={emailRef} />
+          <Input
+            typeInput="number"
+            spaceBar
+            label="Phone Number"
+            ref={phoneRef}
+          />
           <Input
             label="password"
             typeInput="password"
@@ -49,7 +82,8 @@ export default function SignUpHost({ handleClick }) {
                 username: usernameRef.current.value(),
                 email: emailRef.current.value(),
                 password: passwordRef.current.value(),
-                confirmPassword : passwordConfirm.current.value(),
+                confirmPassword: passwordConfirm.current.value(),
+                phone: phoneRef.current.value(),
               })
             }
           >
@@ -58,10 +92,10 @@ export default function SignUpHost({ handleClick }) {
           <p className="text-gray-500 font-medium text-center">
             already a member ?{" "}
             <span
-              className="hover:text-pink cursor-pointer"
+              className="hover:text-pink underline cursor-pointer"
               onClick={handleClick}
             >
-              Login
+              sign In
             </span>{" "}
           </p>
         </>

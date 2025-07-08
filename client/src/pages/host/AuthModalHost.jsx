@@ -1,11 +1,11 @@
 import { X } from "lucide-react";
 import useToggle from "../../hooks/UseToggle";
-import SignUpHost from "../../components/SignUpHost";
 import { ToastContainer } from "react-toastify";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../../store/AuthContext";
 import { useNavigate } from "react-router-dom";
-import LoginHost from "../../components/LoginHost";
+import SignInUser from "../../components/SignInUser";
+import SignUpUser from "../../components/SignUpUser";
 
 export default function AuthModalHost() {
   const { toggle, state } = useToggle();
@@ -24,9 +24,9 @@ export default function AuthModalHost() {
           <X size={20} onClick={() => navigate(-1)} />
         </div>
         {state ? (
-          <SignUpHost handleClick={toggle} />
+          <SignUpUser handleClick={toggle} />
         ) : (
-          <LoginHost handleClick={toggle} />
+          <SignInUser handleClick={toggle} />
         )}
       </div>
     </div>

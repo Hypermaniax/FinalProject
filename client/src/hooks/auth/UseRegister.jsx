@@ -6,7 +6,7 @@ export default function UseRegister(role) {
   const [formData, setFormData] = useState(undefined);
   const [response, setResponse] = useState(undefined);
   const [loading, setLoading] = useState(false);
-
+  console.log(role)
   useEffect(() => {
     if (!formData) return;
     (async () => {
