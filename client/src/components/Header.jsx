@@ -21,7 +21,7 @@ export default function Header() {
   const { user,  handleLogout } = useContext(AuthContext);
   
   return (
-    <nav className="bg-white sticky top-0 shadow-lg z-50">
+    <nav className="bg-white sticky sm:px-0 px-4  top-0 shadow-lg z-50">
       <div className="max-w-7xl mx-auto ">
         <div className="flex justify-between items-center py-4">
           <h1 className="font-extrabold text-2xl">

@@ -30,13 +30,12 @@ const secondText = {
 };
 
 export default function Headline() {
-    
   return (
-    <div className="grid md:grid-cols-2  grid-cols-1 pt-16 gap-10 mb-10">
-      <Section search content ={firsText}/>
+    <div className="grid md:grid-cols-2 px-5 sm:px-0 grid-cols-1 sm:pt-16 pt-5 gap-10 mb-10 ">
+      <Section search content={firsText} />
       <Section link={img1} />
       <Section link={img} />
-      <Section content={secondText}/>
+      <Section content={secondText} />
     </div>
   );
 }

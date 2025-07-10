@@ -1,11 +1,11 @@
 export default function Section({ link, content, search }) {
   return (
-    <section className="col-span-1 content-center">
+    <section className="col-span-1 content-center sm:text-left text-center">
       {link ? (
-        <img src={link} className="hidden md:block" />
+        <img src={link}  />
       ) : (
         <>
-          <h1 className="whitespace-pre-line font-bold italic text-lg md:text-5xl">
+          <h1 className="whitespace-pre-line font-bold italic text-2xl md:text-5xl ">
             {content.head}
           </h1>
           <p className=" mt-6 leading-relaxed whitespace-pre-line text-base text-gray-500">

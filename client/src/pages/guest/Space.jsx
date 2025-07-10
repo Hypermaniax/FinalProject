@@ -10,7 +10,7 @@ export default function Spaces() {
         <WrapperContent>
           <div className="flex items-center justify-between gap-8">
             <div className="max-w-xl">
-              <h1 className="font-bold text-4xl text-white leading-snug">
+              <h1 className="font-bold sm:text-4xl text-white text-2xl">
                 Find and book spaces in
                 <br />
                 easy way with <span className="text-white">StayNesia</span>
@@ -23,7 +23,7 @@ export default function Spaces() {
               <img
                 src={heroImg} // Ganti path sesuai lokasi file kamu
                 alt="StayNesia preview"
-                className="w-[300px] drop-shadow-lg"
+                className="w-[300px] hidden sm:block drop-shadow-lg"
               />
             </div>
           </div>
