@@ -2,18 +2,27 @@ import { Link } from "react-router-dom";
 import UseGetGuestBookings from "../hooks/booking/UseGetGuestBooking";
 import Loading from "./Loading";
 import { motion } from "framer-motion";
-
+import {Receipt} from "lucide-react";
 const highligt = "bg-pink text-white";
 
 export default function DashboardGuest() {
   const { booking, handleSelectStatus, status } = UseGetGuestBookings();
+  const isEmpty = booking && booking.length === 0;
+
   return (
     <div className="sm:mx-0 mx-5 sm:mt-0 mt-4">
-      <h1 className="font-bold text-2xl ">My Bookings</h1>
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="font-bold text-2xl sm:text-3xl">My Bookings</h1>
+        {booking && booking.length > 0 && (
+          <span className="text-sm text-gray-500">
+            {booking.length} transaction{booking.length !== 1 ? 's' : ''}
+          </span>
+        )}
+      </div>
       <div className="flex shadow-xl mt-10 py-2 justify-evenly rounded-xl overflow-hidden bg-white ">
         <button
           onClick={() => handleSelectStatus("pending")}
-          className={`rounded-lg transition duration-300 sm:px-10 px-2 hover:cursor-pointer ${
+          className={`rounded-lg transition duration-300 sm:px-10 px-2 py-2 hover:cursor-pointer hover:bg-gray-50 ${
             status === "pending" ? highligt : undefined
           }`}
         >
@@ -21,7 +30,7 @@ export default function DashboardGuest() {
         </button>
         <button
           onClick={() => handleSelectStatus("confirmed")}
-          className={`rounded-lg transition duration-300 sm:px-10 px-2 hover:cursor-pointer ${
+          className={`rounded-lg transition duration-300 sm:px-10 px-2 py-2 hover:cursor-pointer hover:bg-gray-50 ${
             status === "confirmed" ? highligt : undefined
           }`}
         >
@@ -29,7 +38,7 @@ export default function DashboardGuest() {
         </button>
         <button
           onClick={() => handleSelectStatus("success")}
-          className={`rounded-lg transition duration-300 sm:px-10 px-2 hover:cursor-pointer ${
+          className={`rounded-lg transition duration-300 sm:px-10 px-2 py-2 hover:cursor-pointer hover:bg-gray-50 ${
             status === "success" ? highligt : undefined
           }`}
         >
@@ -37,11 +46,24 @@ export default function DashboardGuest() {
         </button>
       </div>
 
-      <div className="max-h-[800px] grid gap-4 pt-5 mt-10 pr-5 overflow-y-scroll">
+      <div className="max-h-[1000px] grid gap-4 pt-5 mt-10 pr-5 overflow-y-scroll">
         {!booking ? (
           <Loading />
         ) : (
-          booking.map((item, index) => (
+          <>
+          {/* Empty State */}
+        {isEmpty && (
+          <div className="text-center py-12">
+            <Receipt className="w-16 h-16 mx-auto text-gray-300 mb-4" />
+            <h3 className="text-lg font-semibold text-gray-600 mb-2">
+              No {status} Bookings
+            </h3>
+            <p className="text-gray-500">
+              Your {status} Bookings will appear here.
+            </p>
+          </div>
+        )}
+          {booking.map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -49,6 +71,8 @@ export default function DashboardGuest() {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               className="flex flex-col sm:grid bg-white rounded-xl relative space-y-4 sm:space-y-0 sm:space-x-6 p-5 sm:grid-cols-5 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200"
             >
+              
+
               {/* Image Section */}
               <div className="flex justify-center sm:justify-start sm:col-span-1">
                 <img
@@ -165,7 +189,9 @@ export default function DashboardGuest() {
                 )}
               </div>
             </motion.div>
-          ))
+          ))}
+          </>
+          
         )}
       </div>
     </div>
