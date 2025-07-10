@@ -9,7 +9,7 @@ export default function Spaces() {
       <Hero>
         <WrapperContent>
           <div className="flex items-center justify-between gap-8">
-            <div className="max-w-xl">
+            <div className="max-w-xl text-center">
               <h1 className="font-bold sm:text-4xl text-white text-2xl">
                 Find and book spaces in
                 <br />
@@ -19,11 +19,11 @@ export default function Spaces() {
                 Stay anywhere, anytime, your way
               </p>
             </div>
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 hidden sm:block">
               <img
                 src={heroImg} // Ganti path sesuai lokasi file kamu
                 alt="StayNesia preview"
-                className="w-[300px] hidden sm:block drop-shadow-lg"
+                className="w-[300px]  drop-shadow-lg"
               />
             </div>
           </div>
