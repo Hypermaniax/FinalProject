@@ -17,5 +17,5 @@ export default function UseGetGuestPayment() {
     setStatus(currentStatus);
   }, []);
 
-  return { payment,handleSelectStatus };
+  return { payment,handleSelectStatus,status };
 }
