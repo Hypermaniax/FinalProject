@@ -6,12 +6,14 @@ import { Outlet, } from "react-router-dom";
 export default function Bookings() {
   return (
     <WrapperContent>
-      <div className="grid-cols-4 gap-16 mt-10 grid">
-        <ProfileUser />
-        <div className="col-span-3">
-          <Outlet />
+      <div className="md:grid md:grid-cols-4 md:gap-16 md:mt-10">
+          <div className="md:col-span-1">
+            <ProfileUser />
+          </div>
+          <div className="md:col-span-3">
+            <Outlet />
+          </div>
         </div>
-      </div>
     </WrapperContent>
   );
 }

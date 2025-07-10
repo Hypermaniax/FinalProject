@@ -16,29 +16,31 @@ export default function ProfileUser() {
   const { user } = useContext(AuthContext);
   return (
     <>
-      <div className="col-span-1 p-3 h-fit rounded-xl bg-white">
-        <div className="col-span-1 items-center grid grid-cols-2 ">
-          <div className="col-span-1 ">
-            <img
-              src={damn}
-              alt=""
-              className="w-28 h-28 rounded-full object-center "
-            />
-          </div>
-          <div className="col-span-1">
+      <div className="col-span-1 sm:mx-0 mx-4 sm:mt-0 mt-4 p-3 h-fit rounded-xl bg-white">
+        <div className="items-center gap-4 flex ">
+          <img
+            src={damn}
+            alt=""
+            className="w-28 h-28 rounded-full object-cover shadow-xl border-2 border-gray-100"
+          />
+          <div>
             <p className="font-bold">{user.name}</p>
             <p className="text-xs">Since {user.crea}</p>
           </div>
         </div>
-        <div className="mt-10 mx-auto">
-          <ul className="space-y-6 ">
+
+        <div className="sm:mt-10 mx-auto">
+          <ul className="sm:flex-col flex gap-4 overflow-x-auto md:overflow-x-visible my-5 sm:my-0 sm:gap-8 ">
             {menus.map((item, index) => (
               <Link
                 to={`/bookings/${item.path === "bookings" ? "" : item.path}`}
                 key={index}
-                className="flex gap-5 mx-7"
+                className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-5 md:mx-7 p-3 md:p-0 rounded-lg md:rounded-none hover:bg-gray-50 md:hover:bg-transparent transition-colors min-w-fit"
               >
-                <item.icon /> <span className="text-base">{item.label}</span>
+                <item.icon className="w-5 h-5 text-gray-600" />
+                <span className="text-xs md:text-base font-medium whitespace-nowrap">
+                  {item.label}
+                </span>
               </Link>
             ))}
           </ul>
