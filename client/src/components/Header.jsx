@@ -80,7 +80,13 @@ export default function Header() {
               ))}
             </ul>
             <button
-              onClick={() => setlogin(!login)}
+              onClick={
+              !!user
+                ? () => {
+                    handleLogout();
+                  }
+                : () => navigate("/login")
+            }
               className="bg-pink-500 text-white bg-pink px-5 py-2 rounded-lg text-lg font-bold hover:bg-pink-600 transition-colors"
             >
               Login
