@@ -1,5 +1,4 @@
 import { ArrowLeft, Star } from "lucide-react";
-import PaymentMethod from "./PaymentMethod";
 import WrapperContent from "./WrapperContent";
 import UsePaymentCreate from "../hooks/payment/UsePaymentCreate";
 import { Link, useParams } from "react-router-dom";
@@ -7,7 +6,7 @@ import Loading from "./Loading";
 import UseGetGuestBookings from "../hooks/booking/UseGetGuestBooking";
 import useToggle from "../hooks/UseToggle";
 import ChangeReservation from "./ChangeReservation";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../store/AuthContext";
 
 export default function RequestToBook() {
