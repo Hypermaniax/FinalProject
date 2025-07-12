@@ -14,7 +14,7 @@ export default function AuthProvider({ children }) {
       ? jwtDecode(localStorage.getItem("Token"))
       : ""
   );
-  
+
   function isExpired () {
     const currentTime = Date.now() / 1000;
     return user.exp < currentTime

@@ -1,7 +1,10 @@
 import { useCallback, useEffect } from "react";
 import { useState } from "react";
-import { guestBookings } from "../../services/bookings";
-import { removeListingGuest } from "../../services/listing";
+import {
+  guestBookings,
+  removeBooking,
+  updateBookingDate,
+} from "../../services/bookings";
 import { toast } from "react-toastify";
 
 export default function UseGetGuestBookings() {
