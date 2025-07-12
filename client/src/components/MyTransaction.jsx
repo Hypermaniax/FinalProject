@@ -121,7 +121,7 @@ export default function MyTransaction() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.3, delay: index * 0.05 }}
-                    className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100 overflow-y-auto"
+                    className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100 overflow-y-scroll"
                   >
                     {/* Status indicator bar */}
                     <div className={`h-1 ${
@@ -171,7 +171,7 @@ export default function MyTransaction() {
                         {/* Price section */}
                         <div className="text-right">
                           <p className="text-2xl font-bold text-green-600">
-                            Rp {(item.totalAmount || item.amount || 122222).toLocaleString("id-ID")}
+                            Rp {(item.totalAmount || item.amount ).toLocaleString("id-ID")}
                           </p>
                           <p className="text-xs text-gray-500 mt-1">Total paid</p>
                         </div>

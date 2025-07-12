@@ -4,18 +4,9 @@ import { useState } from "react";
 import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
-import useToggle from "../hooks/UseToggle";
-export default function ChangeReservation({ back }) {
-  const [range, setRange] = useState([
-    {
-      startDate: new Date(),
-      endDate: new Date(),
-      key: "selection",
-    },
-  ]);
 
-  const { open, close, state } = useToggle();
-  console.log(state);
+export default function ChangeReservation({ back, bookedDate,handleSave,range, setRange }) {
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
@@ -37,44 +28,25 @@ export default function ChangeReservation({ back }) {
         <h2 className="text-2xl font-semibold  text-gray-800">
           Change Reservation Dates
         </h2>
-        <div className="bg-gray-300 flex gap-2 p-1.5 rounded-full">
-          <button
-            onClick={close}
-            className={`w-full rounded-full p-1.5 ${!state && `bg-white`}`}
-          >
-            Dates
-          </button>
-          <button
-            onClick={open}
-            className={`w-full rounded-full p-1.5 ${state && `bg-white`}`}
-          >
-            Guests
-          </button>
-        </div>
         {/* Date Picker */}
 
-        {state ? (
-          <div className="p-5">
-            <input type="number" />
-          </div>
-        ) : (
-          <DateRange
-            showMonthAndYearPickers={false}
-            // showSelectionPreview={false}
-            editableDateInputs={true}
-            onChange={(item) => setRange([item.selection])}
-            moveRangeOnFirstSelection={false}
-            ranges={range}
-            months={2}
-            direction="horizontal"
-            className="w-full"
-            minDate={new Date()}
-          />
-        )}
+        <DateRange
+          showMonthAndYearPickers={false}
+          disabledDates={bookedDate}
+          editableDateInputs={true}
+          onChange={(item) => setRange([item.selection])}
+          moveRangeOnFirstSelection={false}
+          ranges={range}
+          months={2}
+          direction="horizontal"
+          className="w-full"
+          minDate={new Date()}
+        />
+
         {/* Action Button */}
         <div className="mt-6 flex justify-end">
           <button
-            // onClick={handleSave} // replace with your save handler
+            onClick={handleSave} // replace with your save handler
             className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition"
           >
             Save
