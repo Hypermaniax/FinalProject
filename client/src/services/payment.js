@@ -32,5 +32,5 @@ export const getPaymentById = async (id) => {
       headers: { Authorization: `Bearer ${token}` },
     }
   );
-  return payment.data.data[0];
+  return payment.data;
 };

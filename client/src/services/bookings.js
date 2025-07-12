@@ -11,8 +11,34 @@ export const createBookings = async (bookings) => {
       },
     }
   );
-
   return booking.data;
+};
+
+export const updateBookingDate = async (id,bookings) => {
+  const token = localStorage.getItem("Token");
+
+  const booking = await axios.patch(
+    `${import.meta.env.VITE_API_URL_SELECTED_BOOKING}/${id}`,
+    bookings,
+    {
+      headers: { Authorization: `Bearer ${token}` },
+    }
+  );
+
+  return booking.data.message;
+};
+
+export const removeBooking = async (id) => {
+  const token = localStorage.getItem("Token");
+
+  const booking = await axios.delete(
+    `${import.meta.env.VITE_API_URL_SELECTED_BOOKING}/${id}`,
+    {
+      headers: { Authorization: `Bearer ${token}` },
+    }
+  );
+
+  return booking;
 };
 
 export const guestBookings = async (status) => {

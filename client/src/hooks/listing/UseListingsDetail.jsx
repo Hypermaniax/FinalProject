@@ -6,7 +6,6 @@ export default function UseListingDetail(id) {
   const [hotel, setHotel] = useState(null);
   const [booked, setbooked] = useState();
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     if (!id) return;
     const fetch = async () => {

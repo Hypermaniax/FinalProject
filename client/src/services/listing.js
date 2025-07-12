@@ -26,8 +26,6 @@ export const listingAdd = async (listingData) => {
       },
     }
   );
-  // try
-
   return listing;
 };
 
@@ -57,18 +55,6 @@ export const listingPagination = async (currentPage, filter) => {
     }
   );
   return listing.data.data;
-};
-
-export const removeListingGuest = async (id) => {
-  const token = localStorage.getItem("Token");
-
-  const listing = await axios.delete(
-    `${import.meta.env.VITE_API_URL_SELECTED_BOOKING}/${id}`,
-    {
-      headers: { Authorization: `Bearer ${token}` },
-    }
-  );
-  return listing;
 };
 
 export const listingDelete = async (id) => {

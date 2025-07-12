@@ -1,10 +1,6 @@
 import { useCallback, useEffect } from "react";
 import { useState } from "react";
-import {
-  guestBookings,
-  removeBooking,
-  updateBookingDate,
-} from "../../services/bookings";
+import { guestBookings, removeBooking } from "../../services/bookings";
 import { toast } from "react-toastify";
 
 export default function UseGetGuestBookings() {
@@ -21,9 +17,8 @@ export default function UseGetGuestBookings() {
   const handleRemoveListing = useCallback(
     async (id) => {
       try {
-        console.log();
-        const req = await removeListingGuest(id);
-        toast.success(req.data.message)
+        const req = await removeBooking(id);
+        toast.success(req.data.message);
         bookings();
       } catch (error) {}
     },
@@ -38,5 +33,10 @@ export default function UseGetGuestBookings() {
     bookings();
   }, [status, bookings]);
 
-  return { booking, handleSelectStatus, status, handleRemoveListing };
+  return {
+    booking,
+    handleSelectStatus,
+    status,
+    handleRemoveListing,
+  };
 }
