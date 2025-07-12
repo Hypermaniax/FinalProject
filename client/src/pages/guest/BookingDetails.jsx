@@ -1,6 +1,5 @@
 import { Dot } from "lucide-react";
 import profile from "../../assets/spongebob.jpeg";
-import DatePicker from "react-datepicker";
 import { useState } from "react";
 import GridSwiper from "../../components/GridSwiper";
 import WrapperContent from "../../components/WrapperContent";
@@ -8,28 +7,39 @@ import { useParams } from "react-router-dom";
 import Loading from "../../components/Loading";
 import UseListingDetail from "../../hooks/listing/UseListingsDetail";
 import UseBookings from "../../hooks/booking/UseBookings";
+import { DateRange } from "react-date-range";
+
+import "react-date-range/dist/styles.css"; // main css file
+import "react-date-range/dist/theme/default.css"; // theme css file
 
 export default function BookingDetails() {
-  const [checkIn, setCheckIn] = useState(null);
-  const [checkOut, setCheckOut] = useState(null);
   const [guests, setGuests] = useState(1);
   const { id } = useParams();
   const { hotel, loading, booked, formatted } = UseListingDetail(id);
   const { handleSubmit } = UseBookings();
-  if (loading) return <Loading />;
+  const [showCalender, setShowCalender] = useState(false);
+  const [range, setRange] = useState([
+    {
+      startDate: new Date(),
+      endDate: new Date(),
+      key: "selection",
+    },
+  ]);
 
+  if (loading) return <Loading />;
+  
   const dataBookings = {
-    checkIn: checkIn,
-    checkOut: checkOut,
+    checkIn: range[0].startDate,
+    checkOut: range[0].endDate,
     listingId: hotel._id,
     numGuest: guests,
   };
-  console.log(hotel.imgUrl)
+  
   return (
     <>
       <WrapperContent>
         <GridSwiper imgUrl={hotel.imgUrl} />
-        <section className="grid grid-cols-6 gap-20 mt-5">
+        <section className="grid relative grid-cols-6 gap-20 mt-5">
           <div className="col-span-4">
             <header>
               <h1 className="text-3xl font-semibold">{hotel.title}</h1>
@@ -72,25 +82,47 @@ export default function BookingDetails() {
                 <span className="text-sm text-gray-600"> for 1 night</span>
               </div>
 
-              <div className="border rounded-xl overflow-hidden divide-y">
-                <div className="grid grid-cols-2 divide-x">
-                  <DatePicker
-                    selected={checkIn}
-                    minDate={new Date()}
-                    excludeDates={booked}
-                    onChange={(date) => setCheckIn(date)}
-                    placeholderText="Check In"
-                    className="w-full p-2 text-sm outline-none"
-                  />
-                  <DatePicker
-                    selected={checkOut}
-                    minDate={checkIn}
-                    excludeDates={booked.filter(date => date >= checkIn)}
-                    onChange={(date) => setCheckOut(date)}
-                    placeholderText="Check Out"
-                    className="w-full p-2 text-sm outline-none"
-                  />
+              <div className="border  rounded-xl overflow-hidden divide-y">
+                <div
+                  onClick={() => setShowCalender(!showCalender)}
+                  className="grid grid-cols-2 divide-x"
+                >
+                  <div className="p-2 text-sm">
+                    <p className="text-gray-400 text-xs">Check In</p>
+                    <p className="font-medium">
+                      {range[0].startDate.toLocaleDateString("en-US")}
+                    </p>
+                  </div>
+                  <div className="p-2 text-sm">
+                    <p className="text-gray-400 text-xs">Check Out</p>
+                    <p className="font-medium">
+                      {range[0].endDate.toLocaleDateString("en-US")}
+                    </p>
+                  </div>
                 </div>
+                {showCalender && (
+                  <div className="mt-18 absolute right-16 bg-white p-5 rounded-xl flex flex-col">
+                    <DateRange
+                      showMonthAndYearPickers={false}
+                      disabledDates={booked}
+                      editableDateInputs={true}
+                      onChange={(item) => setRange([item.selection])}
+                      moveRangeOnFirstSelection={false}
+                      ranges={range}
+                      months={2}
+                      direction="horizontal"
+                      minDate={new Date()}
+                    />
+                    <div className="text-end">
+                      <button
+                        className=" mt-4 bg-red-400 hover:bg-red-500 text-white px-4 py-1 rounded-md transition font-medium"
+                        onClick={() => setShowCalender(!showCalender)}
+                      >
+                        close
+                      </button>
+                    </div>
+                  </div>
+                )}
                 <div>
                   <input
                     type="number"
