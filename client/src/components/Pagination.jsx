@@ -18,6 +18,7 @@ export default function Pagination() {
     itemFilter,
     handleFilter,
   } = UsePagination();
+  
   const [city, setCity] = useState();
   const { handleClick } = UseAddWhistlist();
   const capacity = useRef();
